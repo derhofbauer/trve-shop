@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  apache:
+    image: php:apache
+    volumes:
+      - './src/:/var/www/html/'
+    ports:
+      - 1236:80
+    links:
+      - mariadb:db
+    env_file:
+      - docker.env
+
+  mariadb:
+    image: mariadb
+    env_file:
+      - docker.env
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mariadb:db
+    ports:
+      - 1235:80
+    environment:
+      PMA_ARBITRARY: 0
