@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'sys_feusers',
     ],
 
     /*
@@ -38,18 +38,26 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'sys_feusers',
         ],
-
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'sys_feusers',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'sys_beusers'
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'sys_beusers'
+        ]
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | User Providers
+    | SysFeuser Providers
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
@@ -65,19 +73,15 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'sys_feusers' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\SysFeuser::class,
         ],
 
-         'beusers' => [
-             'driver' => 'database',
-             'table' => 'sys_beusers',
+         'sys_beusers' => [
+             'driver' => 'eloquent',
+             'model' => App\SysBeuser::class,
          ],
-        'feusers' => [
-            'driver' => 'database',
-            'table' => 'sys_feusers',
-        ],
     ],
 
     /*
@@ -96,11 +100,16 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'sys_feusers' => [
+            'provider' => 'sys_feusers',
             'table' => 'password_resets',
             'expire' => 60,
         ],
+        'sys_beusers' => [
+            'provider' => 'sys_beusers',
+            'table' => 'password_resets_be',
+            'expire' => 60
+        ]
     ],
 
 ];

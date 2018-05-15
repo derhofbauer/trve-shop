@@ -5,9 +5,14 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class SysFeuser extends Authenticatable
 {
     use Notifiable;
+
+    /**
+     * @var string
+     */
+    protected $guard = 'web';
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'first_name', 'last_name'
+        'email', 'password', 'firstname', 'lastname', 'title',
     ];
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSysBeusers extends Migration
+class CreateSysBeusersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,11 @@ class CreateSysBeusers extends Migration
     public function up()
     {
         Schema::create('sys_beusers', function (Blueprint $table) {
-            $table->increments('uid');
+            $table->increments('id');
             $table->string('username');
             $table->string('email');
-            $table->string('password_hash');
-            $table->string('role_uid');
+            $table->string('password');
+            $table->string('role_id');
             $table->timestamps();
         });
     }

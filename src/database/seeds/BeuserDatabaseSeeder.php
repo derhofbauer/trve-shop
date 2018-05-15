@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class BeusersTableSeeder extends Seeder
+
+class BeuserDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,17 +14,17 @@ class BeusersTableSeeder extends Seeder
     public function run()
     {
         DB::table('sys_beusers')->insert([
-                'name' => 'ford',
+                'username' => 'ford',
                 'email' => 'ford.prefect@galaxy.com',
                 'password' => bcrypt('password'),
-                'role_uid' => 1
+                'role_id' => 1
         ]);
 
         DB::table('sys_beusers')->insert([
-                'name' => 'admin',
+                'username' => 'admin',
                 'email' => 'arthur.dent@galaxy.com',
                 'password' => bcrypt('password'),
-                'role_uid' => 1
+                'role_id' => 1
         ]);
     }
 }
