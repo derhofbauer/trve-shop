@@ -108,7 +108,7 @@ return [
         'sys_beusers' => [
             'provider' => 'sys_beusers',
             'table' => 'password_resets_be',
-            'expire' => 60
+            'expire' => 15
         ]
     ],
 

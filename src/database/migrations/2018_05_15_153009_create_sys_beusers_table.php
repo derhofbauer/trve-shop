@@ -19,6 +19,7 @@ class CreateSysBeusersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('role_id');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

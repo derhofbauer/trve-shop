@@ -1,4 +1,4 @@
-@extends('../layouts.app')
+@extends('../layouts.admin')
 
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in to the Backend!
+                    {{ Auth::user()->username }}, You are logged in to the Backend!
                 </div>
             </div>
         </div>

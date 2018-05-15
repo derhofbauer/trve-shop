@@ -19,16 +19,23 @@ Route::get('/', function () {
 });
 
 /**
- * Auth Route
- */
-Auth::routes();
-
-/**
  * Frontend routes
  */
-Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('home')->group(function () {
+    /**
+     * Auth Route
+     */
+    Auth::routes();
+
+    Route::get('/', 'HomeController@index')->name('home');
+});
 
 /**
- * Admin routes
+ * Backend routes
  */
-Route::get('/admin', 'AdminController@index')->name('admin');
+Route::prefix('admin')->group(function () {
+    Route::get('/', 'AdminController@index')->name('admin');
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+});
