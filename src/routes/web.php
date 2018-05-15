@@ -11,10 +11,24 @@
 |
 */
 
+/**
+ * Root route
+ */
 Route::get('/', function () {
     return view('welcome');
 });
 
+/**
+ * Auth Route
+ */
 Auth::routes();
 
+/**
+ * Frontend routes
+ */
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * Admin routes
+ */
+Route::get('/admin', 'AdminController@index')->name('admin');
