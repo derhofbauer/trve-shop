@@ -24,6 +24,6 @@
     "grunt-postcss": "^0.9.0"
   },
   "scripts": {
-    "attach": "docker exec -it trveshop_apache_1 bash"
+    "attach": "docker exec -it trve-shop_apache_1 bash"
   }
 }
