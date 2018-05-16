@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSysSettingsTable extends Migration
+class CreateSysBlogEntryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateSysSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sys_settings', function (Blueprint $table) {
+        Schema::create('sys_blog_entry', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->json('value');
+            $table->text('title');
+            $table->text('abstract');
+            $table->longText('content');
+            $table->integer('beuser_id');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateSysSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sys_settings');
+        Schema::dropIfExists('sys_blog_entry');
     }
 }

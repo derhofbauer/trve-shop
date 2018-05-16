@@ -31,6 +31,11 @@ Route::prefix('home')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 });
 
+Route::prefix('blog')->group(function () {
+    Route::get('/', 'BlogController@index')->name('blog');
+    Route::get('/{id}/{slug?}', 'BlogController@show')->name('blog.show');
+});
+
 /**
  * Backend routes
  */

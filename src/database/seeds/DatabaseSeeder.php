@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             BeuserDatabaseSeeder::class,
             FeuserDatabaseSeeder::class,
             SysRoleDatabaseSeeder::class,
+            SysBlogEntrySeeder::class
         ]);
     }
 }
