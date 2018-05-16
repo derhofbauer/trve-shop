@@ -11,16 +11,22 @@ class SysRoleDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $permissions = CreateSysRoleTable::getPermissions();
-        $values = [
+        $permissions = \App\SysRole::getPermissions();
+        $values1 = [
             'name' => 'Super Admin',
             'description' => 'Allowed to do everything! :D'
         ];
+        $values2 = [
+            'name' => 'Just a user',
+            'description' => 'Allowed to do nothing :('
+        ];
 
         foreach ($permissions as $permission) {
-            $values[$permission] = true;
+            $values1[$permission] = true;
+            $values2[$permission] = false;
         }
 
-        DB::table('sys_role')->insert($values);
+        DB::table('sys_role')->insert($values1);
+        DB::table('sys_role')->insert($values2);
     }
 }

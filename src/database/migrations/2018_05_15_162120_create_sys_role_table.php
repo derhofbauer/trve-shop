@@ -17,7 +17,7 @@ class CreateSysRoleTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-            foreach (self::getPermissions() as $permission) {
+            foreach (\App\SysRole::getPermissions() as $permission) {
                 $table->boolean($permission);
             }
             $table->timestamps();
@@ -32,17 +32,5 @@ class CreateSysRoleTable extends Migration
     public function down()
     {
         Schema::dropIfExists('sys_role');
-    }
-
-    public static function getPermissions ()
-    {
-        return [
-            'productAdd',
-            'productEdit',
-            'productDelete',
-            'blogAdd',
-            'blogEdit',
-            'blogDelete'
-        ];
     }
 }

@@ -24,6 +24,7 @@
     "grunt-postcss": "^0.9.0"
   },
   "scripts": {
-    "attach": "docker exec -it trve-shop_apache_1 bash"
+    "attach": "docker exec -it trve-shop_apache_1 bash",
+    "migration-fresh": "docker exec -it trve-shop_apache_1 php artisan migrate:fresh --seed"
   }
 }
