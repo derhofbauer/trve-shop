@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 
 @section('content')
 <div class="container">
@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in into the Frontend!
+                    @auth('web')
+                        You are logged in into the Frontend!
+                    @else
+                        You are NOT logged in into the Frontend!
+                    @endauth
                 </div>
             </div>
         </div>

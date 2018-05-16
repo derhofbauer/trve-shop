@@ -40,24 +40,31 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                        @guest('admin')
                             <li><a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a></li>
                         @else
+                            <li><a href="{{ route('admin') }}" class="nav-link">{{ __('Dashboard') }}</a></li>
+                            {{--<li><a href="{{ route('admin.products') }}" class="nav-link">{{ __('Products') }}</a></li>--}}
+                            {{--<li><a href="{{ route('admin.categories') }}" class="nav-link">{{ __('Categories') }}</a></li>--}}
+                            @permitted ('usersShow')
+                                <li><a href="{{ route('admin.users') }}" class="nav-link">{{ __('Users') }}</a></li>
+                            @endpermitted
+                            {{--<li><a href="{{ route('admin.Orders') }}" class="nav-link">{{ __('Orders') }}</a></li>--}}
+                            {{--<li><a href="{{ route('admin.settings') }}" class="nav-link">{{ __('Settings') }}</a></li>--}}
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->firstname }} {{ Auth::user()->lastname }} <span class="caret"></span>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="{{ route('admin.logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>

@@ -33,9 +33,9 @@ class SysBeuser extends Authenticatable
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function role () {
-        return $this->hasOne('App\SysRole', 'role_id');
+        return $this->belongsTo('App\SysRole');
     }
 }
