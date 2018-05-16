@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Users</div>
+                    <div class="card-header">User: Edit ({{ $user->id }})</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,10 +14,12 @@
                             </div>
                         @endif
 
-                        @forelse ($users as $user)
-                            <div>{{ $user->username }} - <a href="{{ route('admin.users.backend.edit', ['id' => $user->id]) }}">{{ __('Edit') }}</a></div>
-                        @empty
-                            <p>No users found!</p>
+                        @isset ($user)
+                            <div>{{ $user->username }}</div>
+                        @endisset
+
+                        @empty ($user)
+                            <p>User not found!</p>
                         @endforelse
                     </div>
                 </div>

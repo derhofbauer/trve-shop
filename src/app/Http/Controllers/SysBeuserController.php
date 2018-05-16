@@ -2,17 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\SysBeuser;
 use Illuminate\Http\Request;
 
 class SysBeuserController extends Controller
 {
-    public function __construct()
+    public function __construct ()
     {
         $this->middleware('auth:admin');
     }
 
-    public function index() {
+    public function index ()
+    {
         $users = \App\SysBeuser::all();
         return view('backend/users-be', ['users' => $users]);
+    }
+
+    public function show ($id)
+    {
+        $user = SysBeuser::find($id);
+        return view('backend/users-be-single', ['user' => $user]);
     }
 }
