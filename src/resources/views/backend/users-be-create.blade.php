@@ -14,15 +14,7 @@
                             </div>
                         @endif
 
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                        @include('backend/partials/errors')
 
                         <form action="{{ route('admin.user.backend.create.submit') }}" method="post" role="form">
                             {{ csrf_field() }}
@@ -52,7 +44,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="{{ __('Save') }}">
+                                @include('backend/partials/form-buttons')
                             </div>
                         </form>
                     </div>
