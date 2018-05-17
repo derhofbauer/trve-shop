@@ -28,5 +28,14 @@ class SysBeuserController extends Controller
             'roles' => $roles
         ]);
     }
+
+    public function update (Request $request)
+    {
+        $validatedData = $request->validate([
+            'username' => 'required|string|unique:sys_beusers|min:4|max:16',
+            'email' => 'required|email|unique:sys_beusers'
+        ]);
+
+
     }
 }
