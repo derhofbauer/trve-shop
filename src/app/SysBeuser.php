@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class SysBeuser extends Authenticatable
 {
@@ -35,7 +36,13 @@ class SysBeuser extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function role () {
+    public function role ()
+    {
         return $this->belongsTo('App\SysRole');
+    }
+
+    public function setPassword ($password)
+    {
+        $this->password = Hash::make($password);
     }
 }

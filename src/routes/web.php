@@ -48,5 +48,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/users', 'SysBeuserController@index')->name('admin.users');
     Route::get('/users/backend', 'SysBeuserController@index')->name('admin.users.backend');
     Route::get('/users/backend/{id}', 'SysBeuserController@show')->name('admin.users.backend.edit');
-    Route::post('/users/backend/{id}', 'SysBeuserController@update')->name('admin.user.backend.submit');
+    Route::post('/users/backend/{id}', 'SysBeuserController@update')->name('admin.user.backend.edit.submit');
+    Route::get('/users/backend/create', 'SysBeuserController@createView')->name('admin.user.backend.create');
+    Route::post('/users/backend/create', 'SysBeuserController@create')->name('admin.user.backend.create.submit');
+    Route::get('/users/backend/delete/{id}', 'SysBeuserController@delete')->name('admin.users.backend.delete');
 });
