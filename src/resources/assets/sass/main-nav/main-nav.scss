@@ -1,0 +1,17 @@
+.main-nav {
+  background-color: $default-bg-color-darker;
+
+  grid-area: main-nav;
+}
+
+.nav {
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: $default-padding;
+    color: $color-font-inverted;
+  }
+}

@@ -1,22 +1,15 @@
 @extends('../layouts.backend')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="module">
+    <div class="module__header container"></div>
+    <div class="module__body container">
+        <div class="module__heading">
+            <h2>{{ __('Dashboard') }}</h2>
+        </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ Auth::user()->username }}, You are logged in to the Backend!
-                </div>
-            </div>
+        <div class="card">
+            {{ Auth::user()->username }}, You are logged in to the Backend!
         </div>
     </div>
 </div>

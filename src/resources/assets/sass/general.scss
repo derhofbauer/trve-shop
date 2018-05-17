@@ -1,9 +1,13 @@
-body.login {
-  background-color: $login-bg-color;
+body {
+  font-family: $default-font-sans-serif;
+
+  &.login {
+    background-color: $login-bg-color;
+  }
 }
 
 .main {
-  font-family: $default-font-sans-serif;
+  grid-area: content;
   background-color: $default-bg-color;
   
   &--login {

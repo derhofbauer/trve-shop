@@ -18,64 +18,34 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="app">
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <h1>{{ config('app.name', 'Laravel') }}</h1> [{{ config('app.version', 'a.b.c') }}]
+            </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest('admin')
-                            <li><a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a></li>
-                        @else
-                            <li><a href="{{ route('admin') }}" class="nav-link">{{ __('Dashboard') }}</a></li>
-                            {{--<li><a href="{{ route('admin.products') }}" class="nav-link">{{ __('Products') }}</a></li>--}}
-                            {{--<li><a href="{{ route('admin.categories') }}" class="nav-link">{{ __('Categories') }}</a></li>--}}
-                            @permitted ('usersShow')
-                                <li><a href="{{ route('admin.users') }}" class="nav-link">{{ __('Users') }}</a></li>
-                            @endpermitted
-                            {{--<li><a href="{{ route('admin.Orders') }}" class="nav-link">{{ __('Orders') }}</a></li>--}}
-                            {{--<li><a href="{{ route('admin.settings') }}" class="nav-link">{{ __('Settings') }}</a></li>--}}
-
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->username }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+            <div class="navbar__right">
+                User - <a href="{{ route('admin.logout') }}">{{ __('Logout') }}</a>
             </div>
         </nav>
 
-        <main class="py-4">
+        <div class="main-nav">
+            <nav class="nav--vertical">
+                <a href="{{ route('admin') }}" class="nav__item">{{ __('Dashboard') }}</a>
+                {{--<a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>--}}
+                {{--<a href="{{ route('admin.categories') }}" class="nav__item">{{ __('Categories') }}</a>--}}
+                @permitted ('usersShow')
+                <a href="{{ route('admin.users') }}" class="nav__item">{{ __('Users') }}</a>
+                @endpermitted
+                {{--<a href="{{ route('admin.Orders') }}" class="nav__item">{{ __('Orders') }}</a>--}}
+                {{--<a href="{{ route('admin.settings') }}" class="nav__item">{{ __('Settings') }}</a>--}}
+            </nav>
+        </div>
+
+        <main class="main">
             @yield('content')
         </main>
     </div>

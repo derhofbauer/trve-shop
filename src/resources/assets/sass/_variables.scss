@@ -1,6 +1,9 @@
 // defaults
 $default-font-sans-serif: "Roboto", sans-serif;
 $default-bg-color: #fff;
+$default-bg-color-dark: #EEEEEE;
+$default-bg-color-darkset: #111111;
+$default-bg-color-darker: #232322;
 $default-border-radius: 5px;
 $default-border-radius-small: 2px;
 $defaul-border-color: #D5D5D5;
@@ -18,7 +21,7 @@ $color-font: #000;
 $color-font-inverted: #fff;
 
 // Login
-$login-bg-color: #eeeeee;
+$login-bg-color: $default-bg-color-dark;
 $login-icon-size: 2.625rem;
 
 // Panel
@@ -32,3 +35,6 @@ $form-input-padding: $default-padding;
 $button-bg-color: #DEDEDE;
 $button-border-color: #C4C4C4;
 $button-bg-color-primary: $color-primary;
+
+// Navbar
+$navbar-bg-color: $default-bg-color-darkset;

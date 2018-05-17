@@ -1,0 +1,22 @@
+.navbar {
+  background-color: $navbar-bg-color;
+  width: 100%;
+  padding: $default-padding;
+  display: flex;
+  justify-content: space-between;
+
+  grid-area: navbar;
+
+  &, * {
+    color: $color-font-inverted;
+  }
+
+  &__brand {
+    h1 {
+      display: inline;
+    }
+  }
+
+  &__right {
+  }
+}
