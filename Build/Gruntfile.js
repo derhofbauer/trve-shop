@@ -14,7 +14,8 @@ module.exports = function(grunt) {
             fonts: '<%= paths.src %>public/fonts/',
             img: '<%= paths.src %>public/images/',
             js_src: '<%= paths.src %>resources/assets/js/',
-            js: '<%= paths.src %>public/js/'
+            js: '<%= paths.src %>public/js/',
+            node_modules: '<%= paths.src %>node_modules/'
         },
         banner: '/*!\n' +
         ' * Trve Shop v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
@@ -31,8 +32,9 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "<%= paths.js %>app.js": [
+                        "<%= paths.node_modules %>feather-icons/dist/feather.min.js",
                         "<%= paths.js_src %>app.js"
-                    ]
+                    ],
                 }
             }
         },

@@ -1,8 +1,34 @@
+// defaults
+$default-font-sans-serif: "Roboto", sans-serif;
+$default-bg-color: #fff;
+$default-border-radius: 5px;
+$default-border-radius-small: 2px;
+$defaul-border-color: #D5D5D5;
+$default-border-width: 1px;
+$default-border: $default-border-width solid $defaul-border-color;
 
-// Body
-$body-bg: #f5f8fa;
+// Paddings & Margins
+$default-step: 0.3125rem; // 5px;
+$default-padding: 3 * $default-step;
+$default-margin: $default-padding;
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+// Colors
+$color-primary: #FF9900;
+$color-font: #000;
+$color-font-inverted: #fff;
+
+// Login
+$login-bg-color: #eeeeee;
+$login-icon-size: 2.625rem;
+
+// Panel
+$panel-bg-color: $default-bg-color;
+$panel-border: $default-border;
+
+// Form
+$form-input-padding: $default-padding;
+
+// Buttons
+$button-bg-color: #DEDEDE;
+$button-border-color: #C4C4C4;
+$button-bg-color-primary: $color-primary;

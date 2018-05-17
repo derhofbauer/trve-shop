@@ -1,0 +1,12 @@
+.form-control {
+  font-size:     1rem;
+  border-radius: $default-border-radius-small;
+  width:         100%;
+  padding:       $form-input-padding;
+
+  border:        $default-border;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: $default-margin;
+}

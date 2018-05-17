@@ -1,0 +1,12 @@
+body.login {
+  background-color: $login-bg-color;
+}
+
+.main {
+  font-family: $default-font-sans-serif;
+  background-color: $default-bg-color;
+  
+  &--login {
+    background-color: $login-bg-color;
+  }
+}

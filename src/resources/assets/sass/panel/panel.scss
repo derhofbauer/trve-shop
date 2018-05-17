@@ -1,0 +1,32 @@
+.panel {
+  padding: 2 * $default-padding;
+  background-color: $panel-bg-color;
+  border-radius: $default-border-radius;
+  border: $panel-border;
+
+  &__heading {
+    margin-bottom: $default-margin;
+  }
+
+  &--login {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+
+    .panel__heading {
+      text-align: center;
+
+      .feather {
+        stroke: $color-primary;
+      }
+    }
+
+    .control-label {
+      display: none;
+    }
+    .btn-primary {
+      width: 100%;
+    }
+  }
+}
