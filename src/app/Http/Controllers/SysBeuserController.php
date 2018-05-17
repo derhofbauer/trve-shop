@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\SysBeuser;
+use App\SysRole;
 use Illuminate\Http\Request;
 
 class SysBeuserController extends Controller
@@ -21,6 +22,11 @@ class SysBeuserController extends Controller
     public function show ($id)
     {
         $user = SysBeuser::find($id);
-        return view('backend/users-be-single', ['user' => $user]);
+        $roles = SysRole::all();
+        return view('backend/users-be-single', [
+            'user' => $user,
+            'roles' => $roles
+        ]);
+    }
     }
 }

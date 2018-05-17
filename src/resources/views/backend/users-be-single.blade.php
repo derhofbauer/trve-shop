@@ -15,7 +15,36 @@
                         @endif
 
                         @isset ($user)
-                            <div>{{ $user->username }}</div>
+                            <form action="{{ route('admin.user.backend.submit', ['id' => $user->id]) }}" method="post" role="form">
+                                {{ csrf_field() }}
+                                <div class="hidden">
+                                    <input type="hidden" id="userid" name="userid" value="{{ $user->id }}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="username">{{ __('Username') }}</label>
+                                    <input type="text" id="username" class="form-control" name="username" value="{{ $user->username }}" required autofocus placeholder="{{ __('Username placeholder') }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">{{ __('Email')}}</label>
+                                    <input type="email" id="email" class="form-control" name="email" value="{{ $user->email }}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">{{ __('Role') }}</label>
+                                    <select name="role" id="role" class="form-control" required>
+                                        @foreach ($roles as $role)
+                                            @if ($user->role_id == $role->id)
+                                                <option value="{{ $role->id }}" selected>{{ $role->name }}</option>
+                                            @else
+                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" value="{{ __('Save') }}">
+                                </div>
+                            </form>
                         @endisset
 
                         @empty ($user)
