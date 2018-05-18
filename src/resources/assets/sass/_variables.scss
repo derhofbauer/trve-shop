@@ -10,6 +10,9 @@ $defaul-border-color: #D5D5D5;
 $default-border-width: 1px;
 $default-border: $default-border-width solid $defaul-border-color;
 
+// Fonts
+$h2-size: 2.5rem;
+
 // Paddings & Margins
 $default-step: 0.3125rem; // 5px;
 $default-padding: 3 * $default-step;
@@ -45,3 +48,8 @@ $card-table-head-bg-color: #ededed;
 $card-table-border: 1px solid #ccc;
 $card-table-odd-bg-color: #F7F7F7;
 $card-table-even-bg-color: #FAFAFA;
+$card-table-icon-field-width: 4rem;
+
+// Icons
+$icon-size-button: 2rem;
+$icon-size-card: 1rem;

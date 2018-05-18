@@ -3,13 +3,27 @@
   background-color: $button-bg-color;
   border-width:     $default-border-width;
   border-style:     solid;
-  border-color: $button-border-color;
-  border-radius: $default-border-radius-small;
-  cursor: pointer;
+  border-color:     $button-border-color;
+  border-radius:    $default-border-radius-small;
+  cursor:           pointer;
 
   &-primary {
     background-color: $color-primary;
-    border-color: $color-primary;
-    color: $color-font-inverted;
+    border-color:     $color-primary;
+    color:            $color-font-inverted;
+  }
+
+  &-icon {
+    padding: 0;
+    display: inline-block;
+    color:   #000;
+    height:  $icon-size-button;
+    width:   $icon-size-button;
+    text-align: center;
+    vertical-align: middle;
+
+    svg {
+      margin-top: 3px;
+    }
   }
 }

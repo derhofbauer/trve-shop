@@ -16,7 +16,7 @@
 
                         @include('backend/partials/errors')
 
-                        <form action="{{ route('admin.user.backend.create.submit') }}" method="post" role="form">
+                        <form action="{{ route('admin.users.backend.create.submit') }}" method="post" role="form">
                             {{ csrf_field() }}
 
                             <div class="form-group">

@@ -1,7 +1,27 @@
 @extends('../layouts.backend')
 
 @section('content')
-    <div class="container">
+    <div class="module">
+        <div class="module__header container">
+            <a href="{{ route('admin.users.backend') }}" class="btn btn-icon">
+                <i data-feather="x"></i>
+            </a>
+            <button class="btn btn-icon" type="submit">
+                <i data-feather="save"></i>
+            </button>
+            <a href="{{ route('admin.users.backend.delete', ['id' => $user->id]) }}" class="btn btn-icon">
+                <i data-feather="trash-2"></i>
+            </a>
+        </div>
+    </div>
+    <div class="module__body container">
+        <div class="form">
+            <div class="form__header">
+                <h2>Edit Backend User "{{ $user->username }}"</h2>
+            </div>
+        </div>
+    </div>
+    {{--<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -17,7 +37,7 @@
                         @include('backend/partials/errors')
 
                         @isset ($user)
-                            <form action="{{ route('admin.user.backend.edit.submit', ['id' => $user->id]) }}" method="post" role="form">
+                            <form action="{{ route('admin.users.backend.edit.submit', ['id' => $user->id]) }}" method="post" role="form">
                                 {{ csrf_field() }}
 
                                 <div class="form-group">
@@ -49,5 +69,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection

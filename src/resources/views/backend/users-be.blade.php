@@ -3,7 +3,9 @@
 @section('content')
     <div class="module">
         <div class="module__header container">
-            <a href="{{ route('admin.user.backend.create') }}">{{ __('New') }}</a>
+            <a href="{{ route('admin.users.backend.create') }}" class="btn btn-icon">
+                <i data-feather="plus"></i>
+            </a>
         </div>
         <div class="module__body container">
             <div class="card">
@@ -14,27 +16,38 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>{{-- Add --}}</th>
+                            <th>
+                                <a href="{{ route('admin.users.backend.create') }}">
+                                    <i class="btn btn-icon" data-feather="plus"></i>
+                                </a>
+                            </th>
                             <th>{{ __('ID') }}</th>
                             <th>{{ __('Username') }}</th>
-                            <th>{{ __('Password') }}</th>
+                            <th>{{ __('E-Mail') }}</th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse ($users as $user)
+                        @foreach ($users as $user)
                             <tr>
-                                <td>{{-- Icon --}}</td>
+                                <td>
+                                    <a href="{{ route('admin.users.backend.edit', ['id' => $user->id]) }}">
+                                        <i class="icon icon--card" data-feather="user"></i>
+                                    </a>
+                                </td>
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->email  }}</td>
                                 <td>
-                                    <a href="{{ route('admin.users.backend.edit', ['id' => $user->id]) }}">{{ __('Edit') }}</a>
+                                    <a href="{{ route('admin.users.backend.edit', ['id' => $user->id]) }}" class="btn btn-icon">
+                                        <i data-feather="edit-2"></i>
+                                    </a>
+                                    <a href="{{ route('admin.users.backend.delete', ['id' => $user->id]) }}" class="btn btn-icon">
+                                        <i data-feather="trash-2"></i>
+                                    </a>
                                 </td>
                             </tr>
-                        @empty
-                            <p>No users found!</p>
-                        @endforelse
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
