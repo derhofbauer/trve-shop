@@ -3,10 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/SysBeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/SysBeuserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Gruntfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/app.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/assets/sass/icons/icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/sass/icons/icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-group.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-group.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-tab.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-tab.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/module.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/module.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/table.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,21 +32,12 @@
     <executablePath>composer</executablePath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AppServiceProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Build/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users-be-edit.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="391">
+              <caret line="53" column="78" lean-forward="true" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -50,8 +53,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>uid</find>
-      <find>admin\controller</find>
       <find>providers</find>
       <find>case</find>
       <find>admin.das</find>
@@ -80,6 +81,8 @@
       <find>h2</find>
       <find>admin.user.backend</find>
       <find>1rem</find>
+      <find>module__header--right</find>
+      <find>class=&quot;right&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>firstname</replace>
@@ -90,6 +93,8 @@
       <replace>nav__item</replace>
       <replace>admin.users.backend</replace>
       <replace>$icon-size-card</replace>
+      <replace>right</replace>
+      <replace>class=&quot;module__header--right&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -98,20 +103,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/BlogController.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/users-be-single.blade.php" />
         <option value="$PROJECT_DIR$/src/app/SysBeuser.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/partials/errors.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/partials/form-buttons.blade.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/AdminLoginController.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/reset.css" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/debug.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/reset.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/helpers.scss" />
-        <option value="$PROJECT_DIR$/Build/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/panel/general.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/form/form.scss" />
@@ -121,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/resources/assets/sass/general.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/grid.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/main-nav/main-nav.scss" />
-        <option value="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" />
         <option value="$PROJECT_DIR$/src/resources/assets/sass/navbar/navbar.scss" />
         <option value="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/admin.blade.php" />
@@ -147,8 +147,13 @@
         <option value="$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/components/form.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/components/form-input.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/components/form-select.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" />
+        <option value="$PROJECT_DIR$/Build/Gruntfile.js" />
       </list>
     </option>
   </component>
@@ -243,7 +248,7 @@
       <path value="$PROJECT_DIR$/src/vendor/sebastian/exporter" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="181" />
     <option name="y" value="-174" />
     <option name="width" value="1910" />
@@ -267,6 +272,11 @@
             <path>
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="Build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,6 +296,27 @@
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="app.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,15 +333,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
@@ -336,19 +358,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources/views/components" />
-      <recent name="$PROJECT_DIR$/src/resources/views/backend" />
-      <recent name="$PROJECT_DIR$/src/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/src/resources/views/frontend" />
-      <recent name="$PROJECT_DIR$/src/app/Http/Controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/resources/views/backend/auth" />
       <recent name="$PROJECT_DIR$/src/resources/views/backend" />
       <recent name="$PROJECT_DIR$/src/resources/views/frontend" />
       <recent name="$PROJECT_DIR$/src/resources/views" />
       <recent name="$PROJECT_DIR$/src/resources/views/partials" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources/views/components" />
+      <recent name="$PROJECT_DIR$/src/resources/views/backend" />
+      <recent name="$PROJECT_DIR$/src/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/src/resources/views/frontend" />
+      <recent name="$PROJECT_DIR$/src/app/Http/Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -366,7 +388,7 @@
   <component name="SvnConfiguration">
     <configuration />
   </component>
-  <component name="TYPO3Settings" version="v0.2.43" />
+  <component name="TYPO3Settings" version="v0.2.44" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="" />
@@ -387,11 +409,13 @@
       <workItem from="1526550006850" duration="3104000" />
       <workItem from="1526556166503" duration="7045000" />
       <workItem from="1526656448093" duration="4849000" />
+      <workItem from="1526843995579" duration="39000" />
+      <workItem from="1526844051063" duration="4181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75674000" />
+    <option name="totallyTimeSpent" value="79986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -400,34 +424,22 @@
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32963374" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32963374" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32741398" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.32963374" />
-      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="18" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="19" visible="true" weight="0.3286026" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,9 +454,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/login/general.scss" />
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/debug.scss" />
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/AdminLoginController.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/helpers.scss" />
     <entry file="file://$PROJECT_DIR$/src/composer.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -459,10 +468,8 @@
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/form/form.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/basic.blade.php" />
-    <entry file="file://$PROJECT_DIR$/Build/Gruntfile.js" />
     <entry file="file://$PROJECT_DIR$/src/config/app.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/main-nav/main-nav.scss" />
-    <entry file="file://$PROJECT_DIR$/src/public/css/app.css" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/grid.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/navbar/navbar.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" />
@@ -470,7 +477,6 @@
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/module.blade.php" />
     <entry file="file://$USER_HOME$/wibs/scripts/setup.sh" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/admin.blade.php" />
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/app.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/reset.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/_variables.scss" />
@@ -480,32 +486,15 @@
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/icons/icons.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/panel/panel.scss" />
     <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/text.scss" />
-    <entry file="file://$PROJECT_DIR$/src/app/Http/ViewHelpers/TableViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-new.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/thead.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/ViewHelpers/TableViewHelper.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-new.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/thead.blade.php" />
     <entry file="file://$PROJECT_DIR$/src/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/components/card.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -514,20 +503,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/table-full.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/table-full.blade.php" />
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/SysBeuserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,13 +518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/module-form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/module-form.blade.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -587,24 +561,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php">
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-input.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="23">
+          <caret line="1" column="129" lean-forward="true" selection-start-line="1" selection-start-column="129" selection-end-line="1" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-select.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public/css/app.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/sass/module/module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        <state relative-caret-position="276">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Build/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="53" column="78" lean-forward="true" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
         </state>
       </provider>
     </entry>

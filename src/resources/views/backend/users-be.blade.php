@@ -6,6 +6,10 @@
             <a href="{{ route('admin.users.backend.create') }}" class="btn btn-icon">
                 <i data-feather="plus"></i>
             </a>
+
+            <div class="module__header--right">
+                {{ __('Path:') }} {{ __('Backend User') }}
+            </div>
         @endslot
 
         @slot('body')

@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('components/form-group', 'formgroup');
         Blade::component('components/form-tab', 'formtab');
         Blade::component('components/table', 'table');
+        Blade::component('components/form-input', 'forminput');
+        Blade::component('components/form-select', 'formselect');
     }
 
     /**

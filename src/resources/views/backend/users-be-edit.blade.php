@@ -10,6 +10,9 @@
             <a href="{{ route('admin.users.backend.delete', ['id' => $user->id]) }}" class="btn btn-icon">
                 <i data-feather="trash-2"></i>
             </a>
+            <div class="module__header--right">
+                {{ __('Path:') }} {{ __('Backend User') }} [{{ $user->id }}]
+            </div>
         @endslot
 
         @slot('body')
@@ -27,24 +30,16 @@
                         @endslot
                         @slot('body')
                             @formgroup
-                                <label for="username">{{ __('Username') }}</label>
-                                <input type="text" id="username" class="form-control" name="username" value="{{ !empty(old('username')) ? old('username') : $user->username }}" required autofocus placeholder="{{ __('Username placeholder') }}">
+                            @forminput(['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true, 'value' => $user->username])
+                            @endforminput
                             @endformgroup
                             @formgroup
-                                <label for="email">{{ __('Email')}}</label>
-                                <input type="email" id="email" class="form-control" name="email" value="{{ !empty(old('email')) ? old('email') : $user->email }}" required>
+                            @forminput(['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email])
+                            @endforminput
                             @endformgroup
                             @formgroup
-                                <label for="role">{{ __('Role') }}</label>
-                                <select name="role_id" id="role_id" class="form-control" required>
-                                    @foreach ($roles as $role)
-                                        @if ($user->role_id == $role->id)
-                                            <option value="{{ $role->id }}" selected>{{ $role->name }}</option>
-                                        @else
-                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
+                                @formselect(['label' => __('Role'), 'id' => 'role_id', 'required' => true, 'data' => $roles, 'value' => $user->role_id])
+                                @endformselect
                             @endformgroup
                             @formgroup
                                 @include('backend/partials/form-buttons')

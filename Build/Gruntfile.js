@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files: {
-                    '<%= paths.css %>app.min.css': '<%= paths.sass %>app.scss'
+                    '<%= paths.css %>app.sass.min.css': '<%= paths.sass %>app.scss'
                 }
             }
         },
