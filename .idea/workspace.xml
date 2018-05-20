@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/app.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/sass/icons/icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/sass/icons/icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/sass/module/module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/partials/form-submit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be-create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/users-be.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-group.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-group.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-tab.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-tab.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/module.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/module.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/table.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +230,7 @@
       <path value="$PROJECT_DIR$/src/vendor/sebastian/exporter" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="181" />
     <option name="y" value="-174" />
     <option name="width" value="1910" />
@@ -410,16 +392,15 @@
       <workItem from="1526556166503" duration="7045000" />
       <workItem from="1526656448093" duration="4849000" />
       <workItem from="1526843995579" duration="39000" />
-      <workItem from="1526844051063" duration="4181000" />
+      <workItem from="1526844051063" duration="4255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79986000" />
+    <option name="totallyTimeSpent" value="80060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
