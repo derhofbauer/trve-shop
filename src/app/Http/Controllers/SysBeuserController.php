@@ -15,7 +15,7 @@ class SysBeuserController extends Controller
 
     public function index ()
     {
-        $users = \App\SysBeuser::all();
+        $users = SysBeuser::all(['id', 'username', 'email']);
         return view('backend/users-be', ['users' => $users]);
     }
 
