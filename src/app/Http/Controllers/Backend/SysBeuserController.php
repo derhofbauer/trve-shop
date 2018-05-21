@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\SysBeuser;
 use App\SysRole;
 use Illuminate\Http\Request;
 
-class SysBeuserController extends Controller
+class SysBeuserController extends \App\Http\Controllers\Controller
 {
     public function __construct ()
     {

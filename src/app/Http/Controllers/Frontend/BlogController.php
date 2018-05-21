@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 use App\SysBlogEntry;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class BlogController extends \App\Http\Controllers\Controller
 {
     /**
      * BlogController constructor.

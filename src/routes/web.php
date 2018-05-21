@@ -28,28 +28,28 @@ Route::prefix('home')->group(function () {
      */
     Auth::routes();
 
-    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/', 'Frontend\HomeController@index')->name('home');
 });
 
 Route::prefix('blog')->group(function () {
-    Route::get('/', 'BlogController@index')->name('blog');
-    Route::get('/{id}/{slug?}', 'BlogController@show')->name('blog.show');
+    Route::get('/', 'Frontend\BlogController@index')->name('blog');
+    Route::get('/{id}/{slug?}', 'Frontend\BlogController@show')->name('blog.show');
 });
 
 /**
  * Backend routes
  */
 Route::prefix('admin')->group(function () {
-    Route::get('/', 'AdminController@index')->name('admin');
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+    Route::get('/', 'Backend\AdminController@index')->name('admin');
+    Route::get('/login', 'Backend\Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Backend\Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/logout', 'Backend\Auth\AdminLoginController@logout')->name('admin.logout');
 
-    Route::get('/users', 'SysBeuserController@index')->name('admin.users');
-    Route::get('/users/backend', 'SysBeuserController@index')->name('admin.users.backend');
-    Route::get('/users/backend/{id}', 'SysBeuserController@show')->name('admin.users.backend.edit');
-    Route::post('/users/backend/{id}', 'SysBeuserController@update')->name('admin.users.backend.edit.submit');
-    Route::get('/users/backend/create', 'SysBeuserController@createView')->name('admin.users.backend.create');
-    Route::post('/users/backend/create', 'SysBeuserController@create')->name('admin.users.backend.create.submit');
-    Route::get('/users/backend/delete/{id}', 'SysBeuserController@delete')->name('admin.users.backend.delete');
+    Route::get('/users', 'Backend\SysBeuserController@index')->name('admin.users');
+    Route::get('/users/backend', 'Backend\SysBeuserController@index')->name('admin.users.backend');
+    Route::get('/users/backend/{id}', 'Backend\SysBeuserController@show')->name('admin.users.backend.edit');
+    Route::post('/users/backend/{id}', 'Backend\SysBeuserController@update')->name('admin.users.backend.edit.submit');
+    Route::get('/users/backend/create', 'Backend\SysBeuserController@createView')->name('admin.users.backend.create');
+    Route::post('/users/backend/create', 'Backend\SysBeuserController@create')->name('admin.users.backend.create.submit');
+    Route::get('/users/backend/delete/{id}', 'Backend\SysBeuserController@delete')->name('admin.users.backend.delete');
 });

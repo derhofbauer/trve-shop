@@ -28,7 +28,7 @@
             </div>
 
             <div class="navbar__right">
-                User - <a href="{{ route('admin.logout') }}">{{ __('Logout') }}</a>
+                <i data-feather="user"></i> {{ Auth::user()->username }} - <a href="{{ route('admin.logout') }}">{{ __('Logout') }}</a>
             </div>
         </nav>
 
