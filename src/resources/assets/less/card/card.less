@@ -1,0 +1,62 @@
+.card {
+  &__header {
+    background-color:        @card-header-bg-color;
+    padding:                 @default-padding;
+    font-weight:             bold;
+    border-top-left-radius:  @default-border-radius;
+    border-top-right-radius: @default-border-radius;
+    border:                  @card-table-border;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    background-color: @card-table-head-bg-color;
+    border:           @card-table-border;
+    text-align:       left;
+    font-weight:      bold;
+  }
+  tbody {
+    background-color: @card-table-odd-bg-color;
+  }
+
+  tr {
+    border: @card-table-border;
+
+    &:nth-child(even) {
+      background-color: @card-table-even-bg-color;
+    }
+  }
+
+  td {
+    padding-top:    @default-padding;
+    padding-bottom: @default-padding;
+
+    &:first-child {
+      padding-left: @default-step;
+    }
+  }
+
+  th {
+    vertical-align: middle;
+
+    &:first-child {
+      padding-top:    @default-step;
+      padding-bottom: @default-step;
+      padding-left:   @default-step;
+    }
+  }
+
+  td,
+  th {
+    &:first-child {
+      width: @card-table-icon-field-width;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -9,7 +9,6 @@ module.exports = function(grunt) {
             root: '../',
             src: '<%= paths.root %>src/',
             less: '<%= paths.src %>resources/assets/less/',
-            sass: '<%= paths.src %>resources/assets/sass/',
             css: '<%= paths.src %>public/css/',
             fonts: '<%= paths.src %>public/fonts/',
             img: '<%= paths.src %>public/images/',
@@ -39,20 +38,9 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            layout: {
-                src: '<%= paths.less %>layout.less',
-                dest: '<%= paths.css %>layout.css'
-            }
-        },
-        sass: {
             app: {
-                options: {
-                    style: 'compressed',
-                    noCache: true
-                },
-                files: {
-                    '<%= paths.css %>app.sass.min.css': '<%= paths.sass %>app.scss'
-                }
+                src: '<%= paths.less %>app.less',
+                dest: '<%= paths.css %>app.css'
             }
         },
         postcss: {
@@ -68,8 +56,8 @@ module.exports = function(grunt) {
                     })
                 ]
             },
-            layout: {
-                src: '<%= paths.css %>layout.css'
+            app: {
+                src: '<%= paths.css %>app.css'
             }
         },
         cssmin: {
@@ -77,9 +65,9 @@ module.exports = function(grunt) {
                 keepSpecialComments: '*',
                 advanced: false
             },
-            layout: {
-                src: '<%= paths.css %>layout.css',
-                dest: '<%= paths.css %>layout.min.css'
+            app: {
+                src: '<%= paths.css %>app.css',
+                dest: '<%= paths.css %>app.min.css'
             }
         },
         image: {
@@ -102,10 +90,6 @@ module.exports = function(grunt) {
                 files: '<%= paths.less %>**/*.less',
                 tasks: ['less', 'postcss', 'cssmin']
             },
-            sass: {
-                files: '<%= paths.sass %>**/*.scss',
-                tasks: ['sass']
-            },
             javascript: {
                 files: '<%= paths.js_src %>**/*.js',
                 tasks: ['js']
@@ -118,7 +102,6 @@ module.exports = function(grunt) {
      */
     grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
@@ -127,7 +110,7 @@ module.exports = function(grunt) {
     /**
      * Grunt update task
      */
-    grunt.registerTask('css', ['less', 'sass', 'postcss', 'cssmin']);
+    grunt.registerTask('css', ['less', 'postcss', 'cssmin']);
     grunt.registerTask('js', ['uglify']);
     grunt.registerTask('build', ['js', 'css', 'image']);
     grunt.registerTask('default', ['build']);
