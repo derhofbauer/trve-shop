@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use App\SysBeuser;
 use App\SysRole;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class SysBeuserController extends \App\Http\Controllers\Controller
 {
@@ -16,17 +18,33 @@ class SysBeuserController extends \App\Http\Controllers\Controller
     public function index ()
     {
         $users = SysBeuser::all(['id', 'username', 'email']);
-        return view('backend/users-be', ['users' => $users]);
+        return view('backend/list', self::prepareConfig([
+            'thead' => [
+                __('ID'),
+                __('Username'),
+                __('Email')
+            ],
+            'data' => $users
+        ]));
     }
 
     public function show ($id)
     {
         $user = SysBeuser::find($id);
         $roles = SysRole::all('name', 'id');
-        return view('backend/users-be-edit', [
-            'user' => $user,
-            'roles' => $roles
-        ]);
+        return view('backend/edit', self::prepareConfig([
+            'object' => $user,
+            'tabs' => [
+                [
+                    'title' => __('General'),
+                    'fields' => [
+                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true, 'value' => $user->username],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email],
+                        ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles, 'value' => $user->role_id]
+                    ]
+                ]
+            ]
+        ]));
     }
 
     public function update (Request $request, $id)
@@ -47,9 +65,20 @@ class SysBeuserController extends \App\Http\Controllers\Controller
     public function createView ()
     {
         $roles = SysRole::all('name', 'id');
-        return view('backend/users-be-create', [
-            'roles' => $roles
-        ]);
+        return view('backend/create', self::prepareConfig([
+            'tabs' => [
+                [
+                    'title' => __('General'),
+                    'fields' => [
+                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true],
+                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password placeholder'), 'required' => true],
+                        ['label' => __('Password repeat'), 'type'=> 'password', 'id' => 'password_repeat', 'placeholder' => __('Password repeat'), 'required' => true],
+                        ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles]
+                    ]
+                ]
+            ]
+        ]));
     }
 
     public function create (Request $request)
@@ -63,11 +92,16 @@ class SysBeuserController extends \App\Http\Controllers\Controller
         return redirect()->route('admin.users.backend');
     }
 
-    public function delete ($id)
+    public function delete (Request $request, $id)
     {
-        $user = SysBeuser::find($id);
-        $user->delete();
-
+        if (Auth::user()->id != $id) {
+            $user = SysBeuser::find($id);
+            $user->delete();
+        } else {
+            // @todo implement error messages
+            Session::flash('status', 'You cannot delete your current user.');
+            Session::flash('status-class', 'alert-error');
+        }
         return redirect()->route('admin.users.backend');
     }
 
@@ -80,5 +114,22 @@ class SysBeuserController extends \App\Http\Controllers\Controller
             'password_repeat' => 'sometimes|same:password',
             'role_id' => 'required|numeric'
         ];
+    }
+
+    public static function prepareConfig ($additionalConfig)
+    {
+        return array_merge([
+            'dataType' => __('Backend User'),
+            'icon' => 'user',
+            'routes' => [
+                'create' => 'admin.users.backend.create',
+                'create-submit' => 'admin.users.backend.create.submit',
+                'edit' => 'admin.users.backend.edit',
+                'edit-submit' => 'admin.users.backend.edit.submit',
+                'delete' => 'admin.users.backend.delete',
+                'base' => 'admin.users.backend'
+            ],
+            'identifier' => 'username'
+        ], $additionalConfig);
     }
 }

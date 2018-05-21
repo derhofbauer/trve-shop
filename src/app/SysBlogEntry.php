@@ -14,6 +14,12 @@ class SysBlogEntry extends Model
     protected $table = 'sys_blog_entry';
 
     /**
+     * @var string
+     */
+    protected $guard = 'admin';
+
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -22,6 +28,13 @@ class SysBlogEntry extends Model
         'title',
         'abstract',
         'content',
-        'beuser_id'
+        'beuser_id',
+        'created_at',
+        'updated_at'
     ];
+
+    public function author ()
+    {
+        return $this->hasOne('App\SysBeUser');
+    }
 }

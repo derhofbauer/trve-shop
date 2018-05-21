@@ -1,0 +1,22 @@
+@foreach($tab['fields'] as $field)
+    @formgroup
+    @switch($field['type'])
+    @case('select')
+        @formselect($field)
+        @endformselect
+        @break
+    @case('textarea')
+        @formtextarea($field)
+        @endformtextarea
+        @break
+    @case('editor')
+        @formeditor($field)
+        @endformeditor
+        @break
+    @default
+        @forminput($field)
+        @endforminput
+        @break
+    @endswitch
+    @endformgroup
+@endforeach

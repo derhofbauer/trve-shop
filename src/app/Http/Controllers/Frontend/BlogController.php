@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BlogController extends \App\Http\Controllers\Controller
 {
     /**
-     * BlogController constructor.
+     * SysBlogEntryController constructor.
      *
      * @return void
      */

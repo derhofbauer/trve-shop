@@ -17,7 +17,7 @@
 //Route::get('/', function () {
 //    return view('frontend/welcome');
 //})->name('root');
-Route::get('/', 'HomeController@index')->name('root');
+Route::get('/', 'Frontend\HomeController@index')->name('root');
 
 /**
  * Frontend routes
@@ -32,8 +32,8 @@ Route::prefix('home')->group(function () {
 });
 
 Route::prefix('blog')->group(function () {
-    Route::get('/', 'Frontend\BlogController@index')->name('blog');
-    Route::get('/{id}/{slug?}', 'Frontend\BlogController@show')->name('blog.show');
+    Route::get('/', 'Frontend\SysBlogEntryController@index')->name('blog');
+    Route::get('/{id}/{slug?}', 'Frontend\SysBlogEntryController@show')->name('blog.show');
 });
 
 /**
@@ -52,4 +52,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/users/backend/create', 'Backend\SysBeuserController@createView')->name('admin.users.backend.create');
     Route::post('/users/backend/create', 'Backend\SysBeuserController@create')->name('admin.users.backend.create.submit');
     Route::get('/users/backend/delete/{id}', 'Backend\SysBeuserController@delete')->name('admin.users.backend.delete');
+
+    Route::get('/blog', 'Backend\SysBlogEntryController@index')->name('admin.blog');
+    Route::get('/blog/{id}', 'Backend\SysBlogEntryController@show')->name('admin.blog.edit');
+    Route::post('/blog/{id}', 'Backend\SysBlogEntryController@update')->name('admin.blog.edit.submit');
+    Route::get('/blog/create', 'Backend\SysBlogEntryController@createView')->name('admin.blog.create');
+    Route::post('/blog/create', 'Backend\SysBlogEntryController@create')->name('admin.blog.create.submit');
+    Route::get('/blog/delete/{id}', 'Backend\SysBlogEntryController@delete')->name('admin.blog.delete');
 });
