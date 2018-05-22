@@ -40,8 +40,11 @@
                 @permitted('blogPostsShow')
                     <a href="{{ route('admin.blog') }}" class="nav__item">{{ __('Blog') }}</a>
                 @endpermitted
-                @permitted ('usersShow')
+                @permitted ('beusersShow')
                     <a href="{{ route('admin.users') }}" class="nav__item">{{ __('Users') }}</a>
+                @endpermitted
+                @permitted('feusersShow')
+                    <a href="{{ route('admin.users.frontend') }}" class="nav__item nav__item--sub">{{ __('Frontend User') }}</a>
                 @endpermitted
                 {{--<a href="{{ route('admin.Orders') }}" class="nav__item">{{ __('Orders') }}</a>--}}
                 {{--<a href="{{ route('admin.settings') }}" class="nav__item">{{ __('Settings') }}</a>--}}

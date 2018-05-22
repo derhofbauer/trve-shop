@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class SysFeuser extends Authenticatable
 {
@@ -31,4 +32,9 @@ class SysFeuser extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function setPassword ($password)
+    {
+        $this->password = Hash::make($password);
+    }
 }

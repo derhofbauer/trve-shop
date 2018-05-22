@@ -126,7 +126,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
             'username' => 'required|string|min:4|max:16|unique:sys_beusers',
             'email' => 'required|email|unique:sys_beusers',
             'password' => 'sometimes|required|string|min:8|max:32',
-            'password_repeat' => 'sometimes|same:password',
+            'password_repeat' => 'sometimes|required|same:password',
             'role_id' => 'required|numeric|exists:sys_role,id'
         ];
     }

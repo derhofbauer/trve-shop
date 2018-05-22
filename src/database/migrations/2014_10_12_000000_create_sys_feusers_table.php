@@ -19,7 +19,7 @@ class CreateSysfeusersTable extends Migration
             $table->string('password');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

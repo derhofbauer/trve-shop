@@ -44,10 +44,14 @@ class SysRole extends Model
             'blogPostsAdd',
             'blogPostsEdit',
             'blogPostsDelete',
-            'usersShow',
-            'usersEdit',
-            'usersDelete',
-            'usersAdd'
+            'beusersShow',
+            'beusersEdit',
+            'beusersDelete',
+            'beusersAdd',
+            'feusersShow',
+            'feusersEdit',
+            'feusersAdd',
+            'feusersDelete'
         ];
     }
 }
