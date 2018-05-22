@@ -23,7 +23,7 @@
                     </a>
                 </td>
                 @foreach($object->toArray() as $propertyName => $property)
-                    @if (!in_array($propertyName, $ignoreData))
+                    @if (!isset($ignoreData) || !in_array($propertyName, $ignoreData))
                         <td>{{ $property }}</td>
                     @endif
                 @endforeach
@@ -36,7 +36,7 @@
                     <a href="{{ route($routes['edit'], ['id' => $object->id]) }}" class="btn btn-icon">
                         <i data-feather="edit-2"></i>
                     </a>
-                    <a href="{{ route($routes['delete'], ['id' => $object->id]) }}" class="btn btn-icon">
+                    <a href="{{ route($routes['delete'], ['id' => $object->id]) }}" class="btn btn-icon" data-modal="confirm-delete">
                         <i data-feather="trash-2"></i>
                     </a>
                 </td>

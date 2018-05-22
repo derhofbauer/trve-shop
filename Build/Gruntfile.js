@@ -33,6 +33,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "<%= paths.js %>app.js": [
+                        "<%= paths.node_modules %>jquery/dist/jquery.min.js",
                         "<%= paths.node_modules %>feather-icons/dist/feather.min.js",
                         "<%= paths.node_modules %>simplemde/dist/simplemde.min.js",
                         "<%= paths.js_src %>app.js"

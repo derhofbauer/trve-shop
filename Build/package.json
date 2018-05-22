@@ -24,6 +24,6 @@
   },
   "scripts": {
     "attach": "docker exec -it trve-shop_apache_1 bash",
-    "migration-fresh": "docker exec -it trve-shop_apache_1 php artisan migrate:fresh --seed"
+    "migration-fresh": "docker exec -it trve-shop_apache_1 php artisan migrate:fresh --seed && exit"
   }
 }

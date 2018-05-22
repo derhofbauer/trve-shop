@@ -2,7 +2,7 @@
     <i data-feather="x"></i>
 </a>
 @include('backend/partials/form-submit')
-<a href="{{ route($routes['delete'], ['id' => $object->id]) }}" class="btn btn-icon">
+<a href="{{ route($routes['delete'], ['id' => $object->id]) }}" class="btn btn-icon" data-modal="confirm-delete">
     <i data-feather="trash-2"></i>
 </a>
 
