@@ -18,8 +18,10 @@ module.exports = function(grunt) {
         },
         banner: '/*!\n' +
         ' * Trve Shop v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-        ' * Copyright 2017-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+        ' * Copyright 2018-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
         ' * Licensed under the <%= pkg.license %> license\n' +
+        ' * ' +
+        ' * Created as a university project.' +
         ' */\n',
         uglify: {
             all: {
