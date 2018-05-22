@@ -41,6 +41,10 @@ class SysBeuser extends Authenticatable
         return $this->belongsTo('App\SysRole');
     }
 
+    public function blogEntries () {
+        return $this->hasMany('App\SysBlogEntry', 'beuser_id');
+    }
+
     public function setPassword ($password)
     {
         $this->password = Hash::make($password);

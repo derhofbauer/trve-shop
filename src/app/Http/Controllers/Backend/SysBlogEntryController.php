@@ -7,7 +7,7 @@ use App\SysBlogEntry;
 use App\SysRole;
 use Illuminate\Http\Request;
 
-class SysBlogEntryController extends \App\Http\Controllers\Controller
+class SysBlogEntryController extends \App\Http\Controllers\Controller implements BackendControllerInterface
 {
     /**
      * SysBlogEntryController constructor.
@@ -21,15 +21,22 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller
 
     public function index ()
     {
-        $blogEntries = SysBlogEntry::all('id', 'title', 'created_at');
+        $blogEntries = SysBlogEntry::all('id', 'title', 'created_at', 'beuser_id')->sortBy('created_at');
 
         return view('backend/list', self::prepareConfig([
             'thead' => [
                 __('ID'),
                 __('Title'),
-                __('Created at')
+                __('Created at'),
+                __('Author')
             ],
-            'data' => $blogEntries
+            'data' => $blogEntries,
+            'ignoreData' => [
+                'beuser_id'
+            ],
+            'relatedData' => [
+                'author' => 'username'
+            ]
         ]));
     }
 
@@ -53,10 +60,52 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller
         ]));
     }
 
+    public function update (Request $request, $id)
+    {
+        $validatedData = $request->validate(self::getValidationRules());
+
+        $entry = SysBlogEntry::find($id);
+
+        $entry->fill($validatedData);
+        $entry->save();
+
+        return redirect()->route('admin.blog');
+    }
+
     public function createView ()
     {
-        $beUsers = SysBeuser::all('username', 'id');
-        return view('backend/create');
+        $users = SysBeuser::all('username AS name', 'id');
+        return view('backend/create', self::prepareConfig([
+            'tabs' => [
+                [
+                    'title' => __('General'),
+                    'fields' => [
+                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Title placeholder'), 'required' => true],
+                        ['label' => __('Author'), 'type' => 'select', 'id' => 'beuser_id', 'required' => true, 'data' => $users],
+                        ['label' => __('Abstract'), 'type' => 'textarea', 'id' => 'abstract', 'placeholder' => __('Abstract placeholder'), 'required' => true],
+                        ['label' => __('Content'), 'type' => 'editor', 'id' => 'content', 'placeholder' => __('Content Placeholder')]
+                    ]
+                ]
+            ]
+        ]));
+    }
+
+    public function create (Request $request)
+    {
+        $validatedData = $request->validate(self::getValidationRules());
+
+        $entry = new SysBlogEntry($validatedData);
+        $entry->save();
+
+        return redirect()->route('admin.blog');
+    }
+
+    public function delete (Request $request, $id)
+    {
+        $entry = SysBlogEntry::find($id);
+        $entry->delete();
+
+        return redirect()->route('admin.blog');
     }
 
     public static function prepareConfig ($additionalConfig)
@@ -74,5 +123,15 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller
             ],
             'identifier' => 'title'
         ], $additionalConfig);
+    }
+
+    public static function getValidationRules ()
+    {
+        return [
+            'title' => 'required|string|min:1',
+            'abstract' => 'required|string|min:1',
+            'content' => 'required|string|min:1',
+            'beuser_id' => 'required|numeric|exists:sys_beusers,id'
+        ];
     }
 }

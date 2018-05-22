@@ -4,6 +4,10 @@
 @endslot
 
 @slot('body')
+    {{-- Tab Bar --}}
+    @include('backend.partials.form-tabs')
+
+    {{-- Tab content --}}
     @foreach($tabs as $tab)
         @formtab
         @slot('title')

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class SysBeuserController extends \App\Http\Controllers\Controller
+class SysBeuserController extends \App\Http\Controllers\Controller implements BackendControllerInterface
 {
     public function __construct ()
     {
@@ -17,7 +17,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller
 
     public function index ()
     {
-        $users = SysBeuser::all(['id', 'username', 'email']);
+        $users = SysBeuser::all(['id', 'username', 'email'])->sortBy('username');
         return view('backend/list', self::prepareConfig([
             'thead' => [
                 __('ID'),
@@ -49,9 +49,16 @@ class SysBeuserController extends \App\Http\Controllers\Controller
 
     public function update (Request $request, $id)
     {
-        $validatedData = $request->validate(self::getValidationRules());
-
         $user = SysBeuser::find($id);
+        $validationRules = self::getValidationRules();
+
+        if ($user->username == $request->input('username')) {
+            unset($validationRules['username']);
+        }
+        if ($user->email == $request->input('email')) {
+            unset($validationRules['email']);
+        }
+        $validatedData = $request->validate($validationRules);
 
         $user->username = $request->input('username');
         $user->email = $request->input('email');
@@ -73,7 +80,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller
                         ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true],
                         ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true],
                         ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password placeholder'), 'required' => true],
-                        ['label' => __('Password repeat'), 'type'=> 'password', 'id' => 'password_repeat', 'placeholder' => __('Password repeat'), 'required' => true],
+                        ['label' => __('Password repeat'), 'type' => 'password', 'id' => 'password_repeat', 'placeholder' => __('Password repeat'), 'required' => true],
                         ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles]
                     ]
                 ]
@@ -112,7 +119,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller
             'email' => 'required|email|unique:sys_beusers',
             'password' => 'sometimes|required|string|min:8|max:32',
             'password_repeat' => 'sometimes|same:password',
-            'role_id' => 'required|numeric'
+            'role_id' => 'required|numeric|exists:sys_role,id'
         ];
     }
 

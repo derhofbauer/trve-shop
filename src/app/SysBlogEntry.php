@@ -35,6 +35,10 @@ class SysBlogEntry extends Model
 
     public function author ()
     {
-        return $this->hasOne('App\SysBeUser');
+        return $this->belongsTo('App\SysBeUser', 'beuser_id');
+    }
+
+    public function beuser () {
+        return $this->author();
     }
 }

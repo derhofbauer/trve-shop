@@ -1,7 +1,9 @@
-feather.replace();
+// Feather Icons
+feather.replace()
 
+// SimpleMDE - Markdown Editor
 let $editors = document.querySelectorAll(".editor")
-let simplemdes = [];
+let simplemdes = []
 
 $editors.forEach((element) => {
     simplemdes.push(new SimpleMDE({
