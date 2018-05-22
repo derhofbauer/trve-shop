@@ -39,6 +39,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
                     'title' => __('General'),
                     'fields' => [
                         ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true, 'value' => $user->username],
+                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Reset password')],
                         ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email],
                         ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles, 'value' => $user->role_id]
                     ]
@@ -58,11 +59,18 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         if ($user->email == $request->input('email')) {
             unset($validationRules['email']);
         }
+        if (empty($request->input('password'))) {
+            unset($validationRules['password']);
+        }
         $validatedData = $request->validate($validationRules);
 
         $user->username = $request->input('username');
         $user->email = $request->input('email');
         $user->role_id = $request->input('role_id');
+
+        if ($request->input('password') != '') {
+            $user->setPassword($request->input('password'));
+        }
 
         $user->save();
 
