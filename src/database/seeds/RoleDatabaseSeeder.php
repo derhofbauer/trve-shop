@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SysRoleDatabaseSeeder extends Seeder
+class RoleDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,12 +13,12 @@ class SysRoleDatabaseSeeder extends Seeder
     {
         $permissions = \App\SysRole::getPermissions();
         $values1 = [
-            'name' => 'Super Admin',
-            'description' => 'Allowed to do everything! :D'
-        ];
-        $values2 = [
             'name' => 'Just a user',
             'description' => 'Allowed to do nothing :('
+        ];
+        $values2 = [
+            'name' => 'Super Admin',
+            'description' => 'Allowed to do everything! :D'
         ];
 
         foreach ($permissions as $permission) {

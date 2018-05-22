@@ -29,7 +29,11 @@
                 @endforeach
                 @isset($relatedData)
                     @foreach($relatedData as $method => $property)
-                        <td>{{ $object->$method->$property }}</td>
+                        @isset($object->$method->$property)
+                            <td>{{ $object->$method->$property }}</td>
+                        @else
+                            <td></td>
+                        @endisset
                     @endforeach
                 @endisset
                 <td>

@@ -15,4 +15,16 @@ class RouteHelper
         Route::post("/create", "{$controller}@create")->name("{$namePrefix}.create.submit");
         Route::get("/delete/{id}", "{$controller}@delete")->name("{$namePrefix}.delete");
     }
+
+    public static function prepareRouteConfigArray ($base)
+    {
+        return [
+            'create' => "{$base}.create",
+            'create-submit' => "{$base}.create.submit",
+            'edit' => "{$base}.edit",
+            'edit-submit' => "{$base}.edit.submit",
+            'delete' => "{$base}.delete",
+            'base' => $base
+        ];
+    }
 }

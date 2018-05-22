@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Helpers\RouteHelper;
 use App\SysBeuser;
 use App\SysBlogEntry;
 use App\SysRole;
@@ -113,14 +114,7 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         return array_merge([
             'dataType' => __('Blog Entry'),
             'icon' => 'book',
-            'routes' => [
-                'create' => 'admin.blog.create',
-                'create-submit' => 'admin.blog.create.submit',
-                'edit' => 'admin.blog.edit',
-                'edit-submit' => 'admin.blog.edit.submit',
-                'delete' => 'admin.blog.delete',
-                'base' => 'admin.blog'
-            ],
+            'routes' => RouteHelper::prepareRouteConfigArray('admin.blog'),
             'identifier' => 'title'
         ], $additionalConfig);
     }

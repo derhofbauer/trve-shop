@@ -35,7 +35,9 @@
         <div class="main-nav">
             <nav class="nav--vertical">
                 <a href="{{ route('admin') }}" class="nav__item">{{ __('Dashboard') }}</a>
-                {{--<a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>--}}
+                @permitted('productsShow')
+                    <a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>
+                @endpermitted
                 {{--<a href="{{ route('admin.categories') }}" class="nav__item">{{ __('Categories') }}</a>--}}
                 @permitted('blogPostsShow')
                     <a href="{{ route('admin.blog') }}" class="nav__item">{{ __('Blog') }}</a>

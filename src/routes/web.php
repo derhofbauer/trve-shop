@@ -59,4 +59,8 @@ Route::prefix('admin')->group(function () {
     Route::prefix('/blog')->group(function () {
         RouteHelper::createCRUDroutes('Backend\SysBlogEntryController', 'admin.blog');
     });
+
+    Route::prefix('/products')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysProductController', 'admin.products');
+    });
 });

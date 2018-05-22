@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSysRoleTable extends Migration
+class CreateSysBlogProductMmTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateSysRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('sys_role', function (Blueprint $table) {
+        Schema::create('sys_blog_product_mm', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('description');
-            foreach (\App\SysRole::getPermissions() as $permission) {
-                $table->boolean($permission);
-            }
+            $table->integer('blog_entry_id');
+            $table->integer('product_id');
             $table->timestamps();
+
+            $table->foreign('blog_entry_id')->references('id')->on('sys_blog_entry');
+            $table->foreign('product_id')->references('id')->on('sys_product');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateSysRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sys_role');
+        Schema::dropIfExists('sys_blog_product_mm');
     }
 }

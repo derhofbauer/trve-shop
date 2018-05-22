@@ -20,6 +20,8 @@ class CreateSysBlogEntryTable extends Migration
             $table->longText('content');
             $table->integer('beuser_id');
             $table->timestamps();
+
+            $table->foreign('beuser_id')->references('id')->on('sys_beusers');
         });
     }
 

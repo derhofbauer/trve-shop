@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Helpers\RouteHelper;
 use App\SysFeuser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -118,18 +119,10 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
 
     public static function prepareConfig (array $additionalConfig)
     {
-        $base = 'admin.users.frontend';
         return array_merge([
             'dataType' => __('Frontend User'),
             'icon' => 'user',
-            'routes' => [
-                'create' => "{$base}.create",
-                'create-submit' => "{$base}.create.submit",
-                'edit' => "{$base}.edit",
-                'edit-submit' => "{$base}.edit.submit",
-                'delete' => "{$base}.delete",
-                'base' => $base
-            ],
+            'routes' => RouteHelper::prepareRouteConfigArray('admin.users.frontend'),
             'identifier' => 'email'
         ], $additionalConfig);
     }

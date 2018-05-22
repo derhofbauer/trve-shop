@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Helpers\RouteHelper;
 use App\SysBeuser;
 use App\SysRole;
 use Illuminate\Http\Request;
@@ -136,14 +137,7 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         return array_merge([
             'dataType' => __('Backend User'),
             'icon' => 'user',
-            'routes' => [
-                'create' => 'admin.users.backend.create',
-                'create-submit' => 'admin.users.backend.create.submit',
-                'edit' => 'admin.users.backend.edit',
-                'edit-submit' => 'admin.users.backend.edit.submit',
-                'delete' => 'admin.users.backend.delete',
-                'base' => 'admin.users.backend'
-            ],
+            'routes' => RouteHelper::prepareRouteConfigArray('admin.users.backend'),
             'identifier' => 'username'
         ], $additionalConfig);
     }
