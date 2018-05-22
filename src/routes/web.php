@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Helpers\RouteHelper;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,17 +48,15 @@ Route::prefix('admin')->group(function () {
     Route::get('/logout', 'Backend\Auth\AdminLoginController@logout')->name('admin.logout');
 
     Route::get('/users', 'Backend\SysBeuserController@index')->name('admin.users');
-    Route::get('/users/backend', 'Backend\SysBeuserController@index')->name('admin.users.backend');
-    Route::get('/users/backend/{id}', 'Backend\SysBeuserController@show')->name('admin.users.backend.edit');
-    Route::post('/users/backend/{id}', 'Backend\SysBeuserController@update')->name('admin.users.backend.edit.submit');
-    Route::get('/users/backend/create', 'Backend\SysBeuserController@createView')->name('admin.users.backend.create');
-    Route::post('/users/backend/create', 'Backend\SysBeuserController@create')->name('admin.users.backend.create.submit');
-    Route::get('/users/backend/delete/{id}', 'Backend\SysBeuserController@delete')->name('admin.users.backend.delete');
+    Route::prefix('/users/backend')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysBeuserController', 'admin.users.backend');
+    });
 
-    Route::get('/blog', 'Backend\SysBlogEntryController@index')->name('admin.blog');
-    Route::get('/blog/{id}', 'Backend\SysBlogEntryController@show')->name('admin.blog.edit');
-    Route::post('/blog/{id}', 'Backend\SysBlogEntryController@update')->name('admin.blog.edit.submit');
-    Route::get('/blog/create', 'Backend\SysBlogEntryController@createView')->name('admin.blog.create');
-    Route::post('/blog/create', 'Backend\SysBlogEntryController@create')->name('admin.blog.create.submit');
-    Route::get('/blog/delete/{id}', 'Backend\SysBlogEntryController@delete')->name('admin.blog.delete');
+    Route::prefix('/users/frontend')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysFeuserController', 'admin.users.frontend');
+    });
+
+    Route::prefix('/blog')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysBlogEntryController', 'admin.blog');
+    });
 });
