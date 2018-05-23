@@ -2,22 +2,34 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Controllers\Backend\BackendControllerInterface;
 use App\Http\Helpers\RouteHelper;
 use App\SysProduct;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * Class SysProductController
+ *
+ * @package App\Http\Controllers\Backend
+ */
 class SysProductController extends Controller implements BackendControllerInterface
 {
+    /**
+     * SysProductController constructor.
+     */
     public function __construct ()
     {
         $this->middleware('auth:admin');
+
+        $this->storage_path = 'public/product_pictures';
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
-        $products = SysProduct::allWithoutDeleted()->get(['id', 'name', 'stock', 'parent_product_id', 'new_until', 'hidden'])->sortByDesc('stock');
+        $products = SysProduct::allWithoutDeleted()->get(['id', 'name', 'stock', 'parent_product_id', 'new_until', 'hidden'])->sortBy('stock');
 
         return view('backend/list', self::prepareConfig([
             'thead' => [
@@ -38,6 +50,11 @@ class SysProductController extends Controller implements BackendControllerInterf
         ]));
     }
 
+    /**
+     * @param int|string $id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show ($id)
     {
         $product = SysProduct::find($id);
@@ -46,8 +63,8 @@ class SysProductController extends Controller implements BackendControllerInterf
             $children[] = $child->id;
         }
         $products = SysProduct::allWithoutDeleted()
-            ->where('id', '!=', $id) // not self
-            ->whereNull('parent_product_id') // not products that already are children of some other product
+            ->where('id', '!=', $id)// not self
+            ->whereNull('parent_product_id')// not products that already are children of some other product
             ->get(['name', 'id'])
             ->sortBy('name');
 
@@ -62,7 +79,8 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Price (€)'), 'type' => 'number', 'id' => 'price', 'placeholder' => __('Price placeholder'), 'required' => false, 'value' => $product->price],
                         ['label' => __('Stock'), 'type' => 'number', 'id' => 'stock', 'placeholder' => __('Stock placeholder'), 'required' => true, 'value' => $product->stock],
                         ['label' => __('Hidden'), 'type' => 'checkbox', 'id' => 'hidden', 'required' => false, 'checked' => (bool)$product->hidden],
-                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => $product->media],
+                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$product->media],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products, 'value' => $product->parent_product_id],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false, 'value' => $product->new_until],
                     ]
@@ -71,10 +89,16 @@ class SysProductController extends Controller implements BackendControllerInterf
         ]));
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update (Request $request, $id)
     {
-        // TODO: implement file upload
         $product = SysProduct::find($id);
+
         $validationRules = self::getValidationRules();
 
         if ($product->name == $request->input('name')) {
@@ -87,18 +111,22 @@ class SysProductController extends Controller implements BackendControllerInterf
         $validatedData = $request->validate($validationRules);
 
         $product->fill($validatedData);
-        if ($request->input('parent_product_id') == "0") {
-            $product->parent_product_id = null;
-        }
+        self::handleMedia($product, $request, $this->storage_path);
+        self::handleDeleteMedia($product, $request);
+        self::handleParent($product, $request);
+
         $product->save();
 
-        return redirect()->route('admin.products');
+        return redirect()->route('admin.products.edit', ['id' => $id]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createView ()
     {
         $products = SysProduct::allWithoutDeleted()
-            ->whereNull('parent_product_id') // not products that already are children of some other product
+            ->whereNull('parent_product_id')// not products that already are children of some other product
             ->get(['name', 'id'])
             ->sortBy('name');
 
@@ -116,7 +144,7 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Price (€)'), 'type' => 'number', 'id' => 'price', 'placeholder' => __('Price placeholder'), 'required' => false],
                         ['label' => __('Stock'), 'type' => 'number', 'id' => 'stock', 'placeholder' => __('Stock placeholder'), 'required' => true],
                         ['label' => __('Hidden'), 'type' => 'checkbox', 'id' => 'hidden', 'required' => false],
-                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false],
                     ]
@@ -125,17 +153,34 @@ class SysProductController extends Controller implements BackendControllerInterf
         ]));
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create (Request $request)
     {
-        // TODO: implement file upload
-        $validatedData = $request->validate(self::getValidationRules());
+        $validationRules = self::getValidationRules();
+        if ($request->input('parent_product_id') == "0") {
+            unset($validationRules['parent_product_id']);
+        }
+        $validatedData = $request->validate($validationRules);
 
         $product = new SysProduct($validatedData);
+        self::handleMedia($product, $request, $this->storage_path);
+        self::handleParent($product, $request);
+
         $product->save();
 
-        return redirect()->route('admin.products');
+        return redirect()->route('admin.products.edit', ['id' => $product->id]);
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete (Request $request, $id)
     {
         $product = SysProduct::find($id);
@@ -145,6 +190,9 @@ class SysProductController extends Controller implements BackendControllerInterf
         return redirect()->route('admin.products');
     }
 
+    /**
+     * @return array
+     */
     public static function getValidationRules ()
     {
         return [
@@ -154,10 +202,16 @@ class SysProductController extends Controller implements BackendControllerInterf
             'stock' => 'required|integer',
             'media' => '',
             'parent_product_id' => 'integer|exists:sys_product,id|nullable',
-            'new_until' => 'date|nullable'
+            'new_until' => 'date|nullable',
+            'media[]' => 'sometimes|image|dimensions:min_width=250,min_height=250'
         ];
     }
 
+    /**
+     * @param array $additionalConfig
+     *
+     * @return array
+     */
     public static function prepareConfig (array $additionalConfig)
     {
         return array_merge([
@@ -166,5 +220,43 @@ class SysProductController extends Controller implements BackendControllerInterf
             'routes' => RouteHelper::prepareRouteConfigArray('admin.products'),
             'identifier' => 'name'
         ], $additionalConfig);
+    }
+
+    /**
+     * @param SysProduct $product
+     * @param Request $request
+     * @param string $storagePath
+     */
+    public static function handleMedia (&$product, $request, $storagePath)
+    {
+        if ($request->has('media')) {
+            foreach ($request->file('media') as $uploaded_file) {
+                $product->addMedia($uploaded_file->store($storagePath));
+            }
+        }
+    }
+
+    /**
+     * @param SysProduct $product
+     * @param Request $request
+     */
+    public static function handleDeleteMedia (&$product, $request)
+    {
+        if ($request->has('delete_media')) {
+            foreach ($request->input('delete_media') as $path => $on) {
+                $product->removeMedia($path);
+            }
+        }
+    }
+
+    /**
+     * @param SysProduct $product
+     * @param Request $request
+     */
+    public static function handleParent (&$product, $request)
+    {
+        if ($request->input('parent_product_id') == "0") {
+            $product->parent_product_id = null;
+        }
     }
 }
