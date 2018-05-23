@@ -6,6 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * Class SysFeuser
+ *
+ * @package App
+ */
 class SysFeuser extends Authenticatable
 {
     use Notifiable;
@@ -33,6 +38,9 @@ class SysFeuser extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * @param string $password
+     */
     public function setPassword ($password)
     {
         $this->password = Hash::make($password);

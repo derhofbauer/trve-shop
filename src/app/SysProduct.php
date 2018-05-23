@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * Class SysProduct
+ *
+ * @package App
+ */
 class SysProduct extends Model
 {
     /**
@@ -36,39 +40,59 @@ class SysProduct extends Model
         'new_until'
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
     protected $casts = [
         'media' => 'array'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function parent ()
     {
         return $this->belongsTo('App\SysProduct', 'parent_product_id', 'id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function children ()
     {
         return $this->hasMany('App\SysProduct', 'parent_product_id', 'id');
     }
 
+    /**
+     * @return mixed
+     */
     public static function allWithoutDeleted ()
     {
         return SysProduct::where('deleted', 0);
     }
 
-    public function addMedia ($file)
+    /**
+     * @param string $path
+     */
+    public function addMedia ($path)
     {
         $tmp = $this->media;
-        $tmp[] = $file;
+        $tmp[] = $path;
         $this->media = $tmp;
     }
 
-    public function removeMedia ($file)
+    /**
+     * @param string $path
+     */
+    public function removeMedia ($path)
     {
         $tmp = $this->media;
-        $index = array_search($file, $tmp);
+        $index = array_search($path, $tmp);
         unset($tmp[$index]);
         $this->media = $tmp;
 
-        Storage::disk('local')->delete($file);
+        Storage::disk('local')->delete($path);
     }
 }

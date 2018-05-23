@@ -4,6 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class SysRole
+ *
+ * @package App
+ */
 class SysRole extends Model
 {
     /**
@@ -25,6 +30,9 @@ class SysRole extends Model
      */
     protected $fillable;
 
+    /**
+     * SysRole constructor.
+     */
     public function __construct ()
     {
         $this->fillable = self::getPermissions();

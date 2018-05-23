@@ -6,6 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * Class SysBeuser
+ *
+ * @package App
+ */
 class SysBeuser extends Authenticatable
 {
     use Notifiable;
@@ -38,13 +43,20 @@ class SysBeuser extends Authenticatable
      */
     public function role ()
     {
-        return $this->belongsTo('App\SysRole');
+        return $this->belongsTo('App\SysRole', 'role_id', 'id');
     }
 
-    public function blogEntries () {
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function blogEntries ()
+    {
         return $this->hasMany('App\SysBlogEntry', 'beuser_id');
     }
 
+    /**
+     * @param string $password
+     */
     public function setPassword ($password)
     {
         $this->password = Hash::make($password);

@@ -15,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        /**
+         * Define custom Blade Stuff
+         */
         Blade::if('permitted', function ($permission) {
            return Auth::user()->role->$permission;
         });
@@ -30,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('components/form-textarea', 'formtextarea');
         Blade::component('components/form-editor', 'formeditor');
         Blade::component('components/form-checkbox', 'formcheckbox');
+        Blade::component('components/form-media', 'formmedia');
     }
 
     /**

@@ -5,18 +5,24 @@ namespace App\Http\Controllers\Frontend;
 use App\SysBlogEntry;
 use Illuminate\Http\Request;
 
+/**
+ * Class BlogController
+ *
+ * @package App\Http\Controllers\Frontend
+ */
 class BlogController extends \App\Http\Controllers\Controller
 {
     /**
      * SysBlogEntryController constructor.
-     *
-     * @return void
      */
     public function __construct ()
     {
         // inject middleware
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         $blogEntries = SysBlogEntry::all();
@@ -24,6 +30,11 @@ class BlogController extends \App\Http\Controllers\Controller
         return view('frontend/blog', ['entries' => $blogEntries]);
     }
 
+    /**
+     * @param string|int $id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show ($id)
     {
         $blogEntry = SysBlogEntry::find($id);

@@ -4,6 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class SysBlogEntry
+ *
+ * @package App
+ */
 class SysBlogEntry extends Model
 {
     /**
@@ -17,7 +22,6 @@ class SysBlogEntry extends Model
      * @var string
      */
     protected $guard = 'admin';
-
 
     /**
      * The attributes that are mass assignable.
@@ -33,16 +37,25 @@ class SysBlogEntry extends Model
         'updated_at'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function author ()
     {
         return $this->belongsTo('App\SysBeUser', 'beuser_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function beuser ()
     {
         return $this->author();
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function products ()
     {
         return $this->belongsToMany('App\SysProduct', 'sys_blog_product_mm', 'blog_entry_id', 'product_id');

@@ -17,6 +17,10 @@
         @formcheckbox($field)
         @endformcheckbox
         @break
+    @case('media')
+        @formmedia($field)
+        @endformmedia
+        @break
     @default
         @forminput($field)
         @endforminput

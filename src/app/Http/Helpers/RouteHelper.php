@@ -4,8 +4,19 @@ namespace App\Http\Helpers;
 
 use Illuminate\Support\Facades\Route;
 
+/**
+ * Class RouteHelper
+ *
+ * @package App\Http\Helpers
+ */
 class RouteHelper
 {
+    /**
+     * Creates all required routes for backend CRUD operations
+     *
+     * @param string $controller
+     * @param string $namePrefix
+     */
     public static function createCRUDroutes ($controller, $namePrefix)
     {
         Route::get("/", "{$controller}@index")->name("{$namePrefix}");
@@ -16,15 +27,22 @@ class RouteHelper
         Route::get("/delete/{id}", "{$controller}@delete")->name("{$namePrefix}.delete");
     }
 
-    public static function prepareRouteConfigArray ($base)
+    /**
+     * Prepares the config array for use in all backend controller config array
+     *
+     * @param string $namePrefix
+     *
+     * @return array
+     */
+    public static function prepareRouteConfigArray ($namePrefix)
     {
         return [
-            'create' => "{$base}.create",
-            'create-submit' => "{$base}.create.submit",
-            'edit' => "{$base}.edit",
-            'edit-submit' => "{$base}.edit.submit",
-            'delete' => "{$base}.delete",
-            'base' => $base
+            'create' => "{$namePrefix}.create",
+            'create-submit' => "{$namePrefix}.create.submit",
+            'edit' => "{$namePrefix}.edit",
+            'edit-submit' => "{$namePrefix}.edit.submit",
+            'delete' => "{$namePrefix}.delete",
+            'base' => $namePrefix
         ];
     }
 }

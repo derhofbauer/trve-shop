@@ -1,4 +1,4 @@
-<form class="form" action="@if($action){{ $action }}@endif" method="post" role="form" id="module-form">
+<form class="form" action="@if($action){{ $action }}@endif" method="post" role="form" id="module-form" enctype="multipart/form-data">
     {{ csrf_field() }}
 
     <div class="form__header">

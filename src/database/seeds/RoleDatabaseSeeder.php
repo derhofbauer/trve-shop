@@ -13,12 +13,12 @@ class RoleDatabaseSeeder extends Seeder
     {
         $permissions = \App\SysRole::getPermissions();
         $values1 = [
-            'name' => 'Just a user',
-            'description' => 'Allowed to do nothing :('
-        ];
-        $values2 = [
             'name' => 'Super Admin',
             'description' => 'Allowed to do everything! :D'
+        ];
+        $values2 = [
+            'name' => 'Just a user',
+            'description' => 'Allowed to do nothing :('
         ];
 
         foreach ($permissions as $permission) {

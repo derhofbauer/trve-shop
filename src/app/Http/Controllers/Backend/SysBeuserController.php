@@ -11,11 +11,17 @@ use Illuminate\Support\Facades\Session;
 
 class SysBeuserController extends \App\Http\Controllers\Controller implements BackendControllerInterface
 {
+    /**
+     * SysBeuserController constructor.
+     */
     public function __construct ()
     {
         $this->middleware('auth:admin');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         $users = SysBeuser::all(['id', 'username', 'email'])->sortBy('username');
@@ -29,6 +35,11 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         ]));
     }
 
+    /**
+     * @param int|string $id ID of item to edit
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show ($id)
     {
         $user = SysBeuser::find($id);
@@ -49,6 +60,12 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         ]));
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id ID of item to update
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update (Request $request, $id)
     {
         $user = SysBeuser::find($id);
@@ -78,6 +95,9 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         return redirect()->route('admin.users.backend');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createView ()
     {
         $roles = SysRole::all('name', 'id');
@@ -97,6 +117,11 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         ]));
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create (Request $request)
     {
         $validatedData = $request->validate(self::getValidationRules());
@@ -108,6 +133,12 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         return redirect()->route('admin.users.backend');
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id ID of item to delete
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete (Request $request, $id)
     {
         if (Auth::user()->id != $id) {
@@ -121,6 +152,9 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         return redirect()->route('admin.users.backend');
     }
 
+    /**
+     * @return array
+     */
     public static function getValidationRules ()
     {
         return [
@@ -132,6 +166,11 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
         ];
     }
 
+    /**
+     * @param array $additionalConfig
+     *
+     * @return array
+     */
     public static function prepareConfig ($additionalConfig)
     {
         return array_merge([

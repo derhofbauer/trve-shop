@@ -7,13 +7,24 @@ use App\SysFeuser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * Class SysFeuserController
+ *
+ * @package App\Http\Controllers\Backend
+ */
 class SysFeuserController extends Controller implements BackendControllerInterface
 {
+    /**
+     * SysFeuserController constructor.
+     */
     public function __construct ()
     {
         $this->middleware('auth:admin');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         $users = SysFeuser::all(['id', 'email', 'firstname', 'lastname'])->sortBy('created_at');
@@ -28,6 +39,11 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         ]));
     }
 
+    /**
+     * @param int|string $id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show ($id)
     {
         $user = SysFeuser::find($id);
@@ -48,6 +64,12 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         ]));
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update (Request $request, $id)
     {
         $user = SysFeuser::find($id);
@@ -68,6 +90,9 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         return redirect()->route('admin.users.frontend');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createView ()
     {
         return view('backend/create', self::prepareConfig([
@@ -87,6 +112,11 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         ]));
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create (Request $request)
     {
         $validatedData = $request->validate(self::getValidationRules());
@@ -98,6 +128,12 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         return redirect()->route('admin.users.frontend');
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete (Request $request, $id)
     {
         $user = SysFeuser::find($id);
@@ -106,6 +142,9 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         return redirect()->route('admin.users.frontend');
     }
 
+    /**
+     * @return array
+     */
     public static function getValidationRules ()
     {
         return [
@@ -117,6 +156,11 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         ];
     }
 
+    /**
+     * @param array $additionalConfig
+     *
+     * @return array
+     */
     public static function prepareConfig (array $additionalConfig)
     {
         return array_merge([

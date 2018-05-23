@@ -5,9 +5,13 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Helpers\RouteHelper;
 use App\SysBeuser;
 use App\SysBlogEntry;
-use App\SysRole;
 use Illuminate\Http\Request;
 
+/**
+ * Class SysBlogEntryController
+ *
+ * @package App\Http\Controllers\Backend
+ */
 class SysBlogEntryController extends \App\Http\Controllers\Controller implements BackendControllerInterface
 {
     /**
@@ -20,6 +24,9 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         $this->middleware('auth:admin');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         $blogEntries = SysBlogEntry::all('id', 'title', 'created_at', 'beuser_id')->sortBy('created_at');
@@ -41,6 +48,11 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         ]));
     }
 
+    /**
+     * @param int|string $id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show ($id)
     {
         $blogEntry = SysBlogEntry::find($id);
@@ -61,6 +73,12 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         ]));
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update (Request $request, $id)
     {
         $validatedData = $request->validate(self::getValidationRules());
@@ -73,6 +91,9 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         return redirect()->route('admin.blog');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createView ()
     {
         $users = SysBeuser::all('username AS name', 'id');
@@ -91,6 +112,11 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         ]));
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create (Request $request)
     {
         $validatedData = $request->validate(self::getValidationRules());
@@ -101,6 +127,12 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         return redirect()->route('admin.blog');
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete (Request $request, $id)
     {
         $entry = SysBlogEntry::find($id);
@@ -109,6 +141,11 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         return redirect()->route('admin.blog');
     }
 
+    /**
+     * @param array $additionalConfig
+     *
+     * @return array
+     */
     public static function prepareConfig ($additionalConfig)
     {
         return array_merge([
@@ -119,6 +156,9 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
         ], $additionalConfig);
     }
 
+    /**
+     * @return array
+     */
     public static function getValidationRules ()
     {
         return [

@@ -17,7 +17,7 @@ class BeuserDatabaseSeeder extends Seeder
                 'username' => 'ford',
                 'email' => 'ford.prefect@galaxy.com',
                 'password' => bcrypt('password'),
-                'role_id' => 1
+                'role_id' => 2
         ]);
 
         DB::table('sys_beusers')->insert([

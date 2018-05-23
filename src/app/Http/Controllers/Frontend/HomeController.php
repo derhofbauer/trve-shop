@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use Illuminate\Http\Request;
-
+/**
+ * Class HomeController
+ *
+ * @package App\Http\Controllers\Frontend
+ */
 class HomeController extends \App\Http\Controllers\Controller
 {
     /**
