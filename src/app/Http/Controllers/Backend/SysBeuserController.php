@@ -24,14 +24,21 @@ class SysBeuserController extends \App\Http\Controllers\Controller implements Ba
      */
     public function index ()
     {
-        $users = SysBeuser::all(['id', 'username', 'email'])->sortBy('username');
+        $users = SysBeuser::all(['id', 'username', 'email', 'role_id'])->sortBy('username');
         return view('backend/list', self::prepareConfig([
             'thead' => [
                 __('ID'),
                 __('Username'),
-                __('Email')
+                __('Email'),
+                __('Role')
             ],
-            'data' => $users
+            'data' => $users,
+            'ignoreData' => [
+                'role_id'
+            ],
+            'relatedData' => [
+                'role' => 'name'
+            ]
         ]));
     }
 
