@@ -38,7 +38,13 @@ class SysBlogEntry extends Model
         return $this->belongsTo('App\SysBeUser', 'beuser_id');
     }
 
-    public function beuser () {
+    public function beuser ()
+    {
         return $this->author();
+    }
+
+    public function products ()
+    {
+        return $this->belongsToMany('App\SysProduct', 'sys_blog_product_mm', 'blog_entry_id', 'product_id');
     }
 }
