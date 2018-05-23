@@ -38,11 +38,16 @@ class SysProduct extends Model
 
     public function parent ()
     {
-        return $this->belongsTo('App\SysProduct', 'id', 'parent_product_id');
+        return $this->belongsTo('App\SysProduct', 'parent_product_id', 'id');
     }
 
     public function children ()
     {
         return $this->hasMany('App\SysProduct', 'parent_product_id', 'id');
+    }
+
+    public static function allWithoutDeleted ()
+    {
+        return SysProduct::where('deleted', 0);
     }
 }

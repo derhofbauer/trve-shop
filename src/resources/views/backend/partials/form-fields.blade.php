@@ -13,6 +13,10 @@
         @formeditor($field)
         @endformeditor
         @break
+    @case('checkbox')
+        @formcheckbox($field)
+        @endformcheckbox
+        @break
     @default
         @forminput($field)
         @endforminput

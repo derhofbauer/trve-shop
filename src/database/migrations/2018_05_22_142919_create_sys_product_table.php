@@ -16,8 +16,8 @@ class CreateSysProductTable extends Migration
         Schema::create('sys_product', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('description');
-            $table->decimal('price');
+            $table->text('description')->nullable();
+            $table->decimal('price')->nullable();
             $table->integer('stock');
             $table->boolean('hidden')->default(0);
             $table->boolean('deleted')->default(0);

@@ -27,6 +27,7 @@ class ProductDatabaseSeeder extends Seeder
                 'stock' => 5,
                 'media' => null,
                 'parent_product_id' => null,
+                'hidden' => true
             ],
             [
                 'name' => 'Product 1.1',
@@ -35,6 +36,15 @@ class ProductDatabaseSeeder extends Seeder
                 'stock' => 5,
                 'media' => null,
                 'parent_product_id' => 1,
+            ],
+            [
+                'name' => 'Deleted product',
+                'description' => 'Product 1.1 Description',
+                'price' => 6.66,
+                'stock' => 5,
+                'media' => null,
+                'parent_product_id' => 1,
+                'deleted' => 1
             ],
         ];
 
