@@ -43,6 +43,12 @@ module.exports = function(grunt) {
         },
         less: {
             app: {
+                options: {
+                    plugins: [
+                        new (require('less-plugin-lists')),
+                        new (require('less-plugin-functions'))
+                    ]
+                },
                 src: '<%= paths.less %>app.less',
                 dest: '<%= paths.css %>app.css'
             }
