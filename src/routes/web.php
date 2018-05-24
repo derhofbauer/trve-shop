@@ -63,4 +63,8 @@ Route::prefix('admin')->group(function () {
     Route::prefix('/products')->group(function () {
         RouteHelper::createCRUDroutes('Backend\SysProductController', 'admin.products');
     });
+
+    Route::prefix('/categories')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysProductCategoryController', 'admin.categories');
+    });
 });

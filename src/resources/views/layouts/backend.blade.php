@@ -38,7 +38,9 @@
                 @permitted('productsShow')
                     <a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>
                 @endpermitted
-                {{--<a href="{{ route('admin.categories') }}" class="nav__item">{{ __('Categories') }}</a>--}}
+                @permitted('categoriesShow')
+                    <a href="{{ route('admin.categories') }}" class="nav__item">{{ __('Categories') }}</a>
+                @endpermitted
                 @permitted('blogPostsShow')
                     <a href="{{ route('admin.blog') }}" class="nav__item">{{ __('Blog') }}</a>
                 @endpermitted

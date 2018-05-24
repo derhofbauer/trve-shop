@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
 use App\Http\Helpers\RouteHelper;
 use App\SysBeuser;
 use App\SysRole;
@@ -9,7 +10,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class SysBeuserController extends \App\Http\Controllers\Controller implements BackendControllerInterface
+/**
+ * Class SysBeuserController
+ *
+ * @package App\Http\Controllers\Backend
+ */
+class SysBeuserController extends Controller implements BackendControllerInterface
 {
     /**
      * SysBeuserController constructor.

@@ -5,6 +5,10 @@
         @formselect($field)
         @endformselect
         @break
+    @case('select_multiple')
+        @formselectmultiple($field)
+        @endformselectmultiple
+        @break
     @case('textarea')
         @formtextarea($field)
         @endformtextarea

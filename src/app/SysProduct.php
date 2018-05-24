@@ -66,6 +66,14 @@ class SysProduct extends Model
     }
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function categories ()
+    {
+        return $this->belongsToMany('App\SysProductCategory', 'sys_product_category_mm', 'product_id', 'category_id');
+    }
+
+    /**
      * @return mixed
      */
     public static function allWithoutDeleted ()
@@ -94,5 +102,18 @@ class SysProduct extends Model
         $this->media = $tmp;
 
         Storage::disk('local')->delete($path);
+    }
+
+    public function addCategory (SysProductCategory $category)
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories()->attach($category);
+        }
+    }
+
+    public function removeCategory (SysProductCategory $category) {
+        if ($this->categories->contains($category)) {
+            $this->categories()->detach($category);
+        }
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Helpers\RouteHelper;
 use App\SysProduct;
+use App\SysProductCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -58,6 +59,10 @@ class SysProductController extends Controller implements BackendControllerInterf
     public function show ($id)
     {
         $product = SysProduct::find($id);
+        $selected_categories = [];
+        foreach ($product->categories as $category) {
+            $selected_categories[] = $category->id;
+        }
         $children = [];
         foreach ($product->children as $child) {
             $children[] = $child->id;
@@ -67,6 +72,7 @@ class SysProductController extends Controller implements BackendControllerInterf
             ->whereNull('parent_product_id')// not products that already are children of some other product
             ->get(['name', 'id'])
             ->sortBy('name');
+        $categories = SysProductCategory::all(['name', 'id']);
 
         return view('backend/edit', self::prepareConfig([
             'object' => $product,
@@ -82,6 +88,7 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$product->media],
                         ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products, 'value' => $product->parent_product_id],
+                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'categories', 'required' => false, 'data' => $categories, 'value' => $selected_categories],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false, 'value' => $product->new_until],
                     ]
                 ]
@@ -98,7 +105,6 @@ class SysProductController extends Controller implements BackendControllerInterf
     public function update (Request $request, $id)
     {
         $product = SysProduct::find($id);
-
         $validationRules = self::getValidationRules();
 
         if ($product->name == $request->input('name')) {
@@ -114,6 +120,7 @@ class SysProductController extends Controller implements BackendControllerInterf
         self::handleMedia($product, $request, $this->storage_path);
         self::handleDeleteMedia($product, $request);
         self::handleParent($product, $request);
+        self::handleProductCategories($product, $request);
 
         $product->save();
 
@@ -203,7 +210,8 @@ class SysProductController extends Controller implements BackendControllerInterf
             'media' => '',
             'parent_product_id' => 'integer|exists:sys_product,id|nullable',
             'new_until' => 'date|nullable',
-            'media[]' => 'sometimes|image|dimensions:min_width=250,min_height=250'
+            'media' => 'sometimes|array|image|dimensions:min_width=250,min_height=250',
+            'product_categories' => 'sometimes|array'
         ];
     }
 
@@ -224,8 +232,8 @@ class SysProductController extends Controller implements BackendControllerInterf
 
     /**
      * @param SysProduct $product
-     * @param Request $request
-     * @param string $storagePath
+     * @param Request    $request
+     * @param string     $storagePath
      */
     public static function handleMedia (&$product, $request, $storagePath)
     {
@@ -238,7 +246,7 @@ class SysProductController extends Controller implements BackendControllerInterf
 
     /**
      * @param SysProduct $product
-     * @param Request $request
+     * @param Request    $request
      */
     public static function handleDeleteMedia (&$product, $request)
     {
@@ -251,12 +259,32 @@ class SysProductController extends Controller implements BackendControllerInterf
 
     /**
      * @param SysProduct $product
-     * @param Request $request
+     * @param Request    $request
      */
     public static function handleParent (&$product, $request)
     {
         if ($request->input('parent_product_id') == "0") {
             $product->parent_product_id = null;
+        }
+    }
+
+    /**
+     * @param SysProduct $product
+     * @param Request    $request
+     */
+    public static function handleProductCategories (&$product, $request)
+    {
+        if ($request->has('product_categories')) {
+            foreach ($request->input('product_categories') as $category => $on) {
+                $product->addCategory(SysProductCategory::find($category));
+            }
+            foreach ($product->categories as $category) {
+                if (!in_array($category->id, array_keys($request->input('product_categories')))) {
+                    $product->categories()->detach($category);
+                }
+            }
+        } else {
+            $product->categories()->detach($product->categories);
         }
     }
 }
