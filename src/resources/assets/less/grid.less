@@ -3,7 +3,8 @@
   display:               grid;
   grid-template-columns: auto 1fr;
   grid-template-rows:    auto 1fr;
-  grid-template-areas:   "navbar   navbar" "main-nav content";
+  grid-template-areas:   "navbar   navbar"
+                         "main-nav content";
 }
 
 .container,
@@ -76,5 +77,11 @@
         .make-col-offset(@i, @grid-columns);
       }
     }
+  }
+}
+.for(@i: 1, @n: @grid-columns) {
+  .col-@{i} {
+    &:extend(.grid-column);
+    .make-col(@i, @grid-columns);
   }
 }

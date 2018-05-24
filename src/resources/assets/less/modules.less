@@ -1,0 +1,120 @@
+.function{
+  .breakpoint-next(@name, @breakpoints: @grid-breakpoints) {
+  @i = 1;
+    .for(@i: 1, @n: length(@breakpoints)) {
+      @breakpoint-pair: at(@breakpoints, @i);
+      @breakpoint-name: at(@breakpoint-pair, 1);
+
+      & when (@name = @breakpoint-name) {
+        & when not (@i >= length(@breakpoints)) {
+          @next-breakpoint-pair: at(@breakpoints, @i + 1);
+          return: at(@next-breakpoint-pair, 1);
+        }
+        & when (@i >= length(@breakpoints)) {
+          return: null;
+        }
+      }
+    }
+  }
+}
+.function {
+  .breakpoint-min(@name, @breakpoints: @grid-breakpoints) {
+    @min: at(@breakpoints, @name);
+    & when not (@min = 0) {
+      return: @min;
+    }
+    & when (@min = 0) {
+      return: null;
+    }
+  }
+}
+.function {
+  .breakpoint-max(@name, @breakpoints: @grid-breakpoints) {
+    @next: breakpoint-next(@name, @breakpoints);
+    & when not (@next = null) {
+      @min: breakpoint-min(@next, @breakpoints);
+      @breakpoint: @min - 0.02;
+      return: @breakpoint;
+    }
+    & when (@next = null) {
+      return: null;
+    }
+  }
+}
+/*.media-breakpoint-up(@name, @rules, @breakpoints: @grid-breakpoints) {
+  @min: breakpoint-min(@name, @breakpoints);
+  & when not (@min = null) {
+    @media (min-width: @min) {
+      @rules();
+    }
+  }
+  & when (@min = null) {
+    @rules();
+  }
+}
+.media-breakpoint-down(@name, @rules, @breakpoints: @grid-breakpoints) {
+  @max: breakpoint-max(@name, @breakpoints);
+
+  & when not (@max = null) {
+    @media (max-width: @max) {
+      @rules();
+    }
+  }
+  & when (@max = null) {
+    @rules();
+  }
+}*/
+
+.make-container () {
+  width:         100%;
+  padding-left:  @grid-gutter-width / 2;
+  padding-right: @grid-gutter-width / 2;
+  margin-right:  auto;
+  margin-left:   auto;
+}
+.make-container-vertical () {
+  padding-top: @grid-gutter-width / 2;
+  padding-bottom: @grid-gutter-width / 2;
+}
+
+.make-container-max-widths(@max-widths: @container-max-widths, @breakpoints: @grid-breakpoints) {
+  .for-each(@max-width-pair in @max-widths) {
+  @size: at(@max-width-pair, 1);
+  @max-width: at(@max-width-pair, 2);
+  @grid-breakpoint: at(@breakpoints, @size);
+
+  @media (min-width: @grid-breakpoint) {
+    max-width: @max-width;
+  }
+}
+}
+
+.make-row() {
+  display:      flex;
+  flex-wrap:    wrap;
+  margin-left:  @grid-gutter-width / -2;
+  margin-right: @grid-gutter-width / -2;
+}
+
+.make-col-ready() {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: @grid-gutter-width / 2;
+  padding-right: @grid-gutter-width / 2;
+}
+
+.make-col(@size, @columns: @grid-columns) {
+  flex: 0 0 percentage(@size / @columns);
+  max-width: percentage(@size / @columns);
+}
+
+.make-col-offset(@size, @columns: @grid-columns) {
+  @num: @size / @columns;
+  & when (@num = 0) {
+    margin-left: 0;
+  }
+  & when not (@num = 0) {
+    margin-left: percentage(@num);
+  }
+}

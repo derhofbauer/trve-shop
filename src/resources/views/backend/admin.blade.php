@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="module">
-    <div class="module__header container"></div>
-    <div class="module__body container">
+    <div class="module__header container-fluid"></div>
+    <div class="module__body container-fluid">
         <div class="module__heading">
             <h2>{{ __('Dashboard') }}</h2>
         </div>

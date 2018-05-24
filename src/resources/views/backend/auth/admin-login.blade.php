@@ -33,9 +33,9 @@
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                        <label for="email" class="col-md-4 control-label">{{ __('Username') }}</label>
+                        <label for="email" class="control-label">{{ __('Username') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-12">
                             <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}" required autofocus placeholder="{{ __('Username placeholder') }}">
 
                             @if ($errors->has('email'))
@@ -47,9 +47,9 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <label for="password" class="col-md-4 control-label">{{ __('Password') }}</label>
+                        <label for="password" class="control-label">{{ __('Password') }}</label>
 
-                        <div class="col-md-6">
+                        <div class="col-12">
                             <input id="password" type="password" class="form-control" name="password" required placeholder="{{ __('Password placeholder') }}">
 
                             @if ($errors->has('password'))
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-8 col-md-offset-4">
+                        <div class="col-12">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Login') }}
                             </button>

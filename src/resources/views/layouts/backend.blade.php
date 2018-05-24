@@ -33,7 +33,7 @@
         </nav>
 
         <div class="main-nav">
-            <nav class="nav--vertical">
+            <nav class="nav--vertical container">
                 <a href="{{ route('admin') }}" class="nav__item">{{ __('Dashboard') }}</a>
                 @permitted('productsShow')
                     <a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>
