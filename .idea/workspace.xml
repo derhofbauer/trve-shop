@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SysProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SysRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysRole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/modules.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/modules.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SysProductCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysProductCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-media.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-media.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,47 +74,37 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="form-select-multiple.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sys_product_category_mm" pinned="false" current-in-tab="false">
-        <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_product_category_mm">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysProduct.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
-              <folding>
-                <element signature="e#23#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysProductController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="282" column="62" lean-forward="true" selection-start-line="282" selection-start-column="62" selection-end-line="282" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="SysProductCategoryController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="301">
+                  <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#48#84#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="SysProductController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-569">
+                  <caret line="139" column="48" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,13 +115,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>confirm</find>
       <find>trash</find>
       <find>backend</find>
       <find>SysBeuser</find>
       <find>frontendController</find>
       <find>'//</find>
-      <find />
+      <find>{{ $object</find>
       <find>'{</find>
       <find>Backend\SysBeuserController</find>
       <find>'</find>
@@ -146,7 +129,7 @@
       <find>sysProductsSeeder</find>
       <find>role</find>
       <find>@isset($required</find>
-      <find />
+      <find>@isset($required) required @endisset</find>
       <find>&lt;form</find>
       <find>form-input.b</find>
       <find>e5uaTDdYoZva6mkep4yrfn2mXR4qnzLKYJ9DFwpl</find>
@@ -161,6 +144,7 @@
       <find>dd</find>
       <find>dd(</find>
       <find>show</find>
+      <find>update</find>
     </findStrings>
     <replaceStrings>
       <replace>firstname</replace>
@@ -185,8 +169,8 @@
       <replace>&quot;{</replace>
       <replace>&quot;</replace>
       <replace>{$namePrefix}</replace>
-      <replace />
-      <replace />
+      <replace>@if(isset($required) &amp;&amp; $required == true) required @endif</replace>
+      <replace>&lt;label class=&quot;col-md-&quot;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/resources/assets/less</dir>
@@ -207,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/resources/views/components/form.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/components/form-input.blade.php" />
         <option value="$PROJECT_DIR$/src/composer.json" />
-        <option value="$PROJECT_DIR$/src/resources/views/components/form-media.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/AdminController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/BackendControllerInterface.php" />
@@ -244,11 +227,12 @@
         <option value="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php" />
         <option value="$PROJECT_DIR$/src/app/SysBlogEntry.php" />
-        <option value="$PROJECT_DIR$/src/app/SysProductCategory.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" />
         <option value="$PROJECT_DIR$/src/app/SysProduct.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/components/form-media.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/SysProductCategory.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" />
       </list>
     </option>
   </component>
@@ -519,12 +503,12 @@
       <workItem from="1527090813826" duration="11862000" />
       <workItem from="1527153028902" duration="14983000" />
       <workItem from="1527170705172" duration="7783000" />
-      <workItem from="1527190620913" duration="3715000" />
+      <workItem from="1527190620913" duration="4842000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162359000" />
+    <option name="totallyTimeSpent" value="163486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,11 +528,10 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.32532752" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963374" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15778251" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.32519424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
+      <window_info anchor="right" id="Database" order="3" weight="0.17803837" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -559,6 +542,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963374" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,13 +796,6 @@
     <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-select.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-media.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="107" lean-forward="true" selection-start-line="5" selection-start-column="107" selection-end-line="5" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -860,27 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding>
-            <element signature="e#48#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_product_category_mm">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -894,27 +854,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_product_category_mm">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
+        <state relative-caret-position="-1089">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="e#23#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-media.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="282" column="62" lean-forward="true" selection-start-line="282" selection-start-column="62" selection-end-line="282" selection-end-column="62" />
+        <state relative-caret-position="-569">
+          <caret line="139" column="48" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="135" lean-forward="true" selection-start-line="5" selection-start-column="135" selection-end-line="5" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
+          <folding>
+            <element signature="e#48#84#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

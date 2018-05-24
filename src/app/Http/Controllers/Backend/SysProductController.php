@@ -137,6 +137,8 @@ class SysProductController extends Controller implements BackendControllerInterf
             ->get(['name', 'id'])
             ->sortBy('name');
 
+        $categories = SysProductCategory::all();
+
         /**
          * `required` is false on nearly all fields, because a product might inherit values from the parent product and
          *      does not need to have own values other than a name.
@@ -153,6 +155,7 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Hidden'), 'type' => 'checkbox', 'id' => 'hidden', 'required' => false],
                         ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products],
+                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'categories', 'required' => false, 'data' => $categories],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false],
                     ]
                 ]
@@ -207,10 +210,9 @@ class SysProductController extends Controller implements BackendControllerInterf
             'description' => 'string|nullable',
             'price' => 'numeric|nullable',
             'stock' => 'required|integer',
-            'media' => '',
             'parent_product_id' => 'integer|exists:sys_product,id|nullable',
             'new_until' => 'date|nullable',
-            'media' => 'sometimes|array|image|dimensions:min_width=250,min_height=250',
+            'media' => 'sometimes|array',
             'product_categories' => 'sometimes|array'
         ];
     }

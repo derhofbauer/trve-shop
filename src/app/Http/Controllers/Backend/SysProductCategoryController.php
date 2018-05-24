@@ -20,6 +20,8 @@ class SysProductCategoryController extends Controller implements BackendControll
     public function __construct ()
     {
         $this->middleware('auth:admin');
+
+        $this->storage_path = 'public/category_pictures';
     }
 
     /**
@@ -54,7 +56,9 @@ class SysProductCategoryController extends Controller implements BackendControll
                     'title' => __('General'),
                     'fields' => [
                         ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name placeholder'), 'required' => true, 'value' => $category->name],
-                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false, 'value' => $category->description]
+                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false, 'value' => $category->description],
+                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$category->media],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                     ]
                 ]
             ]
@@ -74,6 +78,9 @@ class SysProductCategoryController extends Controller implements BackendControll
         $validatedData = $request->validate(self::getValidationRules());
 
         $category->fill($validatedData);
+        self::handleMedia($category, $request, $this->storage_path);
+        self::handleDeleteMedia($category, $request);
+
         $category->save();
 
         return redirect()->route('admin.categories.edit', ['id' => $id]);
@@ -90,7 +97,8 @@ class SysProductCategoryController extends Controller implements BackendControll
                     'title' => __('General'),
                     'fields' => [
                         ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name placeholder'), 'required' => true],
-                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false]
+                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                     ]
                 ]
             ]
@@ -107,6 +115,7 @@ class SysProductCategoryController extends Controller implements BackendControll
         $validatedData = $request->validate(self::getValidationRules());
 
         $category = new SysProductCategory($validatedData);
+        self::handleMedia($category, $request, $this->storage_path);
         $category->save();
 
         return redirect()->route('admin.categories.edit', ['id' => $category->id]);
@@ -150,5 +159,32 @@ class SysProductCategoryController extends Controller implements BackendControll
             'routes' => RouteHelper::prepareRouteConfigArray('admin.categories'),
             'identifier' => 'name'
         ], $additionalConfig);
+    }
+
+    /**
+     * @param SysProductCategory $category
+     * @param Request            $request
+     */
+    public static function handleDeleteMedia (&$category, $request)
+    {
+        if ($request->has('delete_media')) {
+            foreach ($request->input('delete_media') as $path => $on) {
+                $category->removeMedia($path);
+            }
+        }
+    }
+
+    /**
+     * @param  SysProductCategory $category
+     * @param Request             $request
+     * @param string              $storagePath
+     */
+    public static function handleMedia (&$category, $request, $storagePath)
+    {
+        if ($request->has('media')) {
+            foreach ($request->file('media') as $uploaded_file) {
+                $category->addMedia($uploaded_file->store($storagePath));
+            }
+        }
     }
 }
