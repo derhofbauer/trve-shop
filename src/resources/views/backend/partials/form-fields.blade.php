@@ -25,6 +25,14 @@
         @formmedia($field)
         @endformmedia
         @break
+    @case('list')
+        @formlist($field)
+        @endformlist
+        @break
+    @case('products')
+        @formproducts($field)
+        @endformproducts
+        @break
     @default
         @forminput($field)
         @endforminput

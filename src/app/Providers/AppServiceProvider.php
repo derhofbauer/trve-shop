@@ -35,6 +35,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('components/form-editor', 'formeditor');
         Blade::component('components/form-checkbox', 'formcheckbox');
         Blade::component('components/form-media', 'formmedia');
+        Blade::component('components/form-list', 'formlist');
+        Blade::component('components/form-products', 'formproducts');
     }
 
     /**

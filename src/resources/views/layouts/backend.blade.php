@@ -38,6 +38,12 @@
                 @permitted('productsShow')
                     <a href="{{ route('admin.products') }}" class="nav__item">{{ __('Products') }}</a>
                 @endpermitted
+                @permitted('commentsShow')
+                    <a href="{{ route('admin.comments') }}" class="nav__item">{{ __('Comments') }}</a>
+                @endpermitted
+                @permitted('ratingsShow')
+                <a href="{{ route('admin.ratings') }}" class="nav__item">{{ __('Ratings') }}</a>
+                @endpermitted
                 @permitted('categoriesShow')
                     <a href="{{ route('admin.categories') }}" class="nav__item">{{ __('Categories') }}</a>
                 @endpermitted
@@ -50,7 +56,9 @@
                 @permitted('feusersShow')
                     <a href="{{ route('admin.users.frontend') }}" class="nav__item nav__item--sub">{{ __('Frontend User') }}</a>
                 @endpermitted
-                {{--<a href="{{ route('admin.Orders') }}" class="nav__item">{{ __('Orders') }}</a>--}}
+                @permitted('ordersShow')
+                    <a href="{{ route('admin.orders') }}" class="nav__item">{{ __('Orders') }}</a>
+                @endpermitted
                 {{--<a href="{{ route('admin.settings') }}" class="nav__item">{{ __('Settings') }}</a>--}}
             </nav>
         </div>

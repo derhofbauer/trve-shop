@@ -3,12 +3,17 @@
        id="{{ $id }}"
        name="{{ $id }}"
        value="{{ isset($value) ? $value : old($id) }}"
+       @isset($placeholder)
        placeholder="{{ $placeholder }}"
+       @endisset
        class="form-control"
        @if(isset($required) && $required == true)
-           required
+       required
        @endif
        @if(isset($multiple) && $multiple == true)
-           multiple
+       multiple
+       @endif
+       @if(isset($readonly) && $readonly == true)
+       readonly
        @endif
 >

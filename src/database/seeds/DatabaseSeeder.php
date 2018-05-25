@@ -17,7 +17,9 @@ class DatabaseSeeder extends Seeder
             FeuserDatabaseSeeder::class,
             BlogEntryDatabaseSeeder::class,
             ProductDatabaseSeeder::class,
-            CategoryDatabaseSeeder::class
+            CategoryDatabaseSeeder::class,
+            CommentDatabaseSeeder::class,
+            OrderDatabaseSeeder::class
         ]);
     }
 }

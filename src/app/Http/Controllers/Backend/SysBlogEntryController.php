@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
 use App\Http\Helpers\RouteHelper;
 use App\SysBeuser;
 use App\SysBlogEntry;
@@ -12,7 +13,7 @@ use Illuminate\Http\Request;
  *
  * @package App\Http\Controllers\Backend
  */
-class SysBlogEntryController extends \App\Http\Controllers\Controller implements BackendControllerInterface
+class SysBlogEntryController extends Controller implements BackendControllerInterface
 {
     /**
      * SysBlogEntryController constructor.
@@ -56,7 +57,7 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
     public function show ($id)
     {
         $blogEntry = SysBlogEntry::find($id);
-        $users = SysBeuser::all('username As name', 'id');
+        $users = SysBeuser::all('username AS name', 'id');
         return view('backend/edit', self::prepareConfig([
             'object' => $blogEntry,
             'tabs' => [
@@ -146,7 +147,7 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
      *
      * @return array
      */
-    public static function prepareConfig ($additionalConfig)
+    public static function prepareConfig (array $additionalConfig)
     {
         return array_merge([
             'dataType' => __('Blog Entry'),
@@ -165,7 +166,7 @@ class SysBlogEntryController extends \App\Http\Controllers\Controller implements
             'title' => 'required|string|min:1',
             'abstract' => 'required|string|min:1',
             'content' => 'required|string|min:1',
-            'beuser_id' => 'required|numeric|exists:sys_beusers,id'
+            'beuser_id' => 'required|integer|exists:sys_beusers,id'
         ];
     }
 }

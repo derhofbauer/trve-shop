@@ -43,8 +43,7 @@ class ProductDatabaseSeeder extends Seeder
                 'price' => 6.66,
                 'stock' => 5,
                 'media' => null,
-                'parent_product_id' => 1,
-                'deleted' => 1
+                'parent_product_id' => 1
             ],
         ];
 
@@ -52,5 +51,6 @@ class ProductDatabaseSeeder extends Seeder
             $product = new \App\SysProduct($date);
             $product->save();
         }
+        \App\SysProduct::find(4)->delete();
     }
 }

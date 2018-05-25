@@ -43,27 +43,31 @@ class SysRole extends Model
      */
     public static function getPermissions ()
     {
+        $permissions = [];
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('products'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('categories'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('comments'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('ratings'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('blogPosts'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('beusers'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('feusers'));
+        $permissions = array_merge($permissions, self::prepareCRUDpermissions('orders'));
+
+        return $permissions;
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return array
+     */
+    public static function prepareCRUDpermissions ($key)
+    {
         return [
-            'productsShow',
-            'productsAdd',
-            'productsEdit',
-            'productsDelete',
-            'categoriesShow',
-            'categoriesAdd',
-            'categoriesEdit',
-            'categoriesDelete',
-            'blogPostsShow',
-            'blogPostsAdd',
-            'blogPostsEdit',
-            'blogPostsDelete',
-            'beusersShow',
-            'beusersEdit',
-            'beusersDelete',
-            'beusersAdd',
-            'feusersShow',
-            'feusersEdit',
-            'feusersAdd',
-            'feusersDelete'
+            "{$key}Show",
+            "{$key}Add",
+            "{$key}Edit",
+            "{$key}Delete",
         ];
     }
 }

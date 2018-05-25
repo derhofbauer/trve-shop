@@ -16,15 +16,27 @@ class RouteHelper
      *
      * @param string $controller
      * @param string $namePrefix
+     * @param array  $skipRoutes
      */
-    public static function createCRUDroutes ($controller, $namePrefix)
+    public static function createCRUDroutes ($controller, $namePrefix, $skipRoutes = [])
     {
         Route::get("/", "{$controller}@index")->name("{$namePrefix}");
-        Route::get("/{id}", "{$controller}@show")->name("{$namePrefix}.edit");
-        Route::post("/{id}", "{$controller}@update")->name("{$namePrefix}.edit.submit");
-        Route::get("/create", "{$controller}@createView")->name("{$namePrefix}.create");
-        Route::post("/create", "{$controller}@create")->name("{$namePrefix}.create.submit");
-        Route::get("/delete/{id}", "{$controller}@delete")->name("{$namePrefix}.delete");
+
+        if (!in_array('edit', $skipRoutes)) {
+            Route::get("/{id}", "{$controller}@show")->name("{$namePrefix}.edit");
+        }
+        if (!in_array('edit.submit', $skipRoutes)) {
+            Route::post("/{id}", "{$controller}@update")->name("{$namePrefix}.edit.submit");
+        }
+        if (!in_array('create', $skipRoutes)) {
+            Route::get("/create", "{$controller}@createView")->name("{$namePrefix}.create");
+        }
+        if (!in_array('create.submit', $skipRoutes)) {
+            Route::post("/create", "{$controller}@create")->name("{$namePrefix}.create.submit");
+        }
+        if (!in_array('delete', $skipRoutes)) {
+            Route::get("/delete/{id}", "{$controller}@delete")->name("{$namePrefix}.delete");
+        }
     }
 
     /**

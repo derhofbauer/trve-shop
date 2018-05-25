@@ -30,7 +30,7 @@ class SysProductController extends Controller implements BackendControllerInterf
      */
     public function index ()
     {
-        $products = SysProduct::allWithoutDeleted()->get(['id', 'name', 'stock', 'parent_product_id', 'new_until', 'hidden'])->sortBy('stock');
+        $products = SysProduct::all(['id', 'name', 'stock', 'parent_product_id', 'new_until', 'hidden'])->sortBy('stock');
 
         return view('backend/list', self::prepareConfig([
             'thead' => [
@@ -67,7 +67,7 @@ class SysProductController extends Controller implements BackendControllerInterf
         foreach ($product->children as $child) {
             $children[] = $child->id;
         }
-        $products = SysProduct::allWithoutDeleted()
+        $products = SysProduct::query()
             ->where('id', '!=', $id)// not self
             ->whereNull('parent_product_id')// not products that already are children of some other product
             ->get(['name', 'id'])
@@ -132,7 +132,7 @@ class SysProductController extends Controller implements BackendControllerInterf
      */
     public function createView ()
     {
-        $products = SysProduct::allWithoutDeleted()
+        $products = SysProduct::query()
             ->whereNull('parent_product_id')// not products that already are children of some other product
             ->get(['name', 'id'])
             ->sortBy('name');
@@ -179,6 +179,7 @@ class SysProductController extends Controller implements BackendControllerInterf
         $product = new SysProduct($validatedData);
         self::handleMedia($product, $request, $this->storage_path);
         self::handleParent($product, $request);
+        self::handleProductCategories($product, $request);
 
         $product->save();
 
@@ -194,8 +195,11 @@ class SysProductController extends Controller implements BackendControllerInterf
     public function delete (Request $request, $id)
     {
         $product = SysProduct::find($id);
-        $product->deleted = true;
-        $product->save();
+        if ($product->children->count() > 0) {
+            return redirect()->route('admin.products')->with('message', __('This item cannot be deleted, because it has children'));
+        } else {
+            $product->delete();
+        }
 
         return redirect()->route('admin.products');
     }

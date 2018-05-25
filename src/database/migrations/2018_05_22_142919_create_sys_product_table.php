@@ -20,10 +20,10 @@ class CreateSysProductTable extends Migration
             $table->decimal('price')->nullable();
             $table->integer('stock');
             $table->boolean('hidden')->default(0);
-            $table->boolean('deleted')->default(0);
             $table->json('media')->nullable();
             $table->integer('parent_product_id')->nullable();
             $table->date('new_until')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

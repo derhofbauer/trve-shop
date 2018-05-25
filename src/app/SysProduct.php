@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Storage;
  */
 class SysProduct extends Model
 {
+    use SoftDeletes;
+
     /**
      * The table associated with the model.
      *
@@ -35,7 +38,6 @@ class SysProduct extends Model
         'price',
         'stock',
         'hidden',
-        'deleted',
         'parent_product_id',
         'new_until'
     ];
@@ -74,11 +76,11 @@ class SysProduct extends Model
     }
 
     /**
-     * @return mixed
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public static function allWithoutDeleted ()
+    public function ordersMM ()
     {
-        return SysProduct::where('deleted', 0);
+        return $this->hasMany('App\SysOrderProductMM', 'product_id');
     }
 
     /**
@@ -104,6 +106,9 @@ class SysProduct extends Model
         Storage::disk('local')->delete($path);
     }
 
+    /**
+     * @param SysProductCategory $category
+     */
     public function addCategory (SysProductCategory $category)
     {
         if (!$this->categories->contains($category)) {
@@ -111,7 +116,11 @@ class SysProduct extends Model
         }
     }
 
-    public function removeCategory (SysProductCategory $category) {
+    /**
+     * @param SysProductCategory $category
+     */
+    public function removeCategory (SysProductCategory $category)
+    {
         if ($this->categories->contains($category)) {
             $this->categories()->detach($category);
         }

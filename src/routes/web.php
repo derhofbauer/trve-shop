@@ -67,4 +67,24 @@ Route::prefix('admin')->group(function () {
     Route::prefix('/categories')->group(function () {
         RouteHelper::createCRUDroutes('Backend\SysProductCategoryController', 'admin.categories');
     });
+
+    Route::prefix('/comments')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysCommentController', 'admin.comments', [
+            'create',
+            'create.submit'
+        ]);
+    });
+
+    Route::prefix('/ratings')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysRatingController', 'admin.ratings', [
+            'create',
+            'create.submit',
+            'edit',
+            'update'
+        ]);
+    });
+
+    Route::prefix('/orders')->group(function () {
+        RouteHelper::createCRUDroutes('Backend\SysOrderController', 'admin.orders');
+    });
 });
