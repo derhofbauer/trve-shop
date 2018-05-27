@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    @forelse ($entries as $entry)
+                    @forelse ($data as $entry)
                         @include('frontend/partials/blog-entry', ['entry' => $entry])
                     @empty
                         <p>{{ __('No blog entries found.') }}</p>

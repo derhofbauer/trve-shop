@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -124,5 +125,29 @@ class SysProduct extends Model
         if ($this->categories->contains($category)) {
             $this->categories()->detach($category);
         }
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cartEntries ()
+    {
+        return $this->hasMany('App\SysCartEntry', 'product_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments ()
+    {
+        return $this->hasMany('App\SysComment', 'product_id');
+    }
+
+    /**
+     * @return Collection
+     */
+    public static function allVisible ()
+    {
+        return SysProduct::where('hidden', '0')->get();
     }
 }

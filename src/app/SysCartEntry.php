@@ -4,19 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SysComment extends Model
+/**
+ * Class SysCartEntry
+ *
+ * @package App
+ */
+class SysCartEntry extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'sys_comment';
-
-    /**
-     * @var string
-     */
-    protected $guard = 'admin';
+    protected $table = 'sys_cart_entry';
 
     /**
      * The attributes that are mass assignable.
@@ -26,13 +26,13 @@ class SysComment extends Model
     protected $fillable = [
         'feuser_id',
         'product_id',
-        'content'
+        'product_quantity'
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function author ()
+    public function feuser ()
     {
         return $this->belongsTo('App\SysFeuser', 'feuser_id');
     }
@@ -40,9 +40,9 @@ class SysComment extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function feuser ()
+    public function user ()
     {
-        return $this->author();
+        return $this->feuser();
     }
 
     /**

@@ -117,6 +117,7 @@ class SysProductController extends Controller implements BackendControllerInterf
         $validatedData = $request->validate($validationRules);
 
         $product->fill($validatedData);
+        self::handleHidden($product, $request);
         self::handleMedia($product, $request, $this->storage_path);
         self::handleDeleteMedia($product, $request);
         self::handleParent($product, $request);
@@ -177,6 +178,7 @@ class SysProductController extends Controller implements BackendControllerInterf
         $validatedData = $request->validate($validationRules);
 
         $product = new SysProduct($validatedData);
+        self::handleHidden($product, $request);
         self::handleMedia($product, $request, $this->storage_path);
         self::handleParent($product, $request);
         self::handleProductCategories($product, $request);
@@ -217,7 +219,8 @@ class SysProductController extends Controller implements BackendControllerInterf
             'parent_product_id' => 'integer|exists:sys_product,id|nullable',
             'new_until' => 'date|nullable',
             'media' => 'sometimes|array',
-            'product_categories' => 'sometimes|array'
+            'product_categories' => 'sometimes|array',
+            'hidden' => 'sometimes'
         ];
     }
 
@@ -291,6 +294,20 @@ class SysProductController extends Controller implements BackendControllerInterf
             }
         } else {
             $product->categories()->detach($product->categories);
+        }
+    }
+
+    /**
+     * @param SysProduct $product
+     * @param Request    $request
+     */
+    public static function handleHidden (&$product, $request)
+    {
+        if (!$request->has('hidden') || $request->input('hidden') != 'on') {
+            $product->hidden = false;
+        }
+        if ($request->has('hidden') && $request->input('hidden') == 'on') {
+            $product->hidden = true;
         }
     }
 }

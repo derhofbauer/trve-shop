@@ -45,4 +45,12 @@ class SysFeuser extends Authenticatable
     {
         $this->password = Hash::make($password);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cartEntries ()
+    {
+        return $this->hasMany('App\SysCartEntry', 'feuser_id');
+    }
 }

@@ -16,7 +16,7 @@ class HomeController extends \App\Http\Controllers\Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:web');
+        // $this->middleware('auth:web');
     }
 
     /**

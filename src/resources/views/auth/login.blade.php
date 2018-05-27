@@ -7,6 +7,8 @@
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
+                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

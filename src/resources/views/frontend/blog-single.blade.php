@@ -14,16 +14,16 @@
                         </div>
                     @endif
 
-                    @isset ($entry)
+                    @isset ($object)
                             <article class="blog-entry">
                                 <header class="blog-entry__header header">
-                                    <h3>{{ $entry->title }}</h3>
+                                    <h3>{{ $object->title }}</h3>
                                 </header>
                                 <div class="blog-entry__abstract abstract">
-                                    {{ $entry->abstract }}
+                                    {{ $object->abstract }}
                                 </div>
                                 <div class="blog-entry__content content">
-                                    {{ $entry->content }}
+                                    {{ $object->content }}
                                 </div>
                                 <div class="blog-entry__back">
                                     <a href="{{ route('blog') }}">{{ __('Back to Blog') }}</a>
@@ -31,7 +31,7 @@
                             </article>
                     @endisset
 
-                    @empty ($entry)
+                    @empty ($object)
                         <p>{{ __('Blog entry not found.') }}</p>
                     @endempty
                 </div>

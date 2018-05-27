@@ -16,27 +16,30 @@ use App\Http\Helpers\RouteHelper;
 /**
  * Root route
  */
-//Route::get('/', function () {
-//    return view('frontend/welcome');
-//})->name('root');
-Route::get('/', 'Frontend\HomeController@index')->name('root');
+Route::get('/', 'Frontend\SysProductController@index')->name('root');
+
+/**
+ * Auth Route
+ */
+Auth::routes();
 
 /**
  * Frontend routes
  */
-Route::prefix('home')->group(function () {
-    /**
-     * Auth Route
-     */
-    Auth::routes();
-
-    Route::get('/', 'Frontend\HomeController@index')->name('home');
+Route::prefix('shop')->group(function () {
+    Route::get('/', 'Frontend\SysProductController@index')->name('shop');
+    Route::get('/products', 'Frontend\SysProductController@index')->name('products');
+    Route::get('/products/{id}/{slug?}', 'Frontend\SysProductController@show')->name('products.show');
 });
-
+Route::prefix('cart')->group(function () {
+    Route::get('/', 'Frontend\SysCartController@index')->name('cart');
+    Route::get('/add/{id}/{returnUrl?}', 'Frontend\SysCartController@addToCart')->name('cart.add');
+});
 Route::prefix('blog')->group(function () {
     Route::get('/', 'Frontend\SysBlogEntryController@index')->name('blog');
     Route::get('/{id}/{slug?}', 'Frontend\SysBlogEntryController@show')->name('blog.show');
 });
+
 
 /**
  * Backend routes

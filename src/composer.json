@@ -58,6 +58,7 @@
       "php artisan config:clear"
     ],
     "migration-fresh": [
+      "composer dump-autoload",
       "php artisan migrate:fresh --seed"
     ],
     "delete-testfiles": [
