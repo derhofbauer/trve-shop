@@ -20,9 +20,11 @@
     <div id="app">
         <nav class="navbar">
             <div class="navbar__brand">
-                <a href="{{ route('root') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a href="{{ route('root') }}" class="navbar__brand__link">
+                    <h1 class="sr-only">{{ config('app.name', 'Laravel') }}</h1>
+                    <img src="{{ asset('img/Logo.svg') }}" alt="Logo">
                 </a>
+                <div class="navbar__title">{{ __('Merch Store') }}</div>
             </div>
             <div class="navbar__center">
                 <div class="main-nav">
