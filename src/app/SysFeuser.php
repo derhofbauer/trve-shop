@@ -61,4 +61,12 @@ class SysFeuser extends Authenticatable
     {
         return $this->cartEntries();
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders ()
+    {
+        return $this->hasMany('App\SysOrder', 'feuser_id');
+    }
 }
