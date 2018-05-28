@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
-apt update && apt install -y libpq-dev
+if [[ ${apt list | grep 'libpq-dev'} == "" ]]; then
+    apt update && apt install -y libpq-dev
+fi
 
-docker-php-ext-install mysqli pdo pdo_pgsql
+if [[ ${php -m | grep 'mysqli'} == "" ]]; then
+    docker-php-ext-install mysqli
+fi
+
+if [[ ${php -m | grep 'PDO'} == "" ]]; then
+    docker-php-ext-install pdo pdo_pgsql
+fi
 
 a2enmod rewrite
 
