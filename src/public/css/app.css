@@ -1513,7 +1513,35 @@ h2 {
 }
 .main-nav {
   background-color: #232322;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-area: main-nav;
+}
+.main-nav--dark {
+  background-color: #111111;
+}
+.main-nav__item {
+  border-radius: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.main-nav__item:not(:last-child) {
+  margin-right: 0.9375rem;
+}
+.main-nav__item:hover {
+  background-color: #6a6a6a;
+}
+.main-nav__item a {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.main-nav__item--active {
+  background-color: #373737;
 }
 .nav--vertical {
   display: -webkit-box;

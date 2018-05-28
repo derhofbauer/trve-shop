@@ -1,17 +1,48 @@
 .main-nav {
   background-color: @default-bg-color-darker;
+  display:          flex;
+  grid-area:        main-nav;
 
-  grid-area: main-nav;
+  &--dark {
+    background-color: @navbar-bg-color;
+  }
+
+  &__item {
+    border-radius: @default-border-radius-small;
+    font-size:     20px;
+    cursor:        pointer;
+
+    &:not(:last-child) {
+      margin-right: @default-margin;
+    }
+
+    &:hover {
+      background-color: lighten(#373737, 20%);
+    }
+
+    a {
+      display:         inline-block;
+      text-decoration: none;
+      padding-left:    25px;
+      padding-right:   25px;
+      padding-bottom:  10px;
+      padding-top:     10px;
+    }
+
+    &--active {
+      background-color: #373737;
+    }
+  }
 }
 
 .nav {
   &--vertical {
-    display: flex;
+    display:        flex;
     flex-direction: column;
   }
 
   &__item {
     padding: @default-padding;
-    color: @color-font-inverted;
+    color:   @color-font-inverted;
   }
 }

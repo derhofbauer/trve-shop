@@ -27,41 +27,34 @@
                 <div class="navbar__title">{{ __('Merch Store') }}</div>
             </div>
             <div class="navbar__center">
-                <div class="main-nav">
+                <div class="main-nav main-nav--dark">
                     @include('frontend.main-nav')
                 </div>
+            </div>
+            <div class="navbar__right">
                 <!-- Authentication Links -->
-                <ul class="nav">
+                <div class="nav">
+                    <div class="nav-item"><a href="{{ route('cart') }}" class="nav-link">{{ __('Cart') }}</a></div>
                     @guest('web')
-                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                        <li><a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a></li>
+                        <div class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></div>
                     @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <div class="nav-item">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('profile') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->firstname }} {{ Auth::user()->lastname }} <span class="caret"></span>
                             </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
+                            @include('frontend.logout-form')
+                        </div>
                     @endguest
-                </ul>
+                </div>
             </div>
-            <div class="navbar__right"></div>
         </nav>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+<footer class="footer">
+    <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a>
+</footer>
 </body>
 </html>

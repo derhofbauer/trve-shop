@@ -34,12 +34,17 @@ Route::prefix('shop')->group(function () {
     Route::get('/products/{id}/{slug?}', 'Frontend\SysProductController@show')->name('products.show');
 });
 Route::prefix('cart')->group(function () {
-    Route::get('/', 'Frontend\SysCartController@index')->name('cart');
-    Route::get('/add/{id}/{returnUrl?}', 'Frontend\SysCartController@addToCart')->name('cart.add');
+    Route::get('/', 'Frontend\CartController@index')->name('cart');
+    Route::get('/add/{id}/{returnUrl?}', 'Frontend\CartController@addToCart')->name('cart.add');
+    Route::get('/remove/{id}', 'Frontend\CartController@removeFromCart')->name('cart.remove');
 });
 Route::prefix('blog')->group(function () {
     Route::get('/', 'Frontend\SysBlogEntryController@index')->name('blog');
     Route::get('/{id}/{slug?}', 'Frontend\SysBlogEntryController@show')->name('blog.show');
+});
+Route::prefix('profile')->group(function () {
+    Route::get('/', 'Frontend\ProfileController@index')->name('profile');
+    Route::post('/', 'rontend\ProfileController@update')->name('profile.update');
 });
 
 
