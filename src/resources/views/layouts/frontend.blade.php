@@ -28,10 +28,7 @@
             </div>
             <div class="navbar__center">
                 <div class="main-nav">
-                    <div class="main-nav__item"><a href="{{ route('root') }}">{{ __('Shop') }}</a></div>
-                </div>
-                <div class="main-nav">
-                    <div class="main-nav__item"><a href="{{ route('blog') }}">{{ __('Blog') }}</a></div>
+                    @include('frontend.main-nav')
                 </div>
                 <!-- Authentication Links -->
                 <ul class="nav">

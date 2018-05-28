@@ -16,7 +16,9 @@ use App\Http\Helpers\RouteHelper;
 /**
  * Root route
  */
-Route::get('/', 'Frontend\SysProductController@index')->name('root');
+Route::get('/', function () {
+    return redirect()->route('shop');
+})->name('root');
 
 /**
  * Auth Route
