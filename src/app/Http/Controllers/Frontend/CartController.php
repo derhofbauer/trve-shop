@@ -170,4 +170,29 @@ class CartController extends Controller
             }
         }
     }
+
+    /**
+     * @param Request $request
+     *
+     * @return float|int
+     */
+    public static function getCartTotal (Request $request) {
+        if (Auth::guest()) {
+            $entries = $request->session()->get('cart', function () {
+                return [];
+            });
+            $total = 0;
+            foreach ($entries as $entry) {
+                $product = SysProduct::find($entry['id']);
+                $total += $product->price * $entry['quantity'];
+            }
+        } else {
+            $entries = Auth::user()->cart;
+            $total = 0;
+            foreach ($entries as $entry) {
+                $total += $entry->product->price * $entry->product_quantity;
+            }
+        }
+        return $total;
+    }
 }

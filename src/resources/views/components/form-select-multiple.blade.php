@@ -2,8 +2,8 @@
 <div class="select">
     @foreach($data as $date)
         <div class="select-item">
-            <label for="product_categories[{{ $date->id }}]">
-                <input type="checkbox" id="product_categories[{{ $date->id }}]" name="product_categories[{{ $date->id }}]" @if(isset($value) && in_array($date->id, $value)) checked @endif>
+            <label for="{{ $id }}[{{ $date->id }}]">
+                <input type="checkbox" id="{{ $id }}[{{ $date->id }}]" name="{{ $id }}[{{ $date->id }}]" @if(isset($value) && in_array($date->id, $value)) checked @endif>
                 {{ $date->name }}
             </label>
         </div>

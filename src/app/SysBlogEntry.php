@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class SysBlogEntry
@@ -38,6 +39,15 @@ class SysBlogEntry extends Model
     ];
 
     /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'media' => 'array'
+    ];
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author ()
@@ -59,5 +69,62 @@ class SysBlogEntry extends Model
     public function products ()
     {
         return $this->belongsToMany('App\SysProduct', 'sys_blog_product_mm', 'blog_entry_id', 'product_id');
+    }
+
+    /**
+     * @param string $path
+     */
+    public function addMedia ($path)
+    {
+        $tmp = $this->media;
+        $tmp[] = $path;
+        $this->media = $tmp;
+    }
+
+    /**
+     * @param string $path
+     */
+    public function removeMedia ($path)
+    {
+        $tmp = $this->media;
+        $index = array_search($path, $tmp);
+        unset($tmp[$index]);
+        $this->media = $tmp;
+
+        Storage::disk('local')->delete($path);
+    }
+
+    /**
+     * @param SysProduct $product
+     */
+    public function addProduct (SysProduct $product)
+    {
+        if (!$this->products->contains($product)) {
+            $this->products()->attach($product);
+        }
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasMedia ()
+    {
+        return is_array($this->media);
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstImageUri ()
+    {
+        return $this->media[0];
+    }
+
+    /**
+     * @return string
+     */
+    public function renderMarkdown ()
+    {
+        return \Parsedown::instance()->text($this->content);
     }
 }

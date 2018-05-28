@@ -46,6 +46,7 @@ Route::prefix('profile')->group(function () {
     Route::get('/', 'Frontend\ProfileController@index')->name('profile');
     Route::post('/', 'rontend\ProfileController@update')->name('profile.update');
 });
+Route::get('/search/{searchterm?}', 'Frontend\SearchController@search')->name('search');
 
 
 /**

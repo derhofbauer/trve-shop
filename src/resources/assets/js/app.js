@@ -1,8 +1,11 @@
 jQuery(document).ready(function ($, undefined) {
+    // Go :D
+    console.log('GO! :D')
+
     // Feather Icons
     feather.replace()
 
-// SimpleMDE - Markdown Editor
+    // SimpleMDE - Markdown Editor
     let $editors = document.querySelectorAll(".editor")
     let simplemdes = []
 
@@ -22,7 +25,7 @@ jQuery(document).ready(function ($, undefined) {
         }))
     })
 
-// Delete Modal
+    // Delete Modal
     let modalTriggers = $('[data-modal="confirm-delete"]')
 
     modalTriggers.on('click', (event) => {
@@ -31,5 +34,22 @@ jQuery(document).ready(function ($, undefined) {
         if (confirm('Are you sure you want to delete this item?')) {
             window.location = $(event.target).closest('a').prop('href')
         }
+    })
+
+    // Dropdown
+    $('[data-toggle]').on('click', (event) => {
+        event.preventDefault()
+
+        let $target = $(event.currentTarget).attr('data-toggle')
+
+        if ($target != undefined) {
+            $($target).slideToggle();
+        }
+    })
+
+    // Logout Link
+    $('[data-logout]').on('click', (event) => {
+        event.preventDefault()
+        $('#logout-form').submit()
     })
 })

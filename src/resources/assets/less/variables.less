@@ -15,8 +15,12 @@
 
 // Paddings & Margins
 @default-step: 0.3125rem; // 5px;
+@default-padding-large: 4 * @default-step;
 @default-padding: 3 * @default-step;
+@default-padding-small: 2 * @default-step;
+@default-margin-large: @default-padding-large;
 @default-margin: @default-padding;
+@default-margin-small: @default-padding-small;
 
 // Colors
 @color-primary: #FF9900;
@@ -68,3 +72,15 @@
     xl 1140px;
 @grid-columns: 12;
 @grid-gutter-width: 30px;
+
+// Box Shadow
+@default-box-shadow-offset-x: 0;
+@default-box-shadow-offset-y: 1px;
+@default-box-shadow-blur: 2px;
+@default-box-shadow-spread: 0;
+@default-box-shadow-color: rgba(126, 127, 130, 0.75);
+@default-box-shadow: @default-box-shadow-offset-x
+                     @default-box-shadow-offset-y
+                     @default-box-shadow-blur
+                     @default-box-shadow-spread
+                     @default-box-shadow-color;

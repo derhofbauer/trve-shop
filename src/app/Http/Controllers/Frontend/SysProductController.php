@@ -27,6 +27,7 @@ class SysProductController extends Controller
     {
         $products = SysProduct::allVisible();
 
+
         return view('frontend.product', self::prepareConfig([
             'data' => $products
         ]));

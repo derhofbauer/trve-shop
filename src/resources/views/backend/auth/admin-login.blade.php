@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/backend.min.css') }}" rel="stylesheet">
 </head>
 <body class="login">
 <div id="app">
@@ -40,8 +40,8 @@
 
                             @if ($errors->has('email'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
+                                    <strong>{{ $errors->first('username') }}</strong>
+                                </span>
                             @endif
                         </div>
                     </div>
@@ -54,15 +54,15 @@
 
                             @if ($errors->has('password'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
                             @endif
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary btn--login">
                                 {{ __('Login') }}
                             </button>
                         </div>

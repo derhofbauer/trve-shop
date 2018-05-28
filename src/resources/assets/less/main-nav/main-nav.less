@@ -2,6 +2,7 @@
   background-color: @default-bg-color-darker;
   display:          flex;
   grid-area:        main-nav;
+  margin-right:     @default-margin;
 
   &--dark {
     background-color: @navbar-bg-color;
@@ -11,6 +12,7 @@
     border-radius: @default-border-radius-small;
     font-size:     20px;
     cursor:        pointer;
+    color:         #fff;
 
     &:not(:last-child) {
       margin-right: @default-margin;
@@ -23,10 +25,11 @@
     a {
       display:         inline-block;
       text-decoration: none;
-      padding-left:    25px;
-      padding-right:   25px;
-      padding-bottom:  10px;
-      padding-top:     10px;
+      padding-left:    @default-padding-large + @default-step;
+      padding-right:   @default-padding-large + @default-step;
+      padding-bottom:  @default-padding-small;
+      padding-top:     @default-padding-small;
+      color:           inherit;
     }
 
     &--active {
@@ -41,8 +44,7 @@
     flex-direction: column;
   }
 
-  &__item {
-    padding: @default-padding;
-    color:   @color-font-inverted;
+  &-item {
+    margin-left: @default-margin-small;
   }
 }

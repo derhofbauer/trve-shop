@@ -150,4 +150,26 @@ class SysProduct extends Model
     {
         return SysProduct::where('hidden', '0')->get();
     }
+
+    /**
+     * @return string
+     */
+    public function getTeaser ()
+    {
+        $content = \Parsedown::instance()->text($this->description);
+        $content = strip_tags($content);
+        return substr($content, 0, 50) . ' ...';
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstImageUri ()
+    {
+        return $this->media[0];
+    }
+
+    public static function getHighestPricedProduct () {
+        return SysProduct::orderBy('price', 'desc')->limit(1)->get()->first();
+    }
 }

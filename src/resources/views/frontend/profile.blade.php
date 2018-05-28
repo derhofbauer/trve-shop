@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
 @section('content')
-    {{ dump($orders) }}
-    {{ dump($user) }}
+    {{--{{ dump($orders) }}--}}
+    {{--{{ dump($user) }}--}}
 @endsection

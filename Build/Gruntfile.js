@@ -42,15 +42,25 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            app: {
+            backend: {
                 options: {
                     plugins: [
                         new (require('less-plugin-lists')),
                         new (require('less-plugin-functions'))
                     ]
                 },
-                src: '<%= paths.less %>app.less',
-                dest: '<%= paths.css %>app.css'
+                src: '<%= paths.less %>backend.less',
+                dest: '<%= paths.css %>backend.css'
+            },
+            frontend: {
+                options: {
+                    plugins: [
+                        new (require('less-plugin-lists')),
+                        new (require('less-plugin-functions'))
+                    ]
+                },
+                src: '<%= paths.less %>frontend.less',
+                dest: '<%= paths.css %>frontend.css'
             }
         },
         postcss: {
@@ -66,8 +76,11 @@ module.exports = function(grunt) {
                     })
                 ]
             },
-            app: {
-                src: '<%= paths.css %>app.css'
+            backend: {
+                src: '<%= paths.css %>backend.css'
+            },
+            frontend: {
+                src: '<%= paths.css %>frontend.css'
             }
         },
         cssmin: {
@@ -75,9 +88,13 @@ module.exports = function(grunt) {
                 keepSpecialComments: '*',
                 advanced: false
             },
-            app: {
-                src: '<%= paths.css %>app.css',
-                dest: '<%= paths.css %>app.min.css'
+            backend: {
+                src: '<%= paths.css %>backend.css',
+                dest: '<%= paths.css %>backend.min.css'
+            },
+            backend: {
+                src: '<%= paths.css %>frontend.css',
+                dest: '<%= paths.css %>frontend.min.css'
             }
         },
         image: {

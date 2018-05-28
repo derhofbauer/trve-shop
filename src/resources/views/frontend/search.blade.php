@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-10">
                 <div class="row">
-                    @forelse($data as $product)
+                    @forelse($products as $product)
                         @include('frontend.partials.product--grid', ['product' => $product])
                     @empty
                         <div class="warning">{{ __('Oh no! We got nothing to display here :(') }}</div>

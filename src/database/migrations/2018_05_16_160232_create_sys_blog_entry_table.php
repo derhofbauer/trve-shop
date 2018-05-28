@@ -19,6 +19,7 @@ class CreateSysBlogEntryTable extends Migration
             $table->text('abstract');
             $table->longText('content');
             $table->integer('beuser_id');
+            $table->json('media')->nullable();
             $table->timestamps();
 
             $table->foreign('beuser_id')->references('id')->on('sys_beusers');

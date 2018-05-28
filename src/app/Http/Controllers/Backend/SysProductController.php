@@ -88,7 +88,7 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$product->media],
                         ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products, 'value' => $product->parent_product_id],
-                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'categories', 'required' => false, 'data' => $categories, 'value' => $selected_categories],
+                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'product_categories', 'required' => false, 'data' => $categories, 'value' => $selected_categories],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false, 'value' => $product->new_until],
                     ]
                 ]
@@ -156,7 +156,7 @@ class SysProductController extends Controller implements BackendControllerInterf
                         ['label' => __('Hidden'), 'type' => 'checkbox', 'id' => 'hidden', 'required' => false],
                         ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
                         ['label' => __('Parent'), 'type' => 'select', 'id' => 'parent_product_id', 'required' => false, 'data' => $products],
-                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'categories', 'required' => false, 'data' => $categories],
+                        ['label' => __('Category'), 'type' => 'select_multiple', 'id' => 'product_categories', 'required' => false, 'data' => $categories],
                         ['label' => __('New Until'), 'type' => 'date', 'id' => 'new_until', 'placeholder' => __('New Until'), 'required' => false],
                     ]
                 ]
