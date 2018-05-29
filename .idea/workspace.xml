@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,32 +92,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/views/auth/register.blade.php">
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="17" column="89" lean-forward="true" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+            <state relative-caret-position="161">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
-              <folding>
-                <element signature="e#45#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysFeuser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/SysFeuser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="75" column="29" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="294">
+              <caret line="48" column="87" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -246,7 +230,6 @@
         <option value="$PROJECT_DIR$/src/app/SysPaymentMethod.php" />
         <option value="$PROJECT_DIR$/src/database/factories/PaymentMethodFactory.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/checkout-success.blade.php" />
-        <option value="$PROJECT_DIR$/src/routes/web.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/checkout.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/components/form-products.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" />
@@ -256,11 +239,12 @@
         <option value="$PROJECT_DIR$/src/resources/views/components/form-products-static.blade.php" />
         <option value="$PROJECT_DIR$/src/app/SysOrder.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/profile-orders.blade.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less" />
         <option value="$PROJECT_DIR$/src/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/src/routes/web.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" />
       </list>
     </option>
   </component>
@@ -558,12 +542,12 @@
       <workItem from="1527445832465" duration="3236000" />
       <workItem from="1527485781281" duration="9447000" />
       <workItem from="1527516526900" duration="17386000" />
-      <workItem from="1527602480905" duration="8333000" />
+      <workItem from="1527602480905" duration="8583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233010000" />
+    <option name="totallyTimeSpent" value="233260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -887,31 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysFeuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="17" column="89" lean-forward="true" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -931,11 +887,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+        <state relative-caret-position="228">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
           <folding>
             <element signature="e#45#64#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="89" lean-forward="true" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysFeuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="48" column="87" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
