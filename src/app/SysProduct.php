@@ -169,7 +169,23 @@ class SysProduct extends Model
         return $this->media[0];
     }
 
-    public static function getHighestPricedProduct () {
+    /**
+     * @return mixed
+     */
+    public static function getHighestPricedProduct ()
+    {
         return SysProduct::orderBy('price', 'desc')->limit(1)->get()->first();
+    }
+
+    /**
+     * @param $query
+     * @param $value
+     *
+     * @return mixed
+     */
+    public function scopeSearch ($query, $value)
+    {
+        return $query->where('name', 'like', "%$value%")
+            ->orWhere('description', 'like', "%$value%")->get();
     }
 }

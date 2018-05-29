@@ -127,4 +127,17 @@ class SysBlogEntry extends Model
     {
         return \Parsedown::instance()->text($this->content);
     }
+
+    /**
+     * @param $query
+     * @param $value
+     *
+     * @return mixed
+     */
+    public function scopeSearch ($query, $value)
+    {
+        return $query->where('title', 'like', "%$value%")
+            ->orWhere('abstract', 'like', "%$value%")
+            ->orWhere('content', 'like', "%$value%")->get();
+    }
 }

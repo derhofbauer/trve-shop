@@ -2,44 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SysProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SysProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Helpers/FrontendNavigationHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Helpers/FrontendNavigationHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/SysBlogEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysBlogEntry.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/SysProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2018_05_16_160232_create_sys_blog_entry_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2018_05_16_160232_create_sys_blog_entry_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/app.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/app.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/buttons/buttons.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/buttons/buttons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/helpers.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/helpers.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/main-nav/main-nav.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/main-nav/main-nav.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/text.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/text.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/form-select-multiple.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/blog-single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/blog-single.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/blog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/logout-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/logout-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/main-nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/main-nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/frontend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/search.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,35 +70,52 @@
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="sys_blog_entry: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9477a914-1cad-4f65-85e3-c7ee05418320/console.sql">
+      <file leaf-file-name="search.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/search.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="53" selection-end-column="53" />
+            <state relative-caret-position="483">
+              <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/partials/sidebar.blade.php">
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="121">
+              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+              <folding>
+                <element signature="e#49#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sys_product" pinned="false" current-in-tab="false">
+        <entry file="das://9477a914-1cad-4f65-85e3-c7ee05418320/database/shop/schema/public/table/sys_product">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+              <column-attributes>
+                <column name="media" languageId="JSON" />
+              </column-attributes>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysBlogEntry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/SysBlogEntry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,17 +123,8 @@
       <file leaf-file-name="SysProduct.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysProductCategory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="535">
+              <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="189" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -273,7 +248,6 @@
         <option value="$PROJECT_DIR$/src/resources/assets/less/helpers.less" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/text.less" />
-        <option value="$PROJECT_DIR$/src/app/SysBlogEntry.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/blog/blog__entry.less" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/blog-single.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/product--grid.blade.php" />
@@ -282,12 +256,13 @@
         <option value="$PROJECT_DIR$/src/resources/assets/less/searchbox/searchbox.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/src/routes/web.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/frontend/search.blade.php" />
         <option value="$PROJECT_DIR$/src/config/scout.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9477a914-1cad-4f65-85e3-c7ee05418320/console.sql" />
-        <option value="$PROJECT_DIR$/src/app/SysProduct.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/SysProduct.php" />
+        <option value="$PROJECT_DIR$/src/app/SysBlogEntry.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/frontend/search.blade.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php" />
       </list>
     </option>
   </component>
@@ -396,6 +371,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,7 +404,58 @@
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
@@ -516,7 +543,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -601,7 +627,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218953000" />
+    <option name="totallyTimeSpent" value="220144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,21 +647,35 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.3248337" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.32408434" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963374" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15991472" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3263041" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963374" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.3248337" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,18 +690,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Build/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/public/css/backend.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/public/css/frontend.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/app.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/app.less" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -762,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_05_22_142919_create_sys_product_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="368">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -776,8 +811,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_05_16_160232_create_sys_blog_entry_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="420">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -854,16 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysBlogEntry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -920,30 +948,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <element signature="e#49#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/scout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/scout.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/product.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -965,6 +970,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://9477a914-1cad-4f65-85e3-c7ee05418320/database/shop/schema/public/table/sys_product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -975,24 +1001,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
+    <entry file="file://$PROJECT_DIR$/src/app/SysBlogEntry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="650">
+          <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+        <state relative-caret-position="535">
+          <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="189" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/partials/sidebar.blade.php">
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        <state relative-caret-position="483">
+          <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <folding>
+            <element signature="e#49#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
