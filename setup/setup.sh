@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ ${apt list | grep 'libpq-dev'} == "" ]]; then
-    apt update && apt install -y libpq-dev
+    apt update && apt install -y libpq-dev git unzip
 fi
 
 if [[ ${php -m | grep 'mysqli'} == "" ]]; then

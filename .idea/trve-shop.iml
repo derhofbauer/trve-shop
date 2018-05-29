@@ -58,7 +58,6 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/swiftmailer/swiftmailer" />
-      <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/event-dispatcher" />

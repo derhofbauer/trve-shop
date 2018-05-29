@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/database/seeds/BeuserDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeds/BeuserDatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/trve-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trve-shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,52 +31,7 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="sys_beusers: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
     <select />
@@ -86,25 +42,16 @@
         <entry file="file://$PROJECT_DIR$/src/database/seeds/AddressDatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="53" />
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogEntryDatabaseSeeder.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php">
+      <file leaf-file-name="setup.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup/setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogEntryFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/factories/BlogEntryFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            <state relative-caret-position="60">
+              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -193,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/assets/less/helpers.less" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/text.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/blog/blog__entry.less" />
@@ -219,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/app/SysFeuser.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/FeuserDatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/database/factories/FeuserFactory.php" />
-        <option value="$PROJECT_DIR$/src/database/seeds/AddressDatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/database/factories/AddressFactory.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/PaymentMethodDatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php" />
@@ -244,6 +189,8 @@
         <option value="$PROJECT_DIR$/src/database/seeds/BeuserDatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/database/factories/BlogEntryFactory.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/src/database/seeds/AddressDatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/setup/setup.sh" />
       </list>
     </option>
   </component>
@@ -279,7 +226,6 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/src/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/src/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/src/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/src/vendor/phpunit/phpunit-mock-objects" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/http-foundation" />
@@ -327,16 +273,16 @@
       <path value="$PROJECT_DIR$/src/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/src/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/src/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/src/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/src/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/src/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/var-dumper" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -480,11 +426,13 @@
       <workItem from="1527485781281" duration="9447000" />
       <workItem from="1527516526900" duration="17386000" />
       <workItem from="1527602480905" duration="9042000" />
+      <workItem from="1527614796335" duration="228000" />
+      <workItem from="1527615231067" duration="448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233719000" />
+    <option name="totallyTimeSpent" value="234395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,19 +447,18 @@
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095949" />
       <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3263041" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.3242358" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3263041" />
+      <window_info anchor="right" id="Database" order="3" weight="0.17803837" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.32408434" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -519,6 +466,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963374" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,20 +481,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -565,13 +499,7 @@
     <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_05_29_132005_create_sys_address_table.php" />
     <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_05_29_132243_create_sys_payment_method_table.php" />
     <entry file="file://$PROJECT_DIR$/src/app/SysAddress.php" />
-    <entry file="file://$PROJECT_DIR$/src/app/SysComment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="29" column="6" selection-start-line="8" selection-start-column="3" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysComment.php" />
     <entry file="file://$PROJECT_DIR$/src/database/seeds/FeuserDatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
@@ -579,27 +507,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/factories/FeuserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/factories/AddressFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/seeds/PaymentMethodDatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/factories/FeuserFactory.php" />
+    <entry file="file://$PROJECT_DIR$/src/database/factories/AddressFactory.php" />
+    <entry file="file://$PROJECT_DIR$/src/database/seeds/PaymentMethodDatabaseSeeder.php" />
     <entry file="file://$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -607,70 +517,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysPaymentMethod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_payment_method">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="data" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/factories/PaymentMethodFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysCartEntry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/checkout-success.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_order">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_order_product_mm">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysPaymentMethod.php" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_payment_method" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/database/factories/PaymentMethodFactory.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/SysCartEntry.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/SysProductCategory.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/checkout-success.blade.php" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_order" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_order_product_mm" />
     <entry file="file://$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -678,134 +533,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/checkout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="21" column="35" selection-start-line="20" selection-start-column="30" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-products-static.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
-          <folding>
-            <element signature="e#49#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-products.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysOrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="69" column="123" selection-start-line="69" selection-start-column="123" selection-end-line="69" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/SysOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="168" column="85" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Helpers/RouteHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="56" column="33" selection-start-line="51" selection-start-column="12" selection-end-line="56" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile-orders.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#49#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_address">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_feusers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/checkout.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-products-static.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/form-fields.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/components/form-products.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysOrderController.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/list.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/edit.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/SysOrder.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Helpers/RouteHelper.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile-orders.blade.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" />
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/dropdown/dropdown.less" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_address" />
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_feusers" />
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#64#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,13 +571,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" />
     <entry file="file://$PROJECT_DIR$/src/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -837,13 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_beusers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://16d9b484-414c-43ec-9ebe-c1cd309aed72/database/shop/schema/public/table/sys_beusers" />
     <entry file="file://$PROJECT_DIR$/src/database/seeds/BeuserDatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -851,24 +587,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/factories/BlogEntryFactory.php" />
+    <entry file="file://$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9a46e2b-5c38-414d-9288-11b89ba7ee64/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/seeds/AddressDatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="53" />
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/factories/BlogEntryFactory.php">
+    <entry file="file://$PROJECT_DIR$/setup/setup.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/seeds/BlogEntryDatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="60">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
         </state>
       </provider>
     </entry>
