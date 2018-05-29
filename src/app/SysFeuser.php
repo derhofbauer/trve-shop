@@ -69,4 +69,20 @@ class SysFeuser extends Authenticatable
     {
         return $this->hasMany('App\SysOrder', 'feuser_id');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function addresses ()
+    {
+        return $this->hasMany('App\SysAddress', 'feuser_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function paymentMethods ()
+    {
+        return $this->hasMany('App\SysPaymentMethod', 'feuser_id');
+    }
 }

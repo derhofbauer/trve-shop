@@ -18,6 +18,15 @@
                 <div class="product__description">
                     {{ $object->description }}
                 </div>
+
+                <div class="add-to-cart">
+                    <a href="{{ route('cart.add', [
+                        'id' => $object->id,
+                        'returnUrl' => base64_encode(route('products.show', ['id' => $object->id]))
+                    ]) }}">
+                        {{ __('Add To Cart') }}
+                    </a>
+                </div>
             </div>
         @else
             <div class="warning">{{ __('Oh no! We got nothing to display here :(') }}</div>

@@ -16,7 +16,7 @@ class SysComment extends Model
     /**
      * @var string
      */
-    protected $guard = 'admin';
+    protected $guard = 'web';
 
     /**
      * The attributes that are mass assignable.

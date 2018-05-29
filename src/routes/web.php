@@ -36,6 +36,7 @@ Route::prefix('shop')->group(function () {
 Route::prefix('cart')->group(function () {
     Route::get('/', 'Frontend\CartController@index')->name('cart');
     Route::get('/add/{id}/{returnUrl?}', 'Frontend\CartController@addToCart')->name('cart.add');
+    Route::post('/update', 'Frontend\CartController@update')->name('cart.update');
     Route::get('/remove/{id}', 'Frontend\CartController@removeFromCart')->name('cart.remove');
 });
 Route::prefix('blog')->group(function () {
@@ -47,6 +48,10 @@ Route::prefix('profile')->group(function () {
     Route::post('/', 'rontend\ProfileController@update')->name('profile.update');
 });
 Route::get('/search/{searchterm?}', 'Frontend\SearchController@search')->name('search');
+Route::prefix('checkout')->group(function () {
+    Route::get('/', 'Frontend\CartController@checkout')->name('checkout');
+    Route::get('/confirm', 'Frontend\CartController@confirm')->name('checkout.confirm');
+});
 
 
 /**
