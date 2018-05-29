@@ -67,7 +67,7 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         if ($order->productsMM->count() > 0) {
             $orderField = ['label' => __('Products'), 'type' => 'products', 'id' => 'products', 'required' => true, 'value' => $orderProducts];
         } else {
-            $orderField = ['label' => __('Products'), 'type' => 'products-static', 'id' => 'products-static', 'value' => $order->getProductsFromJson()];
+            $orderField = ['label' => __('Products'), 'type' => 'products-static', 'id' => 'products-static', 'value' => $order->invoice];
         }
 
         return view('backend/edit', self::prepareConfig([

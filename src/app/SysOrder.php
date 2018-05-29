@@ -88,22 +88,12 @@ class SysOrder extends Model
     }
 
     /**
-     * @return array
-     */
-    public function getProductsFromJson ()
-    {
-        $products = json_decode($this->invoice);
-
-        return $products;
-    }
-
-    /**
      * @return float|int
      */
     public function getPriceFromInvoice ()
     {
         $price = 0;
-        foreach ($this->getProductsFromJson() as $product) {
+        foreach ($this->invoice as $product) {
             $price += $product->price * $product->quantity;
         }
 

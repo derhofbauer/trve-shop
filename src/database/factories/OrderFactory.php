@@ -18,7 +18,7 @@ $factory->define(\App\SysOrder::class, function (Faker $faker) {
         'status' => rand(0, 2),
         'delivery_address' => $faker->address,
         'feuser_id' => $user->id,
-        'payment_method' => $user->paymentMethods->first(),
+        'payment_method' => json_encode($user->paymentMethods->first()),
         'invoice' => $products_array
     ];
 });
