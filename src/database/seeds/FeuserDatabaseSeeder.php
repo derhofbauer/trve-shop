@@ -28,5 +28,7 @@ class FeuserDatabaseSeeder extends Seeder
             'lastname' => 'Dent',
             'title' => 'Dr.'
         ]);
+
+        factory(App\SysFeuser::class, 20)->create();
     }
 }

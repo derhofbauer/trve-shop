@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
             ProductDatabaseSeeder::class,
             CategoryDatabaseSeeder::class,
             CommentDatabaseSeeder::class,
-            OrderDatabaseSeeder::class
+            OrderDatabaseSeeder::class,
+            AddressDatabaseSeeder::class,
+            PaymentMethodDatabaseSeeder::class
         ]);
     }
 }

@@ -33,6 +33,10 @@
         @formproducts($field)
         @endformproducts
         @break
+    @case('products-static')
+        @formproductsstatic($field)
+        @endformproductsstatic
+        @break
     @default
         @forminput($field)
         @endforminput

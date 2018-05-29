@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('components/form-media', 'formmedia');
         Blade::component('components/form-list', 'formlist');
         Blade::component('components/form-products', 'formproducts');
+        Blade::component('components/form-products-static', 'formproductsstatic');
     }
 
     /**

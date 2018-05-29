@@ -71,11 +71,34 @@ class SysOrder extends Model
     {
         $products = [];
 
-        foreach($this->productsMM as $productMM) {
+        foreach ($this->productsMM as $productMM) {
             $products[] = $productMM->product;
         }
 
         return $products;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProductsFromJson ()
+    {
+        $products = json_decode($this->invoice);
+
+        return $products;
+    }
+
+    /**
+     * @return float|int
+     */
+    public function getPriceFromInvoice ()
+    {
+        $price = 0;
+        foreach ($this->getProductsFromJson() as $product) {
+            $price += $product->price * $product->quantity;
+        }
+
+        return $price;
     }
 
     /**

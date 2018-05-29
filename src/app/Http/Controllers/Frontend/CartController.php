@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\SysAddress;
 use App\SysCartEntry;
+use App\SysOrder;
+use App\SysPaymentMethod;
 use App\SysProduct;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -208,7 +211,6 @@ class CartController extends Controller
         $payment_methods = $user->paymentMethods;
         $addresses = $user->addresses;
 
-        // TODO: implement checkout view
         return view('frontend.checkout', [
             'user' => $user,
             'paymentMethods' => $payment_methods,
@@ -218,9 +220,45 @@ class CartController extends Controller
 
     /**
      * @param Request $request
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function confirm (Request $request) {
-        dd("Confirm and perform checkout routines!");
+    public function confirmAndBuy (Request $request)
+    {
+        $user = Auth::user();
+        $cart = $user->cart;
+
+        $products = [];
+        foreach ($cart as $entry) {
+            $product = $entry->product->toArray();
+            $product['quantity'] = $entry->product_quantity;
+            $products[] = $product;
+
+            $entry->product->stock = $entry->product->stock - $entry->product_quantity;
+            $entry->product->save();
+        }
+
+        $validatedData = $request->validate([
+            'address' => 'integer|required|exists:sys_address,id',
+            'payment_method' => 'integer|required|exists:sys_payment_method,id'
+        ]);
+
+        $order = new SysOrder([
+            'status' => 0,
+            'invoice' => json_encode($products),
+            'delivery_address' => json_encode(SysAddress::find($validatedData['address'])->toArray()),
+            'feuser_id' => $user->id,
+            'payment_method' => json_encode(SysPaymentMethod::find($validatedData['payment_method'])->toArray())
+        ]);
+        $order->save();
+
+        foreach ($cart as $entry) {
+            $entry->delete();
+        }
+
+        return view('frontend.checkout-success', [
+            'order' => $order
+        ]);
     }
 
     /**

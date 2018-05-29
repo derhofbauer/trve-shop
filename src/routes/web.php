@@ -45,12 +45,13 @@ Route::prefix('blog')->group(function () {
 });
 Route::prefix('profile')->group(function () {
     Route::get('/', 'Frontend\ProfileController@index')->name('profile');
-    Route::post('/', 'rontend\ProfileController@update')->name('profile.update');
+    Route::post('/', 'Frontend\ProfileController@update')->name('profile.update');
+    Route::get('/orders', 'Frontend\ProfileController@orders')->name('profile.orders');
 });
 Route::get('/search/{searchterm?}', 'Frontend\SearchController@search')->name('search');
 Route::prefix('checkout')->group(function () {
     Route::get('/', 'Frontend\CartController@checkout')->name('checkout');
-    Route::get('/confirm', 'Frontend\CartController@confirm')->name('checkout.confirm');
+    Route::post('/confirm', 'Frontend\CartController@confirmAndBuy')->name('checkout.confirm');
 });
 
 

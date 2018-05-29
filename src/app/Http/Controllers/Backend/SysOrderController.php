@@ -64,6 +64,12 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         $feusers = SysFeuser::all('email AS name', 'id');
         $products = SysProduct::all('name', 'id');
 
+        if ($order->productsMM->count() > 0) {
+            $orderField = ['label' => __('Products'), 'type' => 'products', 'id' => 'products', 'required' => true, 'value' => $orderProducts];
+        } else {
+            $orderField = ['label' => __('Products'), 'type' => 'products-static', 'id' => 'products-static', 'value' => $order->getProductsFromJson()];
+        }
+
         return view('backend/edit', self::prepareConfig([
             'object' => $order,
             'tabs' => [
@@ -75,7 +81,7 @@ class SysOrderController extends Controller implements BackendControllerInterfac
                         ['label' => __('Delivery Address'), 'type' => 'textarea', 'id' => 'delivery_address', 'placeholder' => __('Delivery Address'), 'required' => true, 'value' => $order->delivery_address],
                         ['label' => __('Customer'), 'type' => 'select', 'id' => 'feuser_id', 'required' => true, 'data' => $feusers, 'value' => $order->feuser_id],
                         ['label' => __('Payment Method'), 'type' => 'textarea', 'id' => 'payment_method', 'placeholder' => __('Payment Method'), 'required' => true, 'value' => $order->payment_method],
-                        ['label' => __('Products'), 'type' => 'products', 'id' => 'products', 'required' => true, 'value' => $order->productsMM],
+                        $orderField,
                         ['label' => __('Add Products'), 'type' => 'select', 'id' => 'add_product', 'required' => true, 'data' => $products],
                     ]
                 ]
