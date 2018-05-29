@@ -6,7 +6,7 @@
             </a>
         </h3>
     </header>
-    <div class="product__price">{{ $product->price}} &euro;</div>
+    <div class="product__price">{{ $product->price }} &euro;</div>
     @if(!empty($product->getFirstImageUri()))
         <div class="product__image">
             <img src="/public{{ Storage::disk('local')->url($product->getFirstImageUri()) }}" alt="{{ $product->name }}" class="img-responsive">

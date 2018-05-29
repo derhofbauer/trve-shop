@@ -25,7 +25,7 @@ class SysProductController extends Controller
      */
     public function index ()
     {
-        $products = SysProduct::allVisible();
+        $products = SysProduct::allWithoutParents();
 
 
         return view('frontend.product', self::prepareConfig([

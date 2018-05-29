@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -148,15 +149,18 @@ class SysProduct extends Model
      */
     public function ratings ()
     {
-       return $this->hasMany('App\SysRating', 'product_id');
+        return $this->hasMany('App\SysRating', 'product_id');
     }
 
     /**
      * @return Collection
      */
-    public static function allVisible ()
+    public static function allWithoutParents ()
     {
-        return SysProduct::where('hidden', '0')->get();
+        $subquery = DB::table('sys_product')->select('parent_product_id')->whereNotNull('parent_product_id');
+        $products = SysProduct::whereNotIn('id', $subquery)->get();
+        // dd($products);
+        return $products;
     }
 
     /**
@@ -174,6 +178,9 @@ class SysProduct extends Model
      */
     public function getFirstImageUri ()
     {
+        if (is_string($this->media)) {
+            return json_decode($this->media)[0];
+        }
         return $this->media[0];
     }
 
@@ -195,5 +202,53 @@ class SysProduct extends Model
     {
         return $query->where('name', 'like', "%$value%")
             ->orWhere('description', 'like', "%$value%")->get();
+    }
+
+    /**
+     * @param $value
+     *
+     * @return string
+     */
+    public function getDescriptionAttribute ($value)
+    {
+        if ($this->hasParent() && empty($value)) {
+            return $this->parent->attributes['description'];
+        }
+        return $value;
+    }
+
+    /**
+     * @param $value
+     *
+     * @return float
+     */
+    public function getPriceAttribute ($value)
+    {
+        if ($this->hasParent() && empty($value)) {
+            return $this->parent->attributes['price'];
+        }
+        return $value;
+    }
+
+    /**
+     * @param $media
+     *
+     * @return array
+     */
+    public function getMediaAttribute ($media)
+    {
+        if ($this->hasParent() && empty($media)) {
+            $parentMedia = $this->parent->attributes['media'];
+            if (is_string($parentMedia)) {
+                $parentMedia = json_decode($parentMedia);
+            }
+            return $parentMedia;
+        }
+        return $media;
+    }
+
+    public function hasParent ()
+    {
+        return $this->parent()->count() > 0;
     }
 }
