@@ -21,6 +21,13 @@ class BeuserDatabaseSeeder extends Seeder
         ]);
 
         \App\SysBeuser::create([
+            'username' => 'marvin',
+            'email' => 'marvin@galaxy.com',
+            'password' => bcrypt('password'),
+            'role_id' => 3
+        ]);
+
+        \App\SysBeuser::create([
             'username' => 'admin',
             'email' => 'arthur.dent@galaxy.com',
             'password' => bcrypt('password'),

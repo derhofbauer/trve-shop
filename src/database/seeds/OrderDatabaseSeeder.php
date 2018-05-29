@@ -11,16 +11,6 @@ class OrderDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $order = new \App\SysOrder([
-            'feuser_id' => 1
-        ]);
-        $order->save();
-
-        $productMM = new \App\SysOrderProductMM([
-            'product_id' => 1,
-            'product_quantity' => 2,
-            'order_id' => 1
-        ]);
-        $productMM->save();
+        factory(App\SysOrder::class, 50)->create();
     }
 }

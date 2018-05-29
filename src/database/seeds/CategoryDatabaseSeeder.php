@@ -12,14 +12,20 @@ class CategoryDatabaseSeeder extends Seeder
     public function run()
     {
         $category = new \App\SysProductCategory([
-            'name' => 'category 1',
-            'description' => 'description 1'
+            'name' => 'Clothing',
+            'description' => 'T-Shirts, Sweaters, Baseball Caps etc.'
         ]);
         $category->save();
 
         $category = new \App\SysProductCategory([
-            'name' => 'category 2',
-            'description' => 'description 2'
+            'name' => 'Sticker & Patches',
+            'description' => ''
+        ]);
+        $category->save();
+
+        $category = new \App\SysProductCategory([
+            'name' => 'Media',
+            'description' => 'CDs, digital downloads etc.'
         ]);
         $category->save();
     }

@@ -9,6 +9,6 @@ $factory->define(App\SysPaymentMethod::class, function (Faker $faker) {
             'swift' => $faker->swiftBicNumber,
             'owner' => $faker->name
         ],
-        'feuser_id' => 2
+        'feuser_id' => rand(1, 20)
     ];
 });

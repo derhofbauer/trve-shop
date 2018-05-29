@@ -245,7 +245,7 @@ class CartController extends Controller
 
         $order = new SysOrder([
             'status' => 0,
-            'invoice' => json_encode($products),
+            'invoice' => $products,
             'delivery_address' => json_encode(SysAddress::find($validatedData['address'])->toArray()),
             'feuser_id' => $user->id,
             'payment_method' => json_encode(SysPaymentMethod::find($validatedData['payment_method'])->toArray())

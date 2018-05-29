@@ -10,6 +10,6 @@ $factory->define(App\SysAddress::class, function (Faker $faker) {
         'street' => $faker->streetName,
         'street_number' => $faker->randomDigit,
         'address_line_2' => $faker->streetAddress,
-        'feuser_id' => 2
+        'feuser_id' => rand(1, 20)
     ];
 });
