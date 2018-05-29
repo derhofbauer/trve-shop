@@ -32,6 +32,7 @@ Route::prefix('shop')->group(function () {
     Route::get('/', 'Frontend\SysProductController@index')->name('shop');
     Route::get('/products', 'Frontend\SysProductController@index')->name('products');
     Route::get('/products/{id}/{slug?}', 'Frontend\SysProductController@show')->name('products.show');
+    Route::post('/products/{id}', 'Frontend\SysCommentController@create')->name('products.comment.add');
 });
 Route::prefix('cart')->group(function () {
     Route::get('/', 'Frontend\CartController@index')->name('cart');

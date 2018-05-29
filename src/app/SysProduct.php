@@ -144,6 +144,14 @@ class SysProduct extends Model
     }
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function ratings ()
+    {
+       return $this->hasMany('App\SysRating', 'product_id');
+    }
+
+    /**
      * @return Collection
      */
     public static function allVisible ()

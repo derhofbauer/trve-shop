@@ -12,7 +12,7 @@
                 </div>
                 @if(!empty($object->media))
                     <div class="product__image">
-                        <img src="{{ asset($object->media->first()) }}" alt="">
+                        <img src="{{ asset($object->media[0]) }}" alt="">
                     </div>
                 @endif
                 <div class="product__description">
@@ -31,6 +31,23 @@
         @else
             <div class="warning">{{ __('Oh no! We got nothing to display here :(') }}</div>
         @endisset
+
+        @auth()
+            <form action="{{ route('products.comment.add', ['id' => $object->id]) }}" method="post">
+                @csrf
+
+                <textarea name="comment" id="comment" class="form-control" placeholder="{{ __('Please give feedback') }}"></textarea>
+                <select name="rating" id="rating" class="form-control">
+                    <option value="0">{{ __('Please rate ...') }}</option>
+                    <option value="1">{{ __('Very good') }}</option>
+                    <option value="2">{{ __('Good') }}</option>
+                    <option value="3">{{ __('OK') }}</option>
+                    <option value="4">{{ __('Bad') }}</option>
+                    <option value="5">{{ __('Very bad') }}</option>
+                </select>
+                <input type="submit" name="do-comment" value="{{ __('Comment') }}">
+            </form>
+        @endauth
 
         <div class="comments">
             @foreach($object->comments as $comment)
