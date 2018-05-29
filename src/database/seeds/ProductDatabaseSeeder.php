@@ -85,5 +85,15 @@ Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, s
             $product = new \App\SysProduct($date);
             $product->save();
         }
+
+        foreach (\App\SysProduct::where('name', 'like', '%T-Shirt%')->get() as $product) {
+            $product->categories()->attach(\App\SysProductCategory::find(1));
+        }
+        foreach (\App\SysProduct::where('name', 'like', '%Patch%')->get() as $product) {
+            $product->categories()->attach(\App\SysProductCategory::find(2));
+        }
+        foreach (\App\SysProduct::where('name', 'like', '%CD%')->get() as $product) {
+            $product->categories()->attach(\App\SysProductCategory::find(3));
+        }
     }
 }

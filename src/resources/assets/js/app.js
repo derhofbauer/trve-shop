@@ -52,4 +52,12 @@ jQuery(document).ready(function ($, undefined) {
         event.preventDefault()
         $('#logout-form').submit()
     })
+
+    // Price Range
+    $('.price__max').text($('[name="price_max"]').first().val())
+    $('[name="price_max"]').on('change', (event) => {
+        let $range = $(event.target)
+        let val = $range.first().val()
+        $('.price__max').text(val)
+    })
 })
