@@ -12,14 +12,42 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('title'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="firstname" type="text" class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ old('firstname') }}" required autofocus>
+
+                                @if ($errors->has('firstname'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('lastname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('lastname') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required autofocus>
+
+                                @if ($errors->has('lastname'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('lastname') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -58,6 +86,54 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="country" type="string" class="form-control" name="country" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="city" type="string" class="form-control" name="city" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="zip" class="col-md-4 col-form-label text-md-right">{{ __('ZIP') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="zip" type="string" class="form-control" name="zip" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="street" class="col-md-4 col-form-label text-md-right">{{ __('Street') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="street" type="string" class="form-control" name="street" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="street_number" class="col-md-4 col-form-label text-md-right">{{ __('Street Number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="street_number" type="string" class="form-control" name="street_number" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address_line_2" class="col-md-4 col-form-label text-md-right">{{ __('Address line 2') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address_line_2" type="string" class="form-control" name="address_line_2">
                             </div>
                         </div>
 

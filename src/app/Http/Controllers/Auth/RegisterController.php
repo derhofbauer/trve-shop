@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\SysAddress;
 use App\SysFeuser;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -35,7 +36,7 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct ()
     {
         $this->middleware('guest');
     }
@@ -43,31 +44,53 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
+     *
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator (array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'title' => 'string|max:255',
+            'firstname' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:sys_feusers,email',
             'password' => 'required|string|min:6|confirmed',
+            'country' => 'required|string|min:1',
+            'city' => 'required|string|min:1',
+            'zip' => 'required|string|min:1',
+            'street' => 'required|string|min:1',
+            'street_number' => 'required|string|min:1',
+            'address_line_2' => 'string',
         ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      *
      * @return \App\SysFeuser
      */
-    protected function create(array $data)
+    protected function create (array $data)
     {
-        return SysFeuser::create([
-            'name' => $data['name'],
+        $user = SysFeuser::create([
+            'title' => $data['title'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $user->addresses()->create([
+            'country' => $data['country'],
+            'city' => $data['city'],
+            'zip' => $data['zip'],
+            'street' => $data['street'],
+            'street_number' => $data['street_number'],
+            'address_line_2' => $data['address_line_2']
+        ]);
+
+        return $user;
     }
 }

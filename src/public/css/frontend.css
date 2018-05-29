@@ -1676,6 +1676,7 @@ a.btn:hover {
 }
 .dropdown {
   position: relative;
+  z-index: 99;
 }
 .dropdown-menu {
   position: absolute;
