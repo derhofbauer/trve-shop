@@ -11,7 +11,8 @@
   color:            @color-font-inverted;
 
   &__brand {
-    display: flex;
+    display:      flex;
+    margin-right: @grid-gutter-width;
 
     &__link {
       text-decoration: none;
@@ -21,15 +22,21 @@
     }
 
     img {
-      max-height: 100%;
-      width:      auto;
+      display:        inline-block;
+      vertical-align: middle;
+      max-height:     100%;
+      width:          auto;
     }
   }
   &__title {
-    font-size:    3rem;
-    line-height:  4rem;
-    white-space:  nowrap;
-    padding-left: @default-padding;
+    color:               transparent;
+    background-image:    url(../img/font.png);
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    display:             block;
+    height:              100%;
+    width:               100%;
+    background-position: center;
   }
 
   &__left {

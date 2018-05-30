@@ -1,3 +1,5 @@
+@button-height: 2.5rem;
+
 .btn {
   padding:          @default-step;
   background-color: @button-bg-color;
@@ -7,25 +9,35 @@
   border-radius:    @default-border-radius-small;
   cursor:           pointer;
   display:          inline-block;
-  height:           2.5rem;
+  height:           @button-height;
+  font-size:        1rem;
+  color:            #000;
+  white-space:      nowrap;
 
-  svg {
-    display:        inline-block;
-    height:         100%;
-    line-height:    1em;
-    vertical-align: middle;
-    color:          inherit;
-    stroke:         currentColor;
+  .feather {
+    margin-top: -5px;
+  }
+
+  &:hover {
+    background-color: darken(@button-bg-color, 10%);
   }
 
   &-primary {
     background-color: @color-primary;
     border-color:     @color-primary;
     color:            @color-font-inverted;
+
+    &:hover {
+      background-color: darken(@color-primary, 10%);
+    }
   }
 
   &--login {
     padding: @default-padding;
+  }
+
+  &-justify {
+    width: 100%;
   }
 
   &-icon {
@@ -57,6 +69,9 @@
 }
 
 a.btn {
+  text-align:  center;
+  line-height: @button-height - (2 * @default-step);
+
   &, &:hover {
     text-decoration: none;
   }

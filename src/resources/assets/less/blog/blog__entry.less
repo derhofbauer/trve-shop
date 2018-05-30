@@ -7,16 +7,7 @@
   margin-left:   auto;
   margin-right:  auto;
 
-  &:not(:last-child)::after {
-    display:    block;
-    content:    '';
-    width:      50%;
-    min-height: 1px;
-    border-top: 1px solid #b9b9b9;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: @grid-gutter-width;
-  }
+  .seperator-bottom();
 
   &__abstract-container {
     display: flex;

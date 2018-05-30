@@ -32,7 +32,7 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.login.submit') }}">
                     {{ csrf_field() }}
 
-                    <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('username') ? ' has-danger' : '' }}">
                         <label for="email" class="control-label">{{ __('Username') }}</label>
 
                         <div class="col-12">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                         <label for="password" class="control-label">{{ __('Password') }}</label>
 
                         <div class="col-12">

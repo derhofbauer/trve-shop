@@ -94,7 +94,7 @@ class SysOrder extends Model
     {
         $price = 0;
         foreach ($this->invoice as $product) {
-            $price += $product->price * $product->quantity;
+            $price += $product['price'] * $product['quantity'];
         }
 
         return $price;

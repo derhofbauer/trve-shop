@@ -24,31 +24,22 @@ class ProfileController extends Controller
         $this->middleware('auth:web');
     }
 
-
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         $user = Auth::user();
 
         return view('frontend.profile', self::prepareConfig([
-            'object' => $user,
-            'tabs' => [
-                [
-                    'title' => __('General'),
-                    'fields' => [
-                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email],
-                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Reset password')],
-                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password placeholder')],
-                        ['label' => __('First name'), 'type' => 'text', 'id' => 'firstname', 'placeholder' => __('Firstname'), 'required' => true, 'value' => $user->firstname],
-                        ['label' => __('Last name'), 'type' => 'text', 'id' => 'lastname', 'placeholder' => __('Lastname'), 'required' => true, 'value' => $user->lastname],
-                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Academic title'), 'value' => $user->title]
-                    ]
-                ]
-            ]
+            'user' => $user
         ]));
     }
 
     /**
      * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update (Request $request)
     {
@@ -99,8 +90,8 @@ class ProfileController extends Controller
     {
         return [
             'email' => 'required|email|unique:sys_feusers,email',
-            'password' => 'sometimes|required|string|min:8|max:32',
-            'password_repeat' => 'sometimes|required|same:password',
+            'password' => 'sometimes|string|min:8|max:32',
+            'password_repeat' => 'sometimes|same:password',
             'firstname' => 'string|min:1',
             'lastname' => 'string|min:1',
             'title' => 'string'

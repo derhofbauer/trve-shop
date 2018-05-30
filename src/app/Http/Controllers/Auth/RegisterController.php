@@ -61,7 +61,7 @@ class RegisterController extends Controller
             'zip' => 'required|string|min:1',
             'street' => 'required|string|min:1',
             'street_number' => 'required|string|min:1',
-            'address_line_2' => 'string',
+            'address_line_2' => 'string|nullable',
         ]);
     }
 

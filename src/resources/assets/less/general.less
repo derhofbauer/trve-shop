@@ -1,5 +1,6 @@
 body {
-  font-family: @default-font-sans-serif;
+  font-family:      @default-font-sans-serif;
+  background-color: @color-page-bg;
 
   &.login {
     background-color: @login-bg-color;
@@ -7,10 +8,48 @@ body {
 }
 
 .main {
-  grid-area:        content;
-  background-color: @default-bg-color;
+  grid-area: content;
 
   &--login {
     background-color: @login-bg-color;
   }
+}
+
+.content {
+  padding-top: @grid-gutter-width;
+}
+
+.login {
+  margin-bottom: @grid-gutter-width;
+
+  &__register-container {
+    padding-top: @grid-gutter-width;
+
+    & > *:not(:last-child)::after {
+      content:    '|';
+      display:    inline-block;
+      width:      @grid-gutter-width;
+      text-align: center;
+    }
+  }
+  &__forgot-password {
+    text-align: right;
+    color:      #999;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.feather {
+  color:          inherit;
+  stroke:         currentColor;
+  height:         24px;
+  width:          24px;
+  vertical-align: middle;
+}
+
+.errors {
+  margin-bottom: @default-margin;
 }

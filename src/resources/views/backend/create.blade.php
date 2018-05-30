@@ -7,7 +7,7 @@
     @endslot
 
     @slot('body')
-        @include('backend.partials.errors')
+        @include('partials.errors')
 
         @include('backend.partials.form-create')
     @endslot

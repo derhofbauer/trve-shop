@@ -1,0 +1,36 @@
+@border: 1px solid @color-page-bg;
+
+table,
+.table {
+  width: 100%;
+}
+
+thead {
+  background-color: darken(#fff, 10%);
+}
+
+th {
+  text-align:  left;
+  font-weight: bold;
+}
+
+thead,
+tr:not(:last-child) {
+  border-bottom: @border;
+}
+
+tr:nth-child(even) {
+  background-color: darken(#fff, 5%);
+}
+
+th,
+td {
+  padding: @default-padding-small;
+
+  &:not(:last-child) {
+    border-right: @border;
+  }
+  &:not(:first-child) {
+    border-left: @border;
+  }
+}
