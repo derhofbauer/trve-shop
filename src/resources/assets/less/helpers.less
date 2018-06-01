@@ -8,8 +8,9 @@
 }
 
 .img-responsive {
-  max-width: 100%;
-  height:    auto;
+  max-width:  100%;
+  max-height: 100%;
+  height:     auto;
 }
 
 .margin-auto {
@@ -33,9 +34,10 @@
 .seperator-bottom {
   &:not(:last-child)::after {
     .seperator();
-    margin-top:   @grid-gutter-width;
+    margin-top: @grid-gutter-width;
   }
 }
+
 .seperator-top {
   &:not(:first-child)::before {
     .seperator();
@@ -48,9 +50,18 @@
   @size: at(@pair, 1);
   @px: at(@pair, 2);
 
-  @media (min-width: @px) {
-    .hidden-@{size} {
-      display: none;
-    }
+@media (min-width: @px) {
+  .hidden-@{size} {
+    display: none;
   }
+}
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container-padding-top {
+  padding-top: @grid-gutter-width;
 }

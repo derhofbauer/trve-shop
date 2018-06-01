@@ -1,4 +1,4 @@
-.function{
+.function {
   .breakpoint-next(@name, @breakpoints: @grid-breakpoints) {
   @i = 1;
     .for(@i: 1, @n: length(@breakpoints)) {
@@ -17,6 +17,7 @@
     }
   }
 }
+
 .function {
   .breakpoint-min(@name, @breakpoints: @grid-breakpoints) {
     @min: at(@breakpoints, @name);
@@ -28,6 +29,7 @@
     }
   }
 }
+
 .function {
   .breakpoint-max(@name, @breakpoints: @grid-breakpoints) {
     @next: breakpoint-next(@name, @breakpoints);
@@ -41,6 +43,7 @@
     }
   }
 }
+
 /*.media-breakpoint-up(@name, @rules, @breakpoints: @grid-breakpoints) {
   @min: breakpoint-min(@name, @breakpoints);
   & when not (@min = null) {
@@ -71,9 +74,11 @@
   padding-right: @grid-gutter-width / 2;
   margin-right:  auto;
   margin-left:   auto;
+  min-height:    100%;
 }
+
 .make-container-vertical () {
-  padding-top: @grid-gutter-width / 2;
+  padding-top:    @grid-gutter-width / 2;
   padding-bottom: @grid-gutter-width / 2;
 }
 
@@ -94,18 +99,19 @@
   flex-wrap:    wrap;
   margin-left:  @grid-gutter-width / -2;
   margin-right: @grid-gutter-width / -2;
+  min-height:   100%;
 }
 
 .make-col-ready() {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-left: @grid-gutter-width / 2;
+  position:      relative;
+  width:         100%;
+  min-height:    1px;
+  padding-left:  @grid-gutter-width / 2;
   padding-right: @grid-gutter-width / 2;
 }
 
 .make-col(@size, @columns: @grid-columns) {
-  flex: 0 0 percentage(@size / @columns);
+  flex:      0 0 percentage(@size / @columns);
   max-width: percentage(@size / @columns);
 }
 

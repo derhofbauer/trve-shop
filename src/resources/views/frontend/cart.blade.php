@@ -1,29 +1,15 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <form action="{{ route('cart.update') }}" method="post">
-        @csrf
-    @forelse($cart as $entry)
-        <div class="cart">
-            <div class="cart__entry">
-                <div class="product">{{ $entry->product->name }}</div>
-                <div class="quantity">
-                    <input type="number" class="form-control" name="new_product_quantity[{{ $entry->product->id }}]" value="{{ $entry->product_quantity }}">
-                    <input type="submit" value="{{ __('Save') }}">
-                </div>
-                <div class="remove">
-                    <a href="{{ route('cart.remove', ['id' => $entry->product->id]) }}">{{ __('remove') }}</a>
-                </div>
-            </div>
-        </div>
-    @empty
-        <div class="warning">{{ __('You cart is empty.') }}</div>
-    @endforelse
-    </form>
+    <div class="container col-sm-10 margin-auto">
+        <div class="panel">
+            <header class="panel__header text-center">
+                <h2>{{ __('Cart') }}</h2>
+            </header>
 
-    @if(!empty($cart))
-        <div class="buy">
-            <a href="{{ route('checkout') }}">{{ __('Buy') }}</a>
+            @include('partials.errors')
+
+            @include('frontend.partials.cart')
         </div>
-    @endif
+    </div>
 @endsection

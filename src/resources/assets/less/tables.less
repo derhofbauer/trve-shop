@@ -23,6 +23,21 @@ tr:nth-child(even) {
   background-color: darken(#fff, 5%);
 }
 
+tr.total {
+  border-top: 3px solid @_color-black;
+
+  td {
+    border: none;
+  }
+}
+
+td.quantity {
+  .form-control {
+    max-width: 100px;
+    padding:   2 * @default-step;
+  }
+}
+
 th,
 td {
   padding: @default-padding-small;
@@ -33,4 +48,9 @@ td {
   &:not(:first-child) {
     border-left: @border;
   }
+}
+
+.buy {
+  text-align: right;
+  margin-top: @grid-gutter-width;
 }

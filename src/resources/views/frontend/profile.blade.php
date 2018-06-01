@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="container col-sm-10 col-sm-4 margin-auto login-container">
+    <div class="container col-sm-10 margin-auto login-container">
         <div class="panel login">
             <header class="panel__header text-center">
                 <h2>{{ __('Profile') }}</h2>

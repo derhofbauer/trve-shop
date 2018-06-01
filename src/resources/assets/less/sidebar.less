@@ -1,0 +1,52 @@
+.sidebar {
+  grid-area: sidebar;
+
+  &-container {
+    background-color: @_color-white;
+  }
+
+  .searchbox,
+  .categories,
+  .price {
+    margin-bottom: @grid-gutter-width;
+  }
+
+  .categories {
+    &__title {
+      padding-bottom: @default-step;
+      font-weight:    bold;
+    }
+    &__tree {
+      display:        flex;
+      flex-direction: column;
+
+      label {
+        padding-top:    @default-step;
+        padding-bottom: @default-step;
+      }
+    }
+  }
+
+  .price {
+    &__title {
+      font-weight:    bold;
+      padding-bottom: @default-step;
+    }
+    &__labels {
+      display:         flex;
+      justify-content: space-between;
+      font-size:       0.8em;
+    }
+    &__range {
+      width: 100%;
+    }
+  }
+
+  .submit {
+    margin-bottom: @default-margin;
+  }
+
+  .reset {
+    text-align: center;
+  }
+}

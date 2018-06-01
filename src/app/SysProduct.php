@@ -170,7 +170,7 @@ class SysProduct extends Model
     {
         $content = \Parsedown::instance()->text($this->description);
         $content = strip_tags($content);
-        return substr($content, 0, 50) . ' ...';
+        return substr($content, 0, 100) . ' ...';
     }
 
     /**

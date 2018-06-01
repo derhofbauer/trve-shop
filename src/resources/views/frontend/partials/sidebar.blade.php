@@ -10,7 +10,7 @@
         </div>
 
         <div class="categories">
-            <div class="title">{{ __('Categories') }}</div>
+            <div class="categories__title">{{ __('Categories') }}</div>
             <div class="categories__tree">
                 @foreach (\App\SysProductCategory::all() as $category)
                     <label>
@@ -21,16 +21,18 @@
         </div>
 
         <div class="price">
-            <div class="title">{{ __('Price (€)') }}</div>
-            <div class="lables">
-                <div class="price__min">0</div>
-                <div class="price__max">5</div>
+            <div class="price__title">{{ __('Price (€)') }}</div>
+            <div class="price__labels">
+                <div class="price__min">0 &euro;</div>
+                <div class="price__max-container"><span class="price__max">5</span> &euro;</div>
             </div>
-            <input type="range" min="0" step="1" max="{{ \App\SysProduct::getHighestPricedProduct()->price }}" name="price_max" @if(!empty($price_max)) value="{{ $price_max }}" @else value="15" @endif">
+            <input class="price__range" type="range" min="0" step="1" max="{{ \App\SysProduct::getHighestPricedProduct()->price }}" name="price_max" @if(!empty($price_max)) value="{{ $price_max }}" @else value="15" @endif">
         </div>
 
         <div class="submit">
-            <input type="submit" value="{{ __('Filter') }}" class="btn btn-default">
+            <input type="submit" value="{{ __('Filter') }}" class="btn btn-primary btn-justify">
+        </div>
+        <div class="reset">
             <a href="{{ route('products') }}">{{ __('Reset filters') }}</a>
         </div>
     </form>

@@ -21,6 +21,10 @@
 
     @include('frontend.partials.navbar')
 
+    <aside class="sidebar-container container-padding-top container-fluid">
+        @include('frontend.partials.sidebar')
+    </aside>
+
     <main class="main content container-fluid">
         @yield('content')
     </main>

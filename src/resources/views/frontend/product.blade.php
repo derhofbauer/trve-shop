@@ -1,20 +1,13 @@
-@extends('layouts.frontend')
+@extends('layouts.frontend-sidebar')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="content-container container-padding-top">
         <div class="row">
-            <div class="col-sm-2">
-                @include('frontend.partials.sidebar')
-            </div>
-            <div class="col-sm-10">
-                <div class="row">
-                    @forelse($data as $product)
-                        @include('frontend.partials.product--grid', ['product' => $product])
-                    @empty
-                        <div class="warning">{{ __('Oh no! We got nothing to display here :(') }}</div>
-                    @endforelse
-                </div>
-            </div>
+            @forelse($data as $product)
+                @include('frontend.partials.product--grid', ['product' => $product])
+            @empty
+                @include('frontend.partials.nothing-to-display')
+            @endforelse
         </div>
     </div>
 @endsection

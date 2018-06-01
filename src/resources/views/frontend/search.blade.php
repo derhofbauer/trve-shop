@@ -3,9 +3,6 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2">
-                @include('frontend.partials.sidebar')
-            </div>
             <div class="col-sm-10">
                 <div class="row search__products">
                     @forelse($products as $product)
