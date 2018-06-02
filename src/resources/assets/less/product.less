@@ -55,19 +55,30 @@
     right:    0;
   }
 
-  &__siblings select {
-    background-color: @_color-white;
-  }
-  &__price {
+  &__price,
+  &__rating {
     font-size:        2rem;
     height:           50px;
     background-color: @color-danger;
     padding:          @default-padding-small;
     display:          inline-block;
     color:            @_color-white;
+    margin-top:       @default-margin;
+
+    &-container {
+      display:   flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__price {
+    margin-right: @default-margin;
+  }
+  &__siblings {
+    margin-top: @default-margin;
   }
 }
 
 .add-to-cart {
-  color: @_color-white;
+  margin-top: @default-margin;
+  color:      @_color-white;
 }

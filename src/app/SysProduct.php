@@ -141,7 +141,7 @@ class SysProduct extends Model
      */
     public function comments ()
     {
-        return $this->hasMany('App\SysComment', 'product_id');
+        return $this->hasMany('App\SysComment', 'product_id')->orderBy('created_at', 'desc');
     }
 
     /**
@@ -150,6 +150,21 @@ class SysProduct extends Model
     public function ratings ()
     {
         return $this->hasMany('App\SysRating', 'product_id');
+    }
+
+    /**
+     * @param int $decimal
+     *
+     * @return string
+     */
+    public function getMediumRating ($decimal = 1)
+    {
+        $total = 0;
+        foreach ($this->ratings as $rating) {
+            $total += $rating->rating;
+        }
+
+        return number_format($total / $this->ratings->count(), $decimal);
     }
 
     /**
@@ -243,6 +258,9 @@ class SysProduct extends Model
                 $parentMedia = json_decode($parentMedia);
             }
             return $parentMedia;
+        }
+        if (is_string($media)) {
+            return json_decode($media);
         }
         return $media;
     }

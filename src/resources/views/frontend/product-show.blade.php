@@ -2,7 +2,7 @@
 
 @section('content')
     @isset($object)
-        <div class="product container-padding-top">
+        <div class="product container-padding-top panel">
             <div class="product__name col-12">
                 <h2>{{ $object->name }}</h2>
             </div>
@@ -14,11 +14,13 @@
                             <div class="slider__canvas">
                                 <img src="/public{{ Storage::disk('local')->url($object->media[0]) }}" alt="{{ $object->name }} {{ __('Image') }} 1" class="img-responsive">
                             </div>
-                            <div class="slider__thumbnails">
-                                @foreach($object->media as $image)
-                                    <img src="/public{{ Storage::disk('local')->url($image) }}" alt="{{ $object->name }} {{ __('Image') }} {{ $loop->index }}" class="img-responsive">
-                                @endforeach
-                            </div>
+                            @if(count($object->media) > 1)
+                                <div class="slider__thumbnails">
+                                    @foreach($object->media as $image)
+                                        <img src="/public{{ Storage::disk('local')->url($image) }}" alt="{{ $object->name }} {{ __('Image') }} {{ $loop->index }}" class="img-responsive">
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                     @endif
                 </div>
@@ -37,14 +39,21 @@
                             </select>
                         </div>
                     @endif
-                    <div class="product__price">
-                        {{ $object->price }} &euro;
+                    <div class="product__price-container">
+                        <div class="product__price">
+                            {{ $object->price }} &euro;
+                        </div>
+                        <div class="product__rating">
+                            <span class="rating__title">{{ __('Rating') }}:</span>
+                            <span class="rating__value">{{ $object->getMediumRating(1) }}
+                                <small>/ 5</small></span>
+                        </div>
                     </div>
                     <div class="add-to-cart">
                         <a href="{{ route('cart.add', [
                         'id' => $object->id,
                         'returnUrl' => base64_encode(route('products.show', ['id' => $object->id]))
-                    ]) }}" class="btn btn-primary">
+                    ]) }}" class="btn btn-primary btn-justify">
                             {{ __('Add To Cart') }}
                         </a>
                     </div>
@@ -57,28 +66,24 @@
     @endisset
 
     @auth('web')
-        <form action="{{ route('products.comment.add', ['id' => $object->id]) }}" method="post">
-            @csrf
-
-            <textarea name="comment" id="comment" class="form-control" placeholder="{{ __('Please give feedback') }}"></textarea>
-            <select name="rating" id="rating" class="form-control">
-                <option value="0">{{ __('Please rate ...') }}</option>
-                <option value="1">{{ __('Very good') }}</option>
-                <option value="2">{{ __('Good') }}</option>
-                <option value="3">{{ __('OK') }}</option>
-                <option value="4">{{ __('Bad') }}</option>
-                <option value="5">{{ __('Very bad') }}</option>
-            </select>
-            <input type="submit" name="do-comment" value="{{ __('Comment') }}">
-        </form>
+        <div class="panel">
+            @include('frontend.partials.comment-form')
+        </div>
     @endauth
 
-    <div class="comments">
+    <section class="comments container-padding-top panel">
+        <header>
+            <h3>{{ __('Comments') }}</h3>
+        </header>
         @foreach($object->comments as $comment)
             <div class="comment">
-                <div class="comment__author">{{ $comment->author->firstname }} {{ $comment->author->lastname }}</div>
                 <div class="comment_text">{{ $comment->content }}</div>
+                <div class="comment__meta">
+                    <div class="comment__author">{{ substr($comment->author->firstname, 0, 1) }}
+                        . {{ $comment->author->lastname }}</div>
+                    <div class="comment__date">{{ $comment->created_at->format(__('d.m.Y H:m')) }}</div>
+                </div>
             </div>
         @endforeach
-    </div>
+    </section>
 @endsection

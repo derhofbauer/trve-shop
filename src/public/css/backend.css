@@ -1503,6 +1503,10 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
 }
+h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
 strong {
   font-weight: bold;
 }
@@ -1554,7 +1558,7 @@ a:hover {
   font-size: 1rem;
   border-radius: 2px;
   width: 100%;
-  padding: 0.9375rem;
+  padding: 0.625rem;
   border: 1px solid #d5d5d5;
 }
 .form-group:not(:last-child) {
@@ -1575,7 +1579,7 @@ fieldset {
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  height: 2.5rem;
+  height: 2.625rem;
   font-size: 1rem;
   color: #000;
   white-space: nowrap;
@@ -1628,7 +1632,7 @@ fieldset {
 }
 a.btn {
   text-align: center;
-  line-height: 1.875rem;
+  line-height: 2rem;
   vertical-align: middle;
   display: inline-block;
   margin-top: -2px;

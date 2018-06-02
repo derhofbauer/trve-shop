@@ -68,4 +68,10 @@ jQuery(document).ready(function ($, undefined) {
             window.location = val
         }
     })
+
+    // Product Image "Slider"/Switcher
+    $('.slider__thumbnails img').on('click', (event) => {
+        $('.slider__canvas img').remove();
+        $(event.target).clone().appendTo($('.slider__canvas'))
+    })
 })

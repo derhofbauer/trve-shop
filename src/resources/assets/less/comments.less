@@ -1,0 +1,29 @@
+.comment {
+  margin-top:  @default-margin;
+  line-height: 1.2;
+  .seperator-bottom();
+
+  &__meta {
+    display:    flex;
+    font-size:  0.8em;
+    color:      @color-secondary;
+    margin-top: @default-margin-small;
+
+    & > *:not(:last-child)::after {
+      display:       inline-block;
+      content:       '|';
+      padding-left:  @default-padding-small;
+      padding-right: @default-padding-small;
+    }
+  }
+
+  &__form {
+    margin-bottom: @default-margin;
+    min-height:    200px;
+  }
+  &__rating {
+    min-width:     150px;
+    width:         25%;
+    margin-bottom: @default-margin;
+  }
+}

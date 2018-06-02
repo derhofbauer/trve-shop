@@ -1496,6 +1496,10 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
 }
+h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
 strong {
   font-weight: bold;
 }
@@ -1547,7 +1551,7 @@ a:hover {
   font-size: 1rem;
   border-radius: 2px;
   width: 100%;
-  padding: 0.9375rem;
+  padding: 0.625rem;
   border: 1px solid #d5d5d5;
 }
 .form-group:not(:last-child) {
@@ -1568,7 +1572,7 @@ fieldset {
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  height: 2.5rem;
+  height: 2.625rem;
   font-size: 1rem;
   color: #000;
   white-space: nowrap;
@@ -1621,7 +1625,7 @@ fieldset {
 }
 a.btn {
   text-align: center;
-  line-height: 1.875rem;
+  line-height: 2rem;
   vertical-align: middle;
   display: inline-block;
   margin-top: -2px;
@@ -1934,7 +1938,7 @@ td:not(:first-child) {
 .searchbox {
   margin-right: 3.125rem;
   width: 100%;
-  height: 2.5rem;
+  height: 2.625rem;
 }
 .searchbox .form {
   width: 100%;
@@ -2122,20 +2126,71 @@ td:not(:first-child) {
   left: 0;
   right: 0;
 }
-.product__siblings select {
-  background-color: #fff;
-}
-.product__price {
+.product__price,
+.product__rating {
   font-size: 2rem;
   height: 50px;
   background-color: #dc3545;
   padding: 0.625rem;
   display: inline-block;
   color: #fff;
+  margin-top: 0.9375rem;
+}
+.product__price-container,
+.product__rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.product__price {
+  margin-right: 0.9375rem;
+}
+.product__siblings {
+  margin-top: 0.9375rem;
 }
 .add-to-cart {
+  margin-top: 0.9375rem;
   color: #fff;
 }
 .slider__thumbnails {
-  height: 150px;
+  height: 100px;
+}
+.comment {
+  margin-top: 0.9375rem;
+  line-height: 1.2;
+}
+.comment:not(:last-child)::after {
+  display: block;
+  content: '';
+  width: 50%;
+  min-height: 1px;
+  border-top: 1px solid #b9b9b9;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.comment__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-top: 0.625rem;
+}
+.comment__meta > *:not(:last-child)::after {
+  display: inline-block;
+  content: '|';
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+.comment__form {
+  margin-bottom: 0.9375rem;
+  min-height: 200px;
+}
+.comment__rating {
+  min-width: 150px;
+  width: 25%;
+  margin-bottom: 0.9375rem;
 }

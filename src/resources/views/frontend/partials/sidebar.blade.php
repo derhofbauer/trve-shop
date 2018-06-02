@@ -2,7 +2,7 @@
     <form action="{{ route('products.filter') }}" id="filter" method="get">
         <div class="searchbox">
             <div class="form">
-                <input type="text" name="searchterm" id="searchterm" placeholder="{{ __('What are you looking for?') }}" class="form-control" @if(!empty($searchterm)) value="{{ $searchterm}} " @endif>
+                <input type="text" name="searchterm" id="searchterm-sidebar" placeholder="{{ __('What are you looking for?') }}" class="form-control" @if(!empty($searchterm)) value="{{ $searchterm}} " @endif>
                 <button type="submit" class="btn btn-default">
                     <i data-feather="search"></i>
                 </button>
