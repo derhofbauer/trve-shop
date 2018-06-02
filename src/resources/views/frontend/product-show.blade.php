@@ -12,7 +12,7 @@
                     @if(!empty($object->media))
                         <div class="slider">
                             <div class="slider__canvas">
-                                <img src="/public{{ Storage::disk('local')->url($object->media[0]) }}" alt="{{ $object->name }} {{ __('Image') }} 1" class="img-responsive product__image">
+                                <img src="/public{{ Storage::disk('local')->url($object->media[0]) }}" alt="{{ $object->name }} {{ __('Image') }} 1" class="img-responsive">
                             </div>
                             <div class="slider__thumbnails">
                                 @foreach($object->media as $image)
@@ -28,7 +28,7 @@
                         {{ $object->description }}
                     </div>
                     @if(!empty($object->parent->children))
-                        <div class="product__siblings">
+                        <div class="product__siblings col-sm-4 no-gutters">
                             <select name="siblings" id="siblings" class="form-control">
                                 <option value="default">{{ __('Other variants ...') }}</option>
                                 @foreach ($object->siblings as $sibling)
@@ -38,18 +38,18 @@
                         </div>
                     @endif
                     <div class="product__price">
-                        {{ $object->price }}
+                        {{ $object->price }} &euro;
                     </div>
-                </div>
-            </div>
-
-            <div class="add-to-cart">
-                <a href="{{ route('cart.add', [
+                    <div class="add-to-cart">
+                        <a href="{{ route('cart.add', [
                         'id' => $object->id,
                         'returnUrl' => base64_encode(route('products.show', ['id' => $object->id]))
-                    ]) }}">
-                    {{ __('Add To Cart') }}
-                </a>
+                    ]) }}" class="btn btn-primary">
+                            {{ __('Add To Cart') }}
+                        </a>
+                    </div>
+                    <small>{{ __('* All prices include taxes.') }}</small>
+                </div>
             </div>
         </div>
     @else

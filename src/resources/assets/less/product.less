@@ -5,7 +5,7 @@
     background-color: @_color-white;
     min-height:       calc(~"100% - " @grid-gutter-width);
 
-    .priduct__price {
+    .product__price {
       position:         absolute;
       right:            -10px;
       bottom:           60px;
@@ -54,4 +54,20 @@
     left:     0;
     right:    0;
   }
+
+  &__siblings select {
+    background-color: @_color-white;
+  }
+  &__price {
+    font-size:        2rem;
+    height:           50px;
+    background-color: @color-danger;
+    padding:          @default-padding-small;
+    display:          inline-block;
+    color:            @_color-white;
+  }
+}
+
+.add-to-cart {
+  color: @_color-white;
 }

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SysProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/backend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/assets/less/product.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/product.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/sidebar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/sidebar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/slider.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/slider.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/partials/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/partials/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/partials/nothing-to-display.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/partials/nothing-to-display.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,11 +85,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="navbar.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="product-show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+            <state relative-caret-position="176">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -215,7 +229,6 @@
         <option value="$PROJECT_DIR$/src/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/variables.less" />
-        <option value="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/grid.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/main-nav/main-nav.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/searchbox/searchbox.less" />
@@ -245,11 +258,12 @@
         <option value="$PROJECT_DIR$/src/resources/assets/less/panel/panel.less" />
         <option value="$PROJECT_DIR$/src/database/seeds/ProductDatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/frontend.less" />
-        <option value="$PROJECT_DIR$/src/resources/assets/less/product.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/slider.less" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/16d9b484-414c-43ec-9ebe-c1cd309aed72/console.sql" />
         <option value="$PROJECT_DIR$/src/app/SysProduct.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less" />
+        <option value="$PROJECT_DIR$/src/resources/assets/less/product.less" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php" />
       </list>
     </option>
@@ -520,12 +534,12 @@
       <workItem from="1527615231067" duration="448000" />
       <workItem from="1527688006961" duration="14411000" />
       <workItem from="1527882397403" duration="10028000" />
-      <workItem from="1527953597500" duration="1950000" />
+      <workItem from="1527953597500" duration="2748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274109000" />
+    <option name="totallyTimeSpent" value="274907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,18 +552,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3263041" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3286026" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946696" weight="0.32372504" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49946696" weight="0.32297447" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32852387" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32963374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
@@ -560,7 +574,6 @@
       <window_info anchor="bottom" id="Command Line Tools Console" order="0" weight="0.32963374" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32963374" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,13 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -869,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/16d9b484-414c-43ec-9ebe-c1cd309aed72/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -926,10 +925,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/navbar/navbar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/frontend/product-show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+        <state relative-caret-position="176">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -1696,6 +1696,9 @@ a.btn:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 #app .navbar {
   height: 6.25rem;

@@ -1689,6 +1689,9 @@ a.btn:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 #app .navbar {
   height: 6.25rem;
@@ -2072,7 +2075,7 @@ td:not(:first-child) {
   background-color: #fff;
   min-height: calc(100% -  30px);
 }
-.product--grid .priduct__price {
+.product--grid .product__price {
   position: absolute;
   right: -10px;
   bottom: 60px;
@@ -2118,6 +2121,20 @@ td:not(:first-child) {
   height: 100%;
   left: 0;
   right: 0;
+}
+.product__siblings select {
+  background-color: #fff;
+}
+.product__price {
+  font-size: 2rem;
+  height: 50px;
+  background-color: #dc3545;
+  padding: 0.625rem;
+  display: inline-block;
+  color: #fff;
+}
+.add-to-cart {
+  color: #fff;
 }
 .slider__thumbnails {
   height: 150px;
