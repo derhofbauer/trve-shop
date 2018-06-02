@@ -247,6 +247,24 @@ class SysProduct extends Model
         return $media;
     }
 
+    /**
+     * @return bool|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function getSiblingsAttribute ()
+    {
+        if ($this->hasParent()) {
+            $products = SysProduct::query()
+                ->where('parent_product_id', $this->parent->id)
+                ->where('id', '!=', $this->id)
+                ->get(['name', 'id']);
+            return $products;
+        }
+        return false;
+    }
+
+    /**
+     * @return bool
+     */
     public function hasParent ()
     {
         return $this->parent()->count() > 0;

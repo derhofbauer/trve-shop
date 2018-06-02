@@ -60,4 +60,12 @@ jQuery(document).ready(function ($, undefined) {
         let val = $range.first().val()
         $('.price__max').text(val)
     })
+
+    $('#siblings').on('change', (event) => {
+        let $select = $(event.target)
+        let val = $select.val()
+        if (val != 'default') {
+            window.location = val
+        }
+    })
 })

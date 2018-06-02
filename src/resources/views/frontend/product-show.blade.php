@@ -2,36 +2,45 @@
 
 @section('content')
     @isset($object)
-        <div class="product row">
-            <div class="col-sm-6">
-                <div class="product__name">
-                    {{ $object->name }}
-                </div>
-                <div class="product__price">
-                    {{ $object->price }}
-                </div>
-                @if(!empty($object->media))
-                    <div class="product__image">
-                        <img src="{{ asset($object->media[0]) }}" alt="">
-                    </div>
-                @endif
-                <div class="product__description">
-                    {{ $object->description }}
-                </div>
+        <div class="product container-padding-top">
+            <div class="product__name col-12">
+                <h2>{{ $object->name }}</h2>
             </div>
-            <div class="col-sm-6">
-                @if(!empty($object->media))
-                    <div class="slider">
-                        <div class="slider__canvas">
-                            <img src="/public{{ Storage::disk('local')->url($object->media[0]) }}" alt="{{ $object->name }} {{ __('Image') }} 1" class="img-responsive product__image">
+
+            <div class="row">
+                <div class="col-sm-4">
+                    @if(!empty($object->media))
+                        <div class="slider">
+                            <div class="slider__canvas">
+                                <img src="/public{{ Storage::disk('local')->url($object->media[0]) }}" alt="{{ $object->name }} {{ __('Image') }} 1" class="img-responsive product__image">
+                            </div>
+                            <div class="slider__thumbnails">
+                                @foreach($object->media as $image)
+                                    <img src="/public{{ Storage::disk('local')->url($image) }}" alt="{{ $object->name }} {{ __('Image') }} {{ $loop->index }}" class="img-responsive">
+                                @endforeach
+                            </div>
                         </div>
-                        <div class="slider__thumbnails">
-                            @foreach($object->media as $image)
-                                <img src="/public{{ Storage::disk('local')->url($image) }}" alt="{{ $object->name }} {{ __('Image') }} {{ $loop->index }}" class="img-responsive">
-                            @endforeach
-                        </div>
+                    @endif
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="product__description">
+                        {{ $object->description }}
                     </div>
-                @endif
+                    @if(!empty($object->parent->children))
+                        <div class="product__siblings">
+                            <select name="siblings" id="siblings" class="form-control">
+                                <option value="default">{{ __('Other variants ...') }}</option>
+                                @foreach ($object->siblings as $sibling)
+                                    <option value="{{ route('products.show', ['id' => $sibling->id]) }}">{{ $sibling->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @endif
+                    <div class="product__price">
+                        {{ $object->price }}
+                    </div>
+                </div>
             </div>
 
             <div class="add-to-cart">
