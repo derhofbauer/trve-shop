@@ -67,7 +67,7 @@ class SysFeuser extends Authenticatable
      */
     public function orders ()
     {
-        return $this->hasMany('App\SysOrder', 'feuser_id');
+        return $this->hasMany('App\SysOrder', 'feuser_id')->orderBy('created_at', 'desc');
     }
 
     /**

@@ -109,6 +109,9 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         return redirect()->route('admin.orders.edit', ['id' => $id]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createView ()
     {
         $feusers = SysFeuser::all('email AS name', 'id');
@@ -130,6 +133,11 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         ]));
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create (Request $request)
     {
         $validatedData = $request->validate(self::getValidationRules());
@@ -144,6 +152,12 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         return redirect()->route('admin.orders.edit', ['id' => $order->id]);
     }
 
+    /**
+     * @param Request    $request
+     * @param int|string $id
+     *
+     * @return \Illuminate\Http\RedirectResponse|void
+     */
     public function delete (Request $request, $id)
     {
         // TODO: Implement delete() method.

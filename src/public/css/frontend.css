@@ -1979,19 +1979,10 @@ td:not(:first-child) {
   max-width: 56.25rem;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.2;
 }
 .blog-entry:first-child {
   margin-top: 1.25rem;
-}
-.blog-entry:not(:last-child)::after {
-  display: block;
-  content: '';
-  width: 50%;
-  min-height: 1px;
-  border-top: 1px solid #b9b9b9;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
 }
 .blog-entry__abstract-container {
   display: -webkit-box;
@@ -2013,6 +2004,10 @@ td:not(:first-child) {
   text-align: center;
   margin-top: 3.75rem;
   margin-bottom: 30px;
+}
+.blog-entry__content img {
+  max-width: 50%;
+  float: right;
 }
 .blog-entry__more {
   color: #000;
@@ -2153,6 +2148,10 @@ td:not(:first-child) {
 .add-to-cart {
   margin-top: 0.9375rem;
   color: #fff;
+}
+.address_new {
+  margin-top: 0.9375rem;
+  min-height: 100px;
 }
 .slider__thumbnails {
   height: 100px;

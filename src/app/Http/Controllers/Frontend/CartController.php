@@ -240,16 +240,21 @@ class CartController extends Controller
 
         $validatedData = $request->validate([
             'address' => 'integer|required|exists:sys_address,id',
-            'payment_method' => 'integer|required|exists:sys_payment_method,id'
+            'payment_method' => 'integer|required|exists:sys_payment_method,id',
+            'address_new' => 'sometimes|string|nullable'
         ]);
 
         $order = new SysOrder([
             'status' => 0,
             'invoice' => $products,
-            'delivery_address' => json_encode(SysAddress::find($validatedData['address'])->toArray()),
             'feuser_id' => $user->id,
             'payment_method' => json_encode(SysPaymentMethod::find($validatedData['payment_method'])->toArray())
         ]);
+        if (!empty($validatedData['address_new'])) {
+            $order->delivery_address = json_encode($validatedData['address_new']);
+        } else {
+            $order->delivery_address = json_encode(SysAddress::find($validatedData['address'])->toArray());
+        }
         $order->save();
 
         foreach ($cart as $entry) {

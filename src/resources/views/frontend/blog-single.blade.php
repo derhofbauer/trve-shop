@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         @isset ($object)
-            <article class="blog-entry">
+            <article class="blog-entry panel">
                 <header class="blog-entry__header header">
                     <h2>
                         <a href="{{ route('blog.show', ['id' => $object->id, 'slug' => str_slug($object->title) ]) }}">
@@ -17,29 +17,31 @@
                             {{ $object->abstract }}
                         </div>
                         <div class="blog-entry__content content">
+                            @if ($object->hasMedia())
+                                <img src="/public{{ Storage::disk('local')->url($object->getFirstImageUri()) }}" alt="{{ __('Blog Image') }}" class="img-responsive">
+                            @endif
+
                             {!! $object->renderMarkdown() !!}
                         </div>
                     </div>
-                    @if ($object->hasMedia())
-                        <div class="blog-entry__image image">
-                            <a href="{{ route('blog.show', ['id' => $object->id, 'slug' => str_slug($object->title) ]) }}">
-                                <img src="/public{{ Storage::disk('local')->url($object->getFirstImageUri()) }}" alt="{{ __('Blog Image') }}" class="img-responsive">
-                            </a>
-                        </div>
-                    @endif
+
                 </div>
                 @if($object->products->count() > 0)
                     <div class="blog-entry__products row">
                         @foreach($object->products as $product)
-                            @include('frontend.partials.product--grid', ['product' => $product])
+                            @include('frontend.partials.product--grid', [
+                            'product' => $product,
+                            'class' => 'col-sm-6'
+                            ])
                         @endforeach
                     </div>
                 @endif
-                @endisset
-
-                @empty ($object)
-                    <p>{{ __('Blog entry not found.') }}</p>
-                @endempty
             </article>
+
+        @endisset
+
+        @empty ($object)
+            <p>{{ __('Blog entry not found.') }}</p>
+        @endempty
     </div>
 @endsection

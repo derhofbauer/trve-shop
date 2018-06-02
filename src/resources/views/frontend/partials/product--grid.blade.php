@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="{{ $class ?? 'col-md-3 col-sm-6 col-xs-12' }}">
     <div class="product product--grid">
         @if(!empty($product->getFirstImageUri()))
             <img src="/public{{ Storage::disk('local')->url($product->getFirstImageUri()) }}" alt="{{ $product->name }}" class="img-responsive product__image">

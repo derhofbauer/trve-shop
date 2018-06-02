@@ -1,36 +1,48 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <form action="{{ route('checkout.confirm') }}" method="post">
-        @csrf
+    <div class="container col-sm-10 margin-auto">
+        <div class="panel">
+            <form action="{{ route('checkout.confirm') }}" method="post">
+                @csrf
 
-        <select name="address" id="address">
-            @foreach($addresses as $address)
-                <option value="{{ $address->id }}">{{ $address->city }}: {{ $address->street }}</option>
-            @endforeach
-        </select>
-        <select name="payment_method" id="payment_method">
-            @foreach($paymentMethods as $paymentMethod)
-                <option value="{{ $paymentMethod->id }}">{{ $paymentMethod->data['iban'] }}
-                    ({{ $paymentMethod->data['swift'] }})
-                </option>
-            @endforeach
-        </select>
-
-        @forelse($user->cart as $entry)
-            <div class="cart">
-                <div class="cart__entry">
-                    <div class="product">{{ $entry->product->name }}</div>
-                    <div class="quantity">{{ $entry->product_quantity }}</div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="address">{{ __('Delivery Address') }}</label>
+                        <select name="address" id="address" class="form-control">
+                            @foreach($addresses as $address)
+                                <option value="{{ $address->id }}">{{ $address->city }}: {{ $address->street }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="payment_method">{{ __('Payment Method') }}</label>
+                        <select name="payment_method" id="payment_method" class="form-control">
+                            @foreach($paymentMethods as $paymentMethod)
+                                <option value="{{ $paymentMethod->id }}">{{ $paymentMethod->data['iban'] }}
+                                    ({{ $paymentMethod->data['swift'] }})
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea name="address_new" id="address_new" class="form-control address_new" placeholder="{{ __('You can add a delivery address for this order only.') }}"></textarea>
+                    </div>
                 </div>
-            </div>
-        @empty
-            <p class="warning">{{ __('Your Cart is empty :(') }}</p>
-        @endforelse
 
-        @if($user->cart->count() > 0)
-            <input type="submit" value="{{ __('Confirm') }}">
-        @endif
-    </form>
+                <div class="container-padding-top">
+                    @include('frontend.partials.cart-table', [
+                    'cart' => $user->cart,
+                    'disableInputs' => true
+                    ])
+                </div>
 
+                @if($user->cart->count() > 0)
+                    <div class="container-padding-top">
+                        <input type="submit" value="{{ __('Confirm') }}" class="btn btn-primary btn-justify">
+                    </div>
+                @endif
+            </form>
+        </div>
+    </div>
 @endsection
