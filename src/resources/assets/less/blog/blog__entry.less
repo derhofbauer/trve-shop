@@ -12,6 +12,10 @@
 
   &__abstract-container {
     display: flex;
+
+    @media (max-width: 575px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__image {
@@ -30,9 +34,11 @@
     margin-bottom: @grid-gutter-width;
   }
 
-  &__content img {
-    max-width: 50%;
-    float:     right;
+  @media (min-width: 576px) {
+    &__content img {
+      max-width: 50%;
+      float:     right;
+    }
   }
 
   &__more {

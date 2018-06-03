@@ -3,6 +3,10 @@
   display:          flex;
   grid-area:        main-nav;
 
+  @media (max-width: 575px) {
+    justify-content: center;
+  }
+
   &--dark {
     background-color: @navbar-bg-color;
   }

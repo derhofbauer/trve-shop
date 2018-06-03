@@ -21,7 +21,7 @@
 
     @include('frontend.partials.navbar')
 
-    <aside class="sidebar-container container-padding-top container-fluid">
+    <aside class="sidebar-container container-padding-top container-fluid hidden-xs">
         @include('frontend.partials.sidebar')
     </aside>
 

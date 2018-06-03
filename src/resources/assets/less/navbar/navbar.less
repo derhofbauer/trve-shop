@@ -10,6 +10,10 @@
   grid-area:        navbar;
   color:            @color-font-inverted;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
   &__brand {
     display:      flex;
     margin-right: @grid-gutter-width;
@@ -53,8 +57,15 @@
 .nav {
   display:         inline-flex;
   justify-content: flex-end;
+
+  @media (max-width: 575px) {
+    justify-content: center;
+    margin-top: @default-margin-small;
+  }
 }
 
-#app .navbar {
-  height: 6.25rem;
+@media (min-width: 768px) {
+  #app .navbar {
+    height: 6.25rem;
+  }
 }

@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <div class="navbar__brand col-sm-4 row">
+    <div class="navbar__brand col-sm-12 col-md-4 col-xs-12 row">
         <a href="{{ route('root') }}" class="navbar__brand__link col-xs-3 no-gutters">
             <img src="{{ asset('img/Logo.svg') }}" alt="Logo" class="img-responsive">
         </a>
@@ -8,7 +8,7 @@
         </a>
     </div>
 
-    <div class="navbar__right col-sm-8 row">
+    <div class="navbar__right col-sm-12 col-md-8 col-xs-12 row">
         <div class="main-nav main-nav--dark col-sm-4 col-xl-3">
             @include('frontend.main-nav')
         </div>
