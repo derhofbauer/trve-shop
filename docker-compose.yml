@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    ports:
+     - 5432:5432
+    env_file:
+      - docker.env
+
+  apache:
+    image: php:apache
+    volumes:
+      - './src/:/var/www/html/'
+      - './setup/:/setup/'
+    command: sh -c "/setup/setup.sh && apache2-foreground"
+    ports:
+      - 1236:80
+    links:
+      - postgres:postgres-db
+    depends_on:
+      - postgres
+    env_file:
+      - docker.env
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+
+  phppgadmin:
+    image: zhajor/docker-phppgadmin
+    ports:
+      - 12345:80
+    links:
+      - postgres:prostgres-db
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432

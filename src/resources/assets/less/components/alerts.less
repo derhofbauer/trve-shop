@@ -1,0 +1,54 @@
+.alert {
+  padding:       @default-padding-small;
+  margin-bottom: @default-step;
+  border-radius: @default-border-radius-small;
+  border-width:  1px;
+  border-style:  solid;
+
+  &__message {
+    color:       @_color-black;
+    line-height: 24px;
+  }
+}
+
+@lighten: 30%;
+
+.alert-success,
+.has-success {
+  background-color: lighten(@color-success, @lighten);
+  border-color:     lighten(@color-success, @lighten - 10);
+}
+
+.alert-success {
+  color: darken(@color-success, 10%);
+}
+
+.alert-info,
+.has-info {
+  background-color: lighten(@color-info, @lighten);
+  border-color:     lighten(@color-info, @lighten - 10);
+}
+
+.alert-info {
+  color: darken(@color-info, 10%);
+}
+
+.alert-warning,
+.has-danger {
+  background-color: lighten(@color-warning, @lighten);
+  border-color:     lighten(@color-warning, @lighten - 10);
+}
+
+.alert-warning {
+  color: darken(@color-warning, 10%);
+}
+
+.alert-danger,
+.has-danger {
+  background-color: lighten(@color-danger, @lighten);
+  border-color:     lighten(@color-danger, @lighten - 10);
+}
+
+.alert-danger {
+  color: darken(@color-danger, 10%);
+}

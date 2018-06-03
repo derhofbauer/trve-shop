@@ -1,0 +1,71 @@
+.navbar {
+  background-color: @navbar-bg-color;
+  width:            100%;
+  padding-left:     @default-padding;
+  padding-right:    @default-padding;
+  padding-top:      @default-padding-small;
+  padding-bottom:   @default-padding-small;
+  display:          flex;
+  justify-content:  space-between;
+  grid-area:        navbar;
+  color:            @color-font-inverted;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  &__brand {
+    display:      flex;
+    margin-right: @grid-gutter-width;
+
+    &__link {
+      text-decoration: none;
+      display:         block;
+      height:          100%;
+      width:           100%;
+    }
+
+    img {
+      display:        inline-block;
+      vertical-align: middle;
+      max-height:     100%;
+      width:          auto;
+    }
+  }
+  &__title {
+    color:               transparent;
+    background-image:    url(../img/font.png);
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    display:             block;
+    height:              100%;
+    width:               100%;
+    background-position: center;
+  }
+
+  &__left {
+  }
+  &__center {
+  }
+  &__right {
+    padding-top:    @default-padding-large;
+    padding-bottom: @default-padding-large;
+    display:        flex;
+  }
+}
+
+.nav {
+  display:         inline-flex;
+  justify-content: flex-end;
+
+  @media (max-width: 575px) {
+    justify-content: center;
+    margin-top: @default-margin-small;
+  }
+}
+
+@media (min-width: 768px) {
+  #app .navbar {
+    height: 6.25rem;
+  }
+}

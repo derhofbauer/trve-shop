@@ -1,0 +1,32 @@
+{
+  "name": "trve-shop",
+  "version": "1.0.0",
+  "description": "Small shop software",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derhofbauer/trve-shop.git"
+  },
+  "author": "Alexander Hofbauer",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/derhofbauer/trve-shop/issues"
+  },
+  "homepage": "https://github.com/derhofbauer/trve-shop#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-image": "^4.2.0",
+    "grunt-postcss": "^0.9.0",
+    "less-plugin-functions": "^1.0.0",
+    "less-plugin-lists": "^1.1.1"
+  },
+  "scripts": {
+    "attach": "docker exec -it trve-shop_apache_1 bash",
+    "migration-fresh": "docker exec -it trve-shop_apache_1 composer migration-fresh",
+    "clear-cache": "docker exec -it trve-shop_apache_1 composer clear-artisan-cache"
+  }
+}

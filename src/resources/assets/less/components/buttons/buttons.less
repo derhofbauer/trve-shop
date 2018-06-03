@@ -1,0 +1,89 @@
+@button-height: 2.625rem;
+
+.btn {
+  padding:          @default-step;
+  background-color: @button-bg-color;
+  border-width:     @default-border-width;
+  border-style:     solid;
+  border-color:     @button-border-color;
+  border-radius:    @default-border-radius-small;
+  cursor:           pointer;
+  display:          inline-block;
+  height:           @button-height;
+  font-size:        1rem;
+  color:            #000;
+  white-space:      nowrap;
+
+  .feather {
+    margin-top: -5px;
+  }
+
+  &:hover {
+    background-color: darken(@button-bg-color, 10%);
+  }
+
+  &-primary {
+    background-color: @color-primary;
+    border-color:     @color-primary;
+    color:            @color-font-inverted;
+
+    &:hover {
+      background-color: darken(@color-primary, 10%);
+    }
+  }
+  &-danger {
+    background-color: lighten(@color-danger, 20%);
+  }
+
+  &--login {
+    padding: @default-padding;
+  }
+
+  &-justify {
+    width: 100%;
+  }
+
+  &-icon {
+    padding:        0;
+    display:        inline-block;
+    color:          #000;
+    height:         @icon-size-button;
+    width:          @icon-size-button;
+    text-align:     center;
+    vertical-align: middle;
+
+    svg {
+      margin-top: 3px;
+    }
+  }
+
+  &--inverted {
+    color:            #000;
+    background-color: #fff;
+  }
+
+  &--round {
+    max-height:    2.5rem;
+    font-size:     20px;
+    border-radius: 2.5rem / 2;
+    padding-left:  @default-padding-small;
+    padding-right: @default-padding-small;
+  }
+}
+
+a.btn {
+  text-align:     center;
+  line-height:    @button-height - (2 * @default-step);
+  vertical-align: middle;
+  display:        inline-block;
+  margin-top:     -2px; // dirty hack, to be honest ;)
+  padding-top:    3px; // another dirty hack, to be honest again ;)
+
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+.cart-total {
+  margin-left: @default-margin;
+}

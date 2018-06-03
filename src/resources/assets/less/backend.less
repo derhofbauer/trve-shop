@@ -1,0 +1,161 @@
+@import "frontend";
+@import (css, inline) "../../../node_modules/simplemde/dist/simplemde.min.css";
+
+body {
+  background-color: #fff;
+}
+
+a.btn {
+  padding-top: 0;
+}
+
+a.btn-icon-text {
+  padding-top: 3px;
+}
+
+.card__header {
+  &, & h3 {
+    font-size:     1rem;
+    margin-bottom: 0;
+  }
+}
+
+.main-nav,
+.navbar {
+  color: @_color-white;
+
+  a {
+    color: inherit;
+  }
+}
+
+.navbar {
+  height: 60px;
+
+  &__brand {
+    line-height:    40px;
+    vertical-align: middle;
+
+    .feather {
+      color:        @color-primary;
+      stroke:       currentColor;
+      height:       40px;
+      margin-right: @default-margin;
+    }
+    .version {
+      margin-left: @default-step;
+    }
+  }
+  &__right {
+    padding:        0;
+    line-height:    40px;
+    vertical-align: middle;
+  }
+}
+
+.nav {
+  &--vertical {
+    padding-top: @default-padding-small;
+  }
+
+  &__item {
+    display:        block;
+    height:         42px;
+    line-height:    32px;
+    margin-bottom:  3px;
+    margin-top:     3px;
+    padding-top:    @default-step;
+    padding-bottom: @default-step;
+    padding-left:   @default-padding;
+    padding-right:  @default-padding;
+    white-space:    nowrap;
+
+    &:hover,
+    &.active {
+      text-decoration:  none;
+      background-color: #484848;
+
+      .feather {
+        background-color: #000;
+      }
+    }
+
+    a, a:hover {
+      text-decoration: inherit;
+    }
+
+    .feather {
+      background-color: #666;
+      border-radius:    @default-border-radius-small;
+      padding:          @default-step;
+      height:           32px;
+      width:            32px;
+      line-height:      32px;
+      display:          inline-block;
+      margin-right:     @default-margin-small;
+      margin-top:       -3px;
+    }
+  }
+}
+
+.feather.circle {
+  background-color: #666;
+  border-radius:    50%;
+  padding:          @default-step;
+  height:           30px;
+  width:            30px;
+}
+
+.user-nav .username {
+  margin-right: @grid-gutter-width;
+}
+
+.tabs {
+  height:           36px;
+  background-color: #ededed;
+
+  ol {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+  }
+
+  &__tab {
+    background-color:   #fafafa;
+    padding-left:       @default-padding;
+    padding-right:      @default-padding;
+    padding-top:        @default-padding-small;
+    padding-bottom:     @default-padding-small;
+    display:            inline-block;
+    height:             calc(~"100% - 1px");
+    border-color:       #ccc;
+    border-style:       solid;
+    border-left-width:  1px;
+    border-top-width:   1px;
+    border-right-width: 1px;
+  }
+}
+
+.tab {
+  background-color: #fafafa;
+  border:           1px solid #ccc;
+
+  label {
+    font-weight:   bold;
+    margin-bottom: @default-margin;
+    display:       block;
+  }
+  .form-group {
+    padding: @default-padding;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+.media-item {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: space-between;
+}

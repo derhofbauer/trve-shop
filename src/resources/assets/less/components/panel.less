@@ -1,0 +1,34 @@
+.panel {
+  padding:          2 * @default-padding;
+  background-color: @panel-bg-color;
+  border-radius:    @default-border-radius;
+  border:           @panel-border;
+  box-shadow:       @default-box-shadow;
+  margin-top:       @default-margin;
+
+  &__heading {
+    margin-bottom: @default-margin;
+  }
+
+  &--login {
+    max-width:    400px;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top:   30vh;
+
+    .panel__heading {
+      text-align: center;
+
+      .feather {
+        stroke:        @color-primary;
+        height:        @h2-size;
+        width:         @h2-size;
+        margin-bottom: -3px;
+      }
+    }
+
+    .control-label {
+      display: none;
+    }
+  }
+}

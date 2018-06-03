@@ -1,0 +1,84 @@
+@import "colors";
+
+// defaults
+@default-font-sans-serif: "Roboto", sans-serif;
+@default-bg-color: #fff;
+@default-bg-color-dark: #eee;
+@default-bg-color-darkset: #111;
+@default-bg-color-darker: #232322;
+@default-border-radius: 5px;
+@default-border-radius-small: 2px;
+@defaul-border-color: #d5d5d5;
+@default-border-width: 1px;
+@default-border: @default-border-width solid @defaul-border-color;
+
+// Fonts
+@h2-size: 2.5rem;
+@h3-size: 2.0rem;
+
+// Paddings & Margins
+@default-step: 0.3125rem; // 5px;
+@default-padding-large: 4 * @default-step;
+@default-padding: 3 * @default-step;
+@default-padding-small: 2 * @default-step;
+@default-margin-large: @default-padding-large;
+@default-margin: @default-padding;
+@default-margin-small: @default-padding-small;
+
+// Colors
+@color-primary: #f90;
+@color-font: #000;
+@color-font-inverted: #fff;
+@color-page-bg: #d5d5d5;
+
+// Login
+@login-bg-color: @default-bg-color-dark;
+@login-icon-size: 2.625rem;
+
+// Panel
+@panel-bg-color: @default-bg-color;
+@panel-border: @default-border;
+
+// Form
+@form-input-padding: @default-padding-small;
+
+// Buttons
+@button-bg-color: #dedede;
+@button-border-color: #c4c4c4;
+@button-bg-color-primary: @color-primary;
+
+// Navbar
+@navbar-bg-color: @default-bg-color-darkset;
+
+// Card
+@card-header-bg-color: #ddd;
+@card-table-head-bg-color: #ededed;
+@card-table-border: 1px solid #ccc;
+@card-table-odd-bg-color: #f7f7f7;
+@card-table-even-bg-color: #fafafa;
+@card-table-icon-field-width: 4rem;
+
+// Icons
+@icon-size-button: 2rem;
+@icon-size-card: 1rem;
+
+// Grid
+@grid-breakpoints: xs 0,
+                   sm 576px,
+                   md 768px,
+                   lg 992px,
+                   xl 1200px;
+@container-max-widths: sm 540px,
+                       md 720px,
+                       lg 960px,
+                       xl 1140px;
+@grid-columns: 12;
+@grid-gutter-width: 30px;
+
+// Box Shadow
+@default-box-shadow-offset-x: 0;
+@default-box-shadow-offset-y: 1px;
+@default-box-shadow-blur: 2px;
+@default-box-shadow-spread: 0;
+@default-box-shadow-color: rgba(126, 127, 130, 0.75);
+@default-box-shadow: @default-box-shadow-offset-x @default-box-shadow-offset-y @default-box-shadow-blur @default-box-shadow-spread @default-box-shadow-color;

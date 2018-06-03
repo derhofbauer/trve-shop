@@ -1,0 +1,60 @@
+@border: 1px solid @color-page-bg;
+
+table,
+.table {
+  width: 100%;
+}
+
+thead {
+  background-color: darken(#fff, 10%);
+}
+
+th {
+  text-align:  left;
+  font-weight: bold;
+}
+
+thead,
+tr:not(:last-child) {
+  border-bottom: @border;
+}
+
+tr:nth-child(even) {
+  background-color: darken(#fff, 5%);
+}
+
+tr.total {
+  border-top: 3px solid @_color-black;
+
+  td {
+    border: none;
+  }
+}
+
+td.quantity {
+  .form-control {
+    max-width: 100px;
+    padding:   2 * @default-step;
+  }
+}
+
+td.controlls {
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: @default-padding-small;
+
+  &:not(:last-child) {
+    border-right: @border;
+  }
+  &:not(:first-child) {
+    border-left: @border;
+  }
+}
+
+.buy {
+  text-align: right;
+  margin-top: @grid-gutter-width;
+}
