@@ -51,7 +51,7 @@ class AdminLoginController extends Controller
             ])) {
             return redirect()->intended(route('admin'));
         }
-        return redirect()->back()->withInput($request->only('username'));
+        return redirect()->route('admin')->withInput($request->only('username'));
     }
 
     /**
