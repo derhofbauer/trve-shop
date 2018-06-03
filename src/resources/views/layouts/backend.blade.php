@@ -20,11 +20,29 @@
     <div class="app">
         <nav class="navbar">
             <div class="navbar__brand">
-                <h1>{{ config('app.name', 'Laravel') }}</h1> [{{ config('app.version', 'a.b.c') }}]
+                <i data-feather="shopping-bag"></i>
+                <h1>{{ config('app.name', 'Laravel') }}</h1>
+                <span class="version">
+                    [{{ config('app.version', 'a.b.c') }}]
+                </span>
             </div>
 
             <div class="navbar__right">
-                <i data-feather="user"></i> {{ Auth::user()->username }} - <a href="{{ route('admin.logout') }}">{{ __('Logout') }}</a>
+                <div class="user-nav">
+                    <i data-feather="user" class="circle"></i>
+                    <span class="username">
+                        {{ Auth::user()->username }}
+                    </span>
+                    {{--<i data-feather="chevron-down"></i>--}}
+                    {{--<div class="dropdown">--}}
+                        {{--<div class="dropdown-item">--}}
+                            <a href="{{ route('admin.logout') }}" class="btn btn-primary btn-icon-text">
+                                <i data-feather="log-out"></i>
+                                {{ __('Logout') }}
+                            </a>
+                        {{--</div>--}}
+                    {{--</div>--}}
+                </div>
             </div>
         </nav>
 

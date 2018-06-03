@@ -2199,6 +2199,9 @@ td:not(:first-child) {
 a.btn {
   padding-top: 0;
 }
+a.btn-icon-text {
+  padding-top: 3px;
+}
 .card__header,
 .card__header h3 {
   font-size: 1rem;
@@ -2211,4 +2214,35 @@ a.btn {
 .main-nav a,
 .navbar a {
   color: inherit;
+}
+.navbar {
+  height: 60px;
+}
+.navbar__brand {
+  line-height: 40px;
+  vertical-align: middle;
+}
+.navbar__brand .feather {
+  color: #f90;
+  stroke: currentColor;
+  height: 40px;
+  margin-right: 0.9375rem;
+}
+.navbar__brand .version {
+  margin-left: 0.3125rem;
+}
+.navbar__right {
+  padding: 0;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.feather.circle {
+  background-color: #666;
+  border-radius: 50%;
+  padding: 0.3125rem;
+  height: 30px;
+  width: 30px;
+}
+.user-nav .username {
+  margin-right: 30px;
 }

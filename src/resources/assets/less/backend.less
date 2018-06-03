@@ -4,6 +4,10 @@ a.btn {
   padding-top: 0;
 }
 
+a.btn-icon-text {
+  padding-top: 3px;
+}
+
 .card__header {
   &, & h3 {
     font-size:     1rem;
@@ -18,4 +22,40 @@ a.btn {
   a {
     color: inherit;
   }
+}
+
+.navbar {
+  height: 60px;
+
+  &__brand {
+    line-height:    40px;
+    vertical-align: middle;
+
+    .feather {
+      color:        @color-primary;
+      stroke:       currentColor;
+      height:       40px;
+      margin-right: @default-margin;
+    }
+    .version {
+      margin-left: @default-step;
+    }
+  }
+  &__right {
+    padding:        0;
+    line-height:    40px;
+    vertical-align: middle;
+  }
+}
+
+.feather.circle {
+  background-color: #666;
+  border-radius:    50%;
+  padding:          @default-step;
+  height:           30px;
+  width:            30px;
+}
+
+.user-nav .username {
+  margin-right: @grid-gutter-width;
 }
