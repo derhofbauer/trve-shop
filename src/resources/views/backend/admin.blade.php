@@ -13,7 +13,7 @@
             @if($loop->count % 2 > 0 && $loop->last)
                 <div class="col-sm-12">
             @else
-                <div class="col-sm-6">
+                <div class="col-xl-6 col-xs-12">
             @endif
 
                 @card

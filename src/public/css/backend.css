@@ -2320,6 +2320,7 @@ a.btn-icon-text {
   padding-bottom: 0.3125rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+  white-space: nowrap;
 }
 .nav__item:hover,
 .nav__item.active {

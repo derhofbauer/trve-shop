@@ -32,6 +32,7 @@ class AdminController extends \App\Http\Controllers\Controller
         return view('backend.admin', [
             'tables' => [
                 SysOrderController::prepareConfig([
+                    'dataType' => __('Open Orders'),
                     'thead' => [
                         __('ID'),
                         __('Status'),
@@ -51,6 +52,17 @@ class AdminController extends \App\Http\Controllers\Controller
                         'priceTotal' => '%s ' . __('€')
                     ]
                 ]),
+                SysProductController::prepareConfig([
+                    'dataType' => __('Products with low stock numbers'),
+                    'thead' => [
+                        __('ID'),
+                        __('Name'),
+                        __('Stock'),
+                        __('Hidden'),
+                    ],
+                    'data' => $lowStockProducts,
+                    'hideButtons' => 'delete'
+                ]),
                 SysBlogEntryController::prepareConfig([
                     'thead' => [
                         __('ID'),
@@ -66,16 +78,6 @@ class AdminController extends \App\Http\Controllers\Controller
                     'relatedData' => [
                         'author' => 'username'
                     ]
-                ]),
-                SysProductController::prepareConfig([
-                    'thead' => [
-                        __('ID'),
-                        __('Name'),
-                        __('Stock'),
-                        __('Hidden'),
-                    ],
-                    'data' => $lowStockProducts,
-                    'hideButtons' => 'delete'
                 ])
             ]
         ]);
