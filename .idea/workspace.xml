@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SysCommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Frontend/SysCommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/backend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/backend.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/backend.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/frontend.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/frontend.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/product.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/product.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/assets/less/sidebar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/less/sidebar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/checkout-success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/checkout-success.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/frontend-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/frontend-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/frontend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,30 +39,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="product.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
+      <file leaf-file-name="AdminLoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/assets/less/sidebar.less">
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="650">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/assets/less/variables.less">
+      <file leaf-file-name="setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="69" column="26" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="26" />
+            <state relative-caret-position="345">
+              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276" />
           </provider>
         </entry>
       </file>
@@ -157,9 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/blog-entry.blade.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/frontend/blog-single.blade.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/cart-table.blade.ph" />
         <option value="$PROJECT_DIR$/src/app/SysFeuser.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/frontend/partials/cart-table.blade.php" />
@@ -208,6 +200,9 @@
         <option value="$PROJECT_DIR$/src/resources/views/layouts/frontend-sidebar.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/sidebar.less" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/product.less" />
+        <option value="$PROJECT_DIR$/setup/setup.sh" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php" />
       </list>
     </option>
   </component>
@@ -322,6 +317,11 @@
             <path>
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
@@ -441,12 +441,12 @@
       <workItem from="1527882397403" duration="10028000" />
       <workItem from="1527953597500" duration="2748000" />
       <workItem from="1527970996322" duration="13087000" />
-      <workItem from="1528026027294" duration="11402000" />
+      <workItem from="1528026027294" duration="12360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299396000" />
+    <option name="totallyTimeSpent" value="300354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +467,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3286026" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.32297447" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32963374" />
@@ -496,36 +496,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/backend/partials/form-buttons.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Build/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="37" column="74" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/assets/less/frontend.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -836,10 +806,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/variables.less">
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="26" />
+        <state relative-caret-position="437">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -850,10 +820,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/product.less">
+    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/Auth/AdminLoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
         </state>
       </provider>
     </entry>

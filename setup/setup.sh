@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 
-if [[ ${apt list | grep 'libpq-dev'} == "" ]]; then
-    apt update && apt install -y libpq-dev git unzip
-fi
+apt update && apt install -y libpq-dev git unzip
 
-if [[ ${php -m | grep 'mysqli'} == "" ]]; then
-    docker-php-ext-install mysqli
-fi
+docker-php-ext-install mysqli
 
-if [[ ${php -m | grep 'PDO'} == "" ]]; then
-    docker-php-ext-install pdo pdo_pgsql
-fi
+docker-php-ext-install pdo pdo_pgsql
 
 a2enmod rewrite
 
@@ -24,3 +18,5 @@ fi
 composer install
 
 chmod 777 -R *
+
+composer migration-fresh
