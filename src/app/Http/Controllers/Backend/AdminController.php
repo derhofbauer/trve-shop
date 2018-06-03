@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 
-use Illuminate\Http\Request;
+use App\SysBlogEntry;
+use App\SysOrder;
+use App\SysProduct;
 
 /**
  * Class AdminController
@@ -14,7 +16,7 @@ class AdminController extends \App\Http\Controllers\Controller
     /**
      * AdminController constructor.
      */
-    public function __construct()
+    public function __construct ()
     {
         $this->middleware('auth:admin');
     }
@@ -22,7 +24,60 @@ class AdminController extends \App\Http\Controllers\Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index() {
-        return view('backend/admin');
+    public function index ()
+    {
+        $openOrders = SysOrder::where('status', '<', 4)->take(15)->orderBy('created_at', 'desc')->get(['id', 'status', 'feuser_id']);
+        $blogEntries = SysBlogEntry::orderBy('created_at', 'desc')->take(15)->get(['id', 'title', 'created_at', 'beuser_id']);
+        $lowStockProducts = SysProduct::where('stock', '<', 10)->orderBy('stock', 'desc')->get(['id', 'name', 'stock', 'hidden']);
+        return view('backend.admin', [
+            'tables' => [
+                SysOrderController::prepareConfig([
+                    'thead' => [
+                        __('ID'),
+                        __('Status'),
+                        __('Customer'),
+                        __('Total Price')
+                    ],
+                    'data' => $openOrders,
+                    'ignoreData' => [
+                        'feuser_id'
+                    ],
+                    'relatedData' => [
+                        'feuser' => 'email'
+                    ],
+                    'hideButtons' => 'delete',
+                    'methodData' => [
+                        // $methodName => render information (sprintf)
+                        'priceTotal' => '%s ' . __('€')
+                    ]
+                ]),
+                SysBlogEntryController::prepareConfig([
+                    'thead' => [
+                        __('ID'),
+                        __('Title'),
+                        __('Created at'),
+                        __('Author')
+                    ],
+                    'data' => $blogEntries,
+                    'ignoreData' => [
+                        'beuser_id'
+                    ],
+                    'hideButtons' => 'delete',
+                    'relatedData' => [
+                        'author' => 'username'
+                    ]
+                ]),
+                SysProductController::prepareConfig([
+                    'thead' => [
+                        __('ID'),
+                        __('Name'),
+                        __('Stock'),
+                        __('Hidden'),
+                    ],
+                    'data' => $lowStockProducts,
+                    'hideButtons' => 'delete'
+                ])
+            ]
+        ]);
     }
 }

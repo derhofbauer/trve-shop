@@ -8,9 +8,26 @@
             <h2>{{ __('Dashboard') }}</h2>
         </div>
 
-        <div class="card">
-            {{ Auth::user()->username }}, You are logged in to the Backend!
-        </div>
+        <div class="row">
+        @foreach($tables as $table)
+            @if($loop->count % 2 > 0 && $loop->last)
+                <div class="col-sm-12">
+            @else
+                <div class="col-sm-6">
+            @endif
+
+                @card
+                @slot('title')
+                    {{ $table['dataType'] }} ({{ count($table['data']) }})
+                @endslot
+
+                @slot('body')
+                    @include('backend.partials.table', $table)
+                @endslot
+                @endcard
+            </div>
+        @endforeach
+                </div>
     </div>
 </div>
 @endsection

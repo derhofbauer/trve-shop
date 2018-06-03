@@ -1759,6 +1759,9 @@ a.btn:hover {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.card {
+  margin-bottom: 0.9375rem;
+}
 .card__header {
   background-color: #ddd;
   padding: 0.9375rem;

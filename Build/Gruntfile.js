@@ -92,7 +92,7 @@ module.exports = function(grunt) {
                 src: '<%= paths.css %>backend.css',
                 dest: '<%= paths.css %>backend.min.css'
             },
-            backend: {
+            frontend: {
                 src: '<%= paths.css %>frontend.css',
                 dest: '<%= paths.css %>frontend.min.css'
             }
