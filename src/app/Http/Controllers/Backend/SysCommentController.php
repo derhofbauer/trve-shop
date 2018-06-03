@@ -90,6 +90,9 @@ class SysCommentController extends Controller implements BackendControllerInterf
         $comment->fill($validatedData);
         $comment->save();
 
+        $request->session()->flash('status', __('Comment updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.comments');
     }
 
@@ -113,6 +116,9 @@ class SysCommentController extends Controller implements BackendControllerInterf
     {
         $comment = SysComment::find($id);
         $comment->delete();
+
+        $request->session()->flash('status', __('Comment deleted successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('admin.comments');
     }

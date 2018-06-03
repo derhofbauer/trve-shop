@@ -7,6 +7,8 @@
     @endslot
 
     @slot('body')
+        @include('partials.errors')
+
         @card
         @slot('title')
             {{ $dataType }} ({{ count($data) }})

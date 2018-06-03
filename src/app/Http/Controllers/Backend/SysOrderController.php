@@ -106,6 +106,9 @@ class SysOrderController extends Controller implements BackendControllerInterfac
 
         $order->save();
 
+        $request->session()->flash('status', __('Order updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.orders.edit', ['id' => $id]);
     }
 
@@ -148,6 +151,9 @@ class SysOrderController extends Controller implements BackendControllerInterfac
         self::handleProducts($order, $request);
 
         $order->save();
+
+        $request->session()->flash('status', __('Order created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('admin.orders.edit', ['id' => $order->id]);
     }

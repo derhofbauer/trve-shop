@@ -119,6 +119,9 @@ class CartController extends Controller
             }
         }
 
+        $request->session()->flash('status', __('Product was successfully added to your cart.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         if ($returnUrl != null) {
             $returnUrl = base64_decode($returnUrl);
             return redirect($returnUrl);

@@ -125,6 +125,9 @@ class SysProductController extends Controller implements BackendControllerInterf
 
         $product->save();
 
+        $request->session()->flash('status', __('Product updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.products.edit', ['id' => $id]);
     }
 
@@ -185,6 +188,10 @@ class SysProductController extends Controller implements BackendControllerInterf
 
         $product->save();
 
+        $request->session()->flash('status', __('Product created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
+
         return redirect()->route('admin.products.edit', ['id' => $product->id]);
     }
 
@@ -198,9 +205,13 @@ class SysProductController extends Controller implements BackendControllerInterf
     {
         $product = SysProduct::find($id);
         if ($product->children->count() > 0) {
-            return redirect()->route('admin.products')->with('message', __('This item cannot be deleted, because it has children'));
+            $request->session()->flash('status', __('This item cannot be deleted, because it has children.'));
+            $request->session()->flash('status-class', 'alert-danger');
+            return redirect()->route('admin.products');
         } else {
             $product->delete();
+            $request->session()->flash('status', __('Product deleted successfully.'));
+            $request->session()->flash('status-class', 'alert-success');
         }
 
         return redirect()->route('admin.products');

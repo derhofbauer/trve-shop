@@ -103,6 +103,9 @@ class SysBlogEntryController extends Controller implements BackendControllerInte
         self::handleProducts($entry, $request);
         $entry->save();
 
+        $request->session()->flash('status', __('Blog entry saved successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.blog.edit', ['id' => $id]);
     }
 
@@ -144,6 +147,9 @@ class SysBlogEntryController extends Controller implements BackendControllerInte
         self::handleProducts($entry, $request);
         $entry->save();
 
+        $request->session()->flash('status', __('Blog entry created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.blog');
     }
 
@@ -157,6 +163,9 @@ class SysBlogEntryController extends Controller implements BackendControllerInte
     {
         $entry = SysBlogEntry::find($id);
         $entry->delete();
+
+        $request->session()->flash('status', __('Blog entry deleted successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('admin.blog');
     }

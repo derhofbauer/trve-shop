@@ -87,6 +87,9 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
 
         $user->save();
 
+        $request->session()->flash('status', __('Frontend user updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.users.frontend');
     }
 
@@ -125,6 +128,9 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
         $user->setPassword($validatedData['password']);
         $user->save();
 
+        $request->session()->flash('status', __('Frontend user created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.users.frontend');
     }
 
@@ -138,6 +144,9 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
     {
         $user = SysFeuser::find($id);
         $user->delete();
+
+        $request->session()->flash('status', __('Frontend user deleted successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('admin.users.frontend');
     }

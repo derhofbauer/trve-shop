@@ -105,6 +105,9 @@ class SysBeuserController extends Controller implements BackendControllerInterfa
 
         $user->save();
 
+        $request->session()->flash('status', __('Backend user saved successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.users.backend');
     }
 
@@ -143,6 +146,9 @@ class SysBeuserController extends Controller implements BackendControllerInterfa
         $user->setPassword($validatedData['password']);
         $user->save();
 
+        $request->session()->flash('status', __('Backend user created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.users.backend');
     }
 
@@ -157,10 +163,11 @@ class SysBeuserController extends Controller implements BackendControllerInterfa
         if (Auth::user()->id != $id) {
             $user = SysBeuser::find($id);
             $user->delete();
+            $request->session()->flash('status', __('Backend user deleted successfully.'));
+            $request->session()->flash('status-class', 'alert-success');
         } else {
-            // @todo implement error messages
-            Session::flash('status', 'You cannot delete your current user.');
-            Session::flash('status-class', 'alert-error');
+            $request->session()->flash('status', __('You cannot delete your current user.'));
+            $request->session()->flash('status-class', 'alert-danger');
         }
         return redirect()->route('admin.users.backend');
     }

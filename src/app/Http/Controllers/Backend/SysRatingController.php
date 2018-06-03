@@ -82,6 +82,9 @@ class SysRatingController extends Controller implements BackendControllerInterfa
         $rating = SysRating::find($id);
         $rating->delete();
 
+        $request->session()->flash('status', __('Rating deleted successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.ratings');
     }
 

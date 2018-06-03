@@ -83,6 +83,9 @@ class SysProductCategoryController extends Controller implements BackendControll
 
         $category->save();
 
+        $request->session()->flash('status', __('Category updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.categories.edit', ['id' => $id]);
     }
 
@@ -118,6 +121,9 @@ class SysProductCategoryController extends Controller implements BackendControll
         self::handleMedia($category, $request, $this->storage_path);
         $category->save();
 
+        $request->session()->flash('status', __('Category created successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('admin.categories.edit', ['id' => $category->id]);
     }
 
@@ -131,6 +137,9 @@ class SysProductCategoryController extends Controller implements BackendControll
     {
         $category = SysProductCategory::find($id);
         $category->delete();
+
+        $request->session()->flash('status', __('Category deleted successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('admin.categories');
     }
