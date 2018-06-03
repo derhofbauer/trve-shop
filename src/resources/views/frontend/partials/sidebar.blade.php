@@ -26,7 +26,7 @@
                 <div class="price__min">0 &euro;</div>
                 <div class="price__max-container"><span class="price__max">5</span> &euro;</div>
             </div>
-            <input class="price__range" type="range" min="0" step="1" max="{{ \App\SysProduct::getHighestPricedProduct()->price }}" name="price_max" @if(!empty($price_max)) value="{{ $price_max }}" @else value="15" @endif">
+            <input class="price__range" type="range" min="0" step="1" max="{{ \App\SysProduct::getHighestPricedProduct()->price }}" name="price_max" @if(!empty($price_max)) value="{{ $price_max }}" @else value="15" @endif>
         </div>
 
         <div class="submit">

@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label class="control-label" for="password">{{ __('Password Confirmation') }}</label>
-                        <input type="password" id="password" name="password_repeat" placeholder="{{ __('Password') }}" class="form-control{{ $errors->has('password_repeat') ? ' has-danger' : '' }}">
+                        <input type="password" id="password_repeat" name="password_repeat" placeholder="{{ __('Password') }}" class="form-control{{ $errors->has('password_repeat') ? ' has-danger' : '' }}">
                     </div>
                 </div>
 
