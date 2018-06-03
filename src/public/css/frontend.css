@@ -2078,6 +2078,11 @@ td:not(:first-child) {
 .sidebar-container {
   background-color: #fff;
 }
+@media (max-width: 767px) {
+  .sidebar-container {
+    display: none;
+  }
+}
 .sidebar .searchbox,
 .sidebar .categories,
 .sidebar .price {
@@ -2134,7 +2139,7 @@ td:not(:first-child) {
   font-size: 2rem;
   white-space: nowrap;
 }
-@media (min-width: 768px) {
+@media (min-width: 1600px) {
   .product--grid .product__price {
     height: 50px;
     position: absolute;
@@ -2156,7 +2161,7 @@ td:not(:first-child) {
   background-color: rgba(0, 0, 0, 0.65);
   color: #fff;
 }
-@media (min-width: 768px) {
+@media (min-width: 1600px) {
   .product__overlay {
     padding-right: 100px;
     position: absolute;

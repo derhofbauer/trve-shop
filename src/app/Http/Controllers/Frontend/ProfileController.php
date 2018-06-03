@@ -68,6 +68,10 @@ class ProfileController extends Controller
         $user->title = $validatedData['title'];
         $user->save();
 
+        $request->session()->flash('status', __('Profile updated successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
+
         return redirect()->route('profile');
     }
 

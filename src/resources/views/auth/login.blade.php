@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+@extends('layouts.frontend', ['hideErrors' => true])
 
 @section('content')
     <div class="container col-sm-10 col-md-4 margin-auto login-container">

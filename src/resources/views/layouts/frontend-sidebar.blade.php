@@ -21,11 +21,15 @@
 
     @include('frontend.partials.navbar')
 
-    <aside class="sidebar-container container-padding-top container-fluid hidden-xs">
+    <aside class="sidebar-container container-padding-top container-fluid">
         @include('frontend.partials.sidebar')
     </aside>
 
     <main class="main content container-fluid">
+        @if(!isset($hideErrors) || $hideErrors != true)
+            @include('partials.errors')
+        @endif
+
         @yield('content')
     </main>
 </div>

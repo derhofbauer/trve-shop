@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="show-order container-padding-top">
-            <a href="{{ route('profile.orders'  ) }}" class="btn btn-primary">{{ __('show orders') }}</a>
+            <a href="{{ route('profile.orders'  ) }}" class="btn btn-primary">{{ __('Show orders') }}</a>
         </div>
     </div>
 </div>

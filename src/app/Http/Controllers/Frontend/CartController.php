@@ -155,6 +155,9 @@ class CartController extends Controller
             SysCartEntry::where('feuser_id', Auth::user()->id)->where('product_id', $id)->delete();
         }
 
+        $request->session()->flash('status', __('Product was successfully removed from your cart.'));
+        $request->session()->flash('status-class', 'alert-success');
+
         return redirect()->route('cart');
     }
 
@@ -198,6 +201,9 @@ class CartController extends Controller
                 }
             }
         }
+
+        $request->session()->flash('status', __('Your cart was successfully updated.'));
+        $request->session()->flash('status-class', 'alert-success');
 
         return redirect()->route('cart');
     }

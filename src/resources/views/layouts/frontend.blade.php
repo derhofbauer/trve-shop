@@ -22,6 +22,10 @@
     @include('frontend.partials.navbar')
 
     <main class="main content container-fluid">
+        @if(!isset($hideErrors) || $hideErrors != true)
+            @include('partials.errors')
+        @endif
+
         @yield('content')
     </main>
 </div>

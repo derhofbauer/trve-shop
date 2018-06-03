@@ -52,6 +52,10 @@ class SysCommentController extends Controller
             ]);
         }
 
+        $request->session()->flash('status', __('Comment added successfully.'));
+        $request->session()->flash('status-class', 'alert-success');
+
+
         return redirect()->route('products.show', ['id' => $id]);
     }
 }
