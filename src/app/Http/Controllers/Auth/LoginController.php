@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct ()
     {
         $this->middleware('guest')->except('logout');
     }
@@ -34,8 +34,22 @@ class LoginController extends Controller
     /**
      * @return string
      */
-    public function redirectPath ()
+    public function redirectTo ()
     {
         return route('root');
+    }
+
+    /**
+     * Check user's role and redirect user based on their role
+     *
+     * @return
+     */
+    public function authenticated ()
+    {
+        if (auth()->user()->role_id != null) {
+            return redirect()->route('admin');
+        }
+
+        return redirect()->route('root');
     }
 }
