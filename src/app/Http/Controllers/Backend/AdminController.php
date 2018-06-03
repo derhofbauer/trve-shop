@@ -28,7 +28,7 @@ class AdminController extends \App\Http\Controllers\Controller
     {
         $openOrders = SysOrder::where('status', '<', 4)->take(15)->orderBy('created_at', 'desc')->get(['id', 'status', 'feuser_id']);
         $blogEntries = SysBlogEntry::orderBy('created_at', 'desc')->take(15)->get(['id', 'title', 'created_at', 'beuser_id']);
-        $lowStockProducts = SysProduct::where('stock', '<', 10)->orderBy('stock', 'desc')->get(['id', 'name', 'stock', 'hidden']);
+        $lowStockProducts = SysProduct::where('stock', '<', 10)->orderBy('stock', 'asc')->get(['id', 'name', 'stock', 'hidden']);
         return view('backend.admin', [
             'tables' => [
                 SysOrderController::prepareConfig([

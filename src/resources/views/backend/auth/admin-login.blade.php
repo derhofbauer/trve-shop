@@ -62,7 +62,7 @@
 
                     <div class="form-group">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn--login">
+                            <button type="submit" class="btn btn-primary btn-justify">
                                 {{ __('Login') }}
                             </button>
                         </div>

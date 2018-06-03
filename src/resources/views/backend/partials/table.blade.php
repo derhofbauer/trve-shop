@@ -45,7 +45,7 @@
                         <td>{{ sprintf($rendering, $object->$method()) }}</td>
                     @endforeach
                 @endisset
-                <td>
+                <td class="controlls">
                     @if(!isset($hideButtons) || strpos($hideButtons, 'edit') === false)
                     <a href="{{ route($routes['edit'], ['id' => $object->id]) }}" class="btn btn-icon">
                         <i data-feather="edit-2"></i>

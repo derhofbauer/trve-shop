@@ -1554,6 +1554,11 @@ a:hover {
   padding: 0.625rem;
   border: 1px solid #d5d5d5;
 }
+.form-control[type='checkbox'] {
+  width: auto;
+  margin-top: 0.625rem;
+  margin-left: 0;
+}
 .form-group:not(:last-child) {
   margin-bottom: 0.9375rem;
 }
@@ -1755,6 +1760,9 @@ a.btn:hover {
 .module__header--right {
   float: right;
 }
+.module__header button {
+  margin-right: 4px;
+}
 .module__body {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1878,6 +1886,9 @@ tr.total td {
 td.quantity .form-control {
   max-width: 100px;
   padding: 0.625rem;
+}
+td.controlls {
+  white-space: nowrap;
 }
 th,
 td {
