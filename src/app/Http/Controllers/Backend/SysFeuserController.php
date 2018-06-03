@@ -54,7 +54,7 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email'), 'required' => true, 'value' => $user->email],
                         ['label' => __('First name'), 'type' => 'text', 'id' => 'firstname', 'placeholder' => __('Firstname'), 'required' => true, 'value' => $user->firstname],
                         ['label' => __('Last name'), 'type' => 'text', 'id' => 'lastname', 'placeholder' => __('Lastname'), 'required' => true, 'value' => $user->lastname],
                         ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Academic title'), 'value' => $user->title]
@@ -103,8 +103,8 @@ class SysFeuserController extends Controller implements BackendControllerInterfa
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true],
-                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password placeholder'), 'required' => true],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email'), 'required' => true],
+                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password'), 'required' => true],
                         ['label' => __('Password repeat'), 'type' => 'password', 'id' => 'password_repeat', 'placeholder' => __('Password repeat'), 'required' => true],
                         ['label' => __('First name'), 'type' => 'text', 'id' => 'firstname', 'placeholder' => __('Firstname'), 'required' => true],
                         ['label' => __('Last name'), 'type' => 'text', 'id' => 'lastname', 'placeholder' => __('Lastname'), 'required' => true],

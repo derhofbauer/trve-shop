@@ -63,9 +63,9 @@ class SysBeuserController extends Controller implements BackendControllerInterfa
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true, 'value' => $user->username],
+                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username'), 'required' => true, 'value' => $user->username],
                         ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Reset password')],
-                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true, 'value' => $user->email],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email'), 'required' => true, 'value' => $user->email],
                         ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles, 'value' => $user->role_id]
                     ]
                 ]
@@ -122,9 +122,9 @@ class SysBeuserController extends Controller implements BackendControllerInterfa
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username placeholder'), 'required' => true],
-                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email placeholder'), 'required' => true],
-                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password placeholder'), 'required' => true],
+                        ['label' => __('Username'), 'type' => 'text', 'id' => 'username', 'placeholder' => __('Username'), 'required' => true],
+                        ['label' => __('Email'), 'type' => 'email', 'id' => 'email', 'placeholder' => __('Email'), 'required' => true],
+                        ['label' => __('Password'), 'type' => 'password', 'id' => 'password', 'placeholder' => __('Password'), 'required' => true],
                         ['label' => __('Password repeat'), 'type' => 'password', 'id' => 'password_repeat', 'placeholder' => __('Password repeat'), 'required' => true],
                         ['label' => __('Role'), 'type' => 'select', 'id' => 'role_id', 'required' => true, 'data' => $roles]
                     ]

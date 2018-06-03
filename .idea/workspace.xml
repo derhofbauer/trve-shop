@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/107769d6e715403fdde1c1ac45e4a16c7887f64a.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/views/107769d6e715403fdde1c1ac45e4a16c7887f64a.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,7 +87,26 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="SysProductCategoryController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="60" column="137" selection-start-line="60" selection-start-column="137" selection-end-line="60" selection-end-column="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysProductController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="164" column="17" lean-forward="true" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,7 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert</find>
       <find>10%</find>
       <find>has-error</find>
       <find>has-warning</find>
@@ -122,6 +146,7 @@
       <find>homeCon</find>
       <find>__('</find>
       <find>sys_order_product_mm</find>
+      <find>('* placeholder')</find>
     </findStrings>
     <replaceStrings>
       <replace>class=&quot;module__header--right&quot;</replace>
@@ -189,8 +214,6 @@
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysCommentController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysOrderController.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysRatingController.php" />
         <option value="$PROJECT_DIR$/src/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/layouts/frontend.blade.php" />
@@ -211,6 +234,8 @@
         <option value="$PROJECT_DIR$/src/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" />
       </list>
     </option>
   </component>
@@ -335,6 +360,12 @@
               <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trve-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trve-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -430,11 +461,12 @@
       <workItem from="1527953597500" duration="2748000" />
       <workItem from="1527970996322" duration="13087000" />
       <workItem from="1528026027294" duration="17465000" />
+      <workItem from="1528044569471" duration="315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305459000" />
+    <option name="totallyTimeSpent" value="305774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,6 +479,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3263041" />
@@ -454,7 +487,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3286026" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.32297447" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.17803837" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32963374" />
@@ -536,23 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1314">
           <caret line="154" column="62" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
-          <folding>
-            <element signature="e#48#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="213" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="123" column="57" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -685,13 +701,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Frontend/HomeController.php" />
     <entry file="file://$PROJECT_DIR$/src/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -706,15 +716,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/shop_public_migrations.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/shop_public_password_resets.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/shop_public_password_resets_be.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/shop_public_migrations.sql" />
+    <entry file="file://$PROJECT_DIR$/setup/shop_public_password_resets.sql" />
+    <entry file="file://$PROJECT_DIR$/setup/shop_public_password_resets_be.sql" />
     <entry file="file://$PROJECT_DIR$/setup/dump.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -729,9 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="e#48#69#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,6 +811,20 @@
             <caret line="2" column="122" selection-start-line="2" selection-start-column="122" selection-end-line="2" selection-end-column="122" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="60" column="137" selection-start-line="60" selection-start-column="137" selection-end-line="60" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="164" column="17" lean-forward="true" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
         </state>
       </provider>
     </entry>

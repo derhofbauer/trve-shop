@@ -55,10 +55,10 @@ class SysProductCategoryController extends Controller implements BackendControll
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name placeholder'), 'required' => true, 'value' => $category->name],
-                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false, 'value' => $category->description],
-                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$category->media],
-                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
+                        ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name'), 'required' => true, 'value' => $category->name],
+                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description'), 'required' => false, 'value' => $category->description],
+                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media'), 'required' => false, 'value' => (array)$category->media],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media'), 'multiple' => true],
                     ]
                 ]
             ]
@@ -99,9 +99,9 @@ class SysProductCategoryController extends Controller implements BackendControll
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name placeholder'), 'required' => true],
-                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description placeholder'), 'required' => false],
-                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
+                        ['label' => __('Name'), 'type' => 'text', 'id' => 'name', 'placeholder' => __('Name '), 'required' => true],
+                        ['label' => __('Description'), 'type' => 'textarea', 'id' => 'description', 'placeholder' => __('Description'), 'required' => false],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media'), 'multiple' => true],
                     ]
                 ]
             ]

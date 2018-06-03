@@ -72,12 +72,12 @@ class SysBlogEntryController extends Controller implements BackendControllerInte
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Title placeholder'), 'required' => true, 'value' => $blogEntry->title],
+                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Title'), 'required' => true, 'value' => $blogEntry->title],
                         ['label' => __('Author'), 'type' => 'select', 'id' => 'beuser_id', 'required' => true, 'data' => $users, 'value' => $blogEntry->beuser_id],
-                        ['label' => __('Abstract'), 'type' => 'textarea', 'id' => 'abstract', 'placeholder' => __('Abstract placeholder'), 'required' => true, 'value' => $blogEntry->abstract],
-                        ['label' => __('Content'), 'type' => 'editor', 'id' => 'content', 'placeholder' => __('Content Placeholder'), 'value' => $blogEntry->content],
-                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media placeholder'), 'required' => false, 'value' => (array)$blogEntry->media],
-                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
+                        ['label' => __('Abstract'), 'type' => 'textarea', 'id' => 'abstract', 'placeholder' => __('Abstract'), 'required' => true, 'value' => $blogEntry->abstract],
+                        ['label' => __('Content'), 'type' => 'editor', 'id' => 'content', 'placeholder' => __('Content'), 'value' => $blogEntry->content],
+                        ['label' => __('Media'), 'type' => 'media', 'id' => 'media', 'placeholder' => __('Media'), 'required' => false, 'value' => (array)$blogEntry->media],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media'), 'multiple' => true],
                         ['label' => __('Products'), 'type' => 'select_multiple', 'id' => 'products', 'required' => false, 'data' => $products, 'value' => $selected_products],
                     ]
                 ]
@@ -120,11 +120,11 @@ class SysBlogEntryController extends Controller implements BackendControllerInte
                 [
                     'title' => __('General'),
                     'fields' => [
-                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Title placeholder'), 'required' => true],
+                        ['label' => __('Title'), 'type' => 'text', 'id' => 'title', 'placeholder' => __('Title'), 'required' => true],
                         ['label' => __('Author'), 'type' => 'select', 'id' => 'beuser_id', 'required' => true, 'data' => $users],
-                        ['label' => __('Abstract'), 'type' => 'textarea', 'id' => 'abstract', 'placeholder' => __('Abstract placeholder'), 'required' => true],
-                        ['label' => __('Content'), 'type' => 'editor', 'id' => 'content', 'placeholder' => __('Content Placeholder')],
-                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media placeholder'), 'multiple' => true],
+                        ['label' => __('Abstract'), 'type' => 'textarea', 'id' => 'abstract', 'placeholder' => __('Abstract'), 'required' => true],
+                        ['label' => __('Content'), 'type' => 'editor', 'id' => 'content', 'placeholder' => __('Content')],
+                        ['label' => __('Add Media'), 'type' => 'file', 'id' => 'media[]', 'required' => false, 'placeholder' => __('Media'), 'multiple' => true],
                         ['label' => __('Products'), 'type' => 'select_multiple', 'id' => 'products', 'required' => false, 'data' => $products],
                     ]
                 ]
