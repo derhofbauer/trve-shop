@@ -164,7 +164,12 @@ class SysProduct extends Model
             $total += $rating->rating;
         }
 
-        return number_format($total / $this->ratings->count(), $decimal);
+        if ($this->ratings->count() > 0) {
+            return number_format($total / $this->ratings->count(), $decimal);
+        } else {
+            return '-';
+        }
+
     }
 
     /**

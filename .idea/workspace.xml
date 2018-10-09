@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d38578e-efe3-4799-ac41-8b4ebb814e16" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBeuserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysBlogEntryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysFeuserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/backend/auth/admin-login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/107769d6e715403fdde1c1ac45e4a16c7887f64a.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/views/107769d6e715403fdde1c1ac45e4a16c7887f64a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SysProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SysProduct.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,21 +81,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SysProductCategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SysProduct.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="60" column="137" selection-start-line="60" selection-start-column="137" selection-end-line="60" selection-end-column="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysProductController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="164" column="17" lean-forward="true" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
+            <state relative-caret-position="513">
+              <caret line="169" column="23" lean-forward="true" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -117,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>10%</find>
       <find>has-error</find>
       <find>has-warning</find>
       <find>icon</find>
@@ -147,6 +131,7 @@
       <find>__('</find>
       <find>sys_order_product_mm</find>
       <find>('* placeholder')</find>
+      <find>getmediumrating</find>
     </findStrings>
     <replaceStrings>
       <replace>class=&quot;module__header--right&quot;</replace>
@@ -185,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/views/backend/partials/list.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/assets/less/card/card.less" />
         <option value="$PROJECT_DIR$/Build/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/resources/views/layouts/backend.blade.php" />
@@ -236,6 +220,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php" />
+        <option value="$PROJECT_DIR$/src/app/SysProduct.php" />
       </list>
     </option>
   </component>
@@ -461,12 +446,13 @@
       <workItem from="1527953597500" duration="2748000" />
       <workItem from="1527970996322" duration="13087000" />
       <workItem from="1528026027294" duration="17465000" />
-      <workItem from="1528044569471" duration="315000" />
+      <workItem from="1528044569471" duration="347000" />
+      <workItem from="1528136602578" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305774000" />
+    <option name="totallyTimeSpent" value="305886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,7 +473,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3286026" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.32297447" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21588486" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.17803837" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32963374" />
@@ -516,13 +502,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/assets/less/components/searchbox.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/backend/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -816,15 +795,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductCategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="1380">
           <caret line="60" column="137" selection-start-line="60" selection-start-column="137" selection-end-line="60" selection-end-column="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Backend/SysProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="164" column="17" lean-forward="true" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
+        <state relative-caret-position="301">
+          <caret line="175" column="5" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SysProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="169" column="23" lean-forward="true" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
         </state>
       </provider>
     </entry>
