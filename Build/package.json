@@ -14,12 +14,12 @@
   "homepage": "https://github.com/derhofbauer/trve-shop#readme",
   "devDependencies": {
     "autoprefixer": "^8.6.5",
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-image": "^4.2.0",
+    "grunt-image": "^4.3.0",
     "grunt-postcss": "^0.9.0",
     "less-plugin-functions": "^1.0.0",
     "less-plugin-lists": "^1.1.2"
